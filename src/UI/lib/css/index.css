@@ -1,0 +1,210 @@
+/*
+	全局默认样式
+*/
+.is_relative{
+	position: relative;
+}
+.is_absolute{
+	position: absolute;
+}
+.is_fixed{
+	position: fixed;
+}
+
+
+/*
+	Button
+*/
+
+/*按钮默认样式*/
+button{
+	outline:none;
+	cursor: pointer;
+	/*清除移动端input,textarea顶部灰色阴影 清除select默认样式*/
+    appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	/*清除移动端input,textarea,button,i等标签 点击时灰色阴影*/
+    tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.lu_button{
+	border: 1px solid #bfcbd9;
+	line-height: 1;
+	user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+	display: inline-block;
+    padding: 10px 15px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    text-align: center;
+	background: #fff;
+	font-size: 14px;
+	color: #fff;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+/*默认按钮*/
+.lu_button_default{
+	background: #20a0ff;
+	border-color: #20a0ff;
+}
+.lu_button_default:focus, .lu_button_default:hover {
+    background: #50bfff;
+    border-color: #50bfff;
+    color: #fff;
+}
+.lu_button_default:active{
+	background: #20a0ff;
+	border-color: #20a0ff;
+}
+/*危险按钮*/
+.lu_button_danger{
+	background: #ff4949;
+	border-color: #ff4949;
+}
+.lu_button_danger:focus, .lu_button_danger:hover {
+    background: #ff6d6d;
+    border-color: #ff6d6d;
+}
+.lu_button_danger:active{
+	background: #ff4949;
+	border-color: #ff4949;
+}
+/*成功按钮*/
+.lu_button_success{
+	background: #13ce66;
+	border-color: #13ce66;
+}
+.lu_button_success:focus, .lu_button_success:hover {
+    background: #42d885;
+    border-color: #42d885;
+}
+.lu_button_success:active{
+	background: #13ce66;
+	border-color: #13ce66;
+}
+/*警告按钮*/
+.lu_button_warning{
+	background: #f7ba2a;
+	border-color: #f7ba2a;
+}
+.lu_button_warning:focus, .lu_button_warning:hover {
+    background: #f9c855;
+    border-color: #f9c855;
+}
+.lu_button_warning:active{
+	background: #f7ba2a;
+	border-color: #f7ba2a;
+}
+.lu_button_plain_default,
+.lu_button_plain_danger,
+.lu_button_plain_success,
+.lu_button_plain_warning{
+	background: #fff;
+	border: 1px solid #bfcbd9;
+	color: #1f2d3d;
+}
+/*hover-默认按钮*/
+.lu_button_plain_default:hover{
+	border-color:#50bfff;
+	color: #50bfff;
+}
+/*hover-危险按钮*/
+.lu_button_plain_danger:hover{
+	border-color: #ff4949;
+	color: #ff4949;
+}
+/*hover-成功按钮*/
+.lu_button_plain_success:hover{
+	border-color: #13ce66;
+	color: #13ce66;
+}
+/*hover-警告按钮*/
+.lu_button_plain_warning:hover{
+	border-color: #f7ba2a;
+	color: #f7ba2a;
+}
+
+.lu_button_large{
+	padding: 11px 19px;
+	font-size: 16px;
+}
+.lu_button_small{
+	padding: 7px 9px;
+	font-size: 12px;
+}
+.lu_button_mini{
+	padding: 4px;
+	font-size: 12px;
+}
+.lu_button_radius_false{
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+/*按钮禁用*/
+.lu_button_disabled,
+.lu_button_disabled:focus, 
+.lu_button_disabled:hover,
+.lu_button_disabled:active{
+	border-color: #bfcbd9;
+	background: #eef1f6;
+	color: #bfcbd9;
+	cursor: not-allowed;
+}
+.lu_button_plain_disabled,
+.lu_button_plain_disabled:focus, 
+.lu_button_plain_disabled:hover,
+.lu_button_plain_disabled:active{
+	cursor: not-allowed;
+	border-color: #bfcbd9;
+	color: #bfcbd9;
+}
+
+/*
+	Badge
+*/
+.lu_badge{
+    display:inline-block;
+}
+.lu_badge sup{
+    top: 0;
+    right: 10px;
+    transform: translateY(-50%) translateX(100%);
+    background-color: #ff4949;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 6px;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid #fff;
+    z-index: 99999;
+}
+/*红点显示*/
+.lu_badge .lu_badge_isDot{
+	text-indent: -99999px;
+	width: 8px;
+    height: 8px;
+    padding: 0;
+    right: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
