@@ -43,7 +43,6 @@ Vue.prototype.lucy = lucy
 
 import LucyUI from './UI'
 import './UI/lib/css/index.css';
-console.log(LucyUI)
 Vue.use(LucyUI);
 
 

@@ -2,12 +2,14 @@ import lu_button from './button';
 import lu_alert from './alert';
 import lu_radio from './radio';
 import lu_badge from './badge';
+import lu_toast from './toast';
 
 const components = [
 	lu_button,
 	lu_alert,
   lu_radio,
   lu_badge,
+  lu_toast
 ]
 
 const install = function(Vue) {
@@ -16,6 +18,10 @@ const install = function(Vue) {
   components.map(component => {
     Vue.component(component.name, component);
   });
+
+
+  Vue.$lu_toast = Vue.prototype.$lu_toast = lu_toast;
+
 };
 
 /* istanbul ignore if */
@@ -29,4 +35,5 @@ export default {
 	lu_alert,
   lu_radio,
   lu_badge,
+  lu_toast
 }

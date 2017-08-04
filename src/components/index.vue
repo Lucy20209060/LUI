@@ -97,7 +97,7 @@ export default {
     },
     methods:{
         tap(){
-            console.log('tap')
+            this.$lu_toast('lu_toast实例')
         },
 
 	}
