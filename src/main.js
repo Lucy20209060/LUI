@@ -6,7 +6,6 @@ import router from './router'
 
 import store from '@/store'
 
-import 'alucy/lib/style.min.css'
 
 // 项目api 挂载全局变量
 import api from '@/utils/Api'
