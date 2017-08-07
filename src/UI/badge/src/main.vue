@@ -3,6 +3,7 @@
         <slot></slot>
         <sup 
             class="is_absolute"
+            :style="{ backgroundColor: color }"
             v-if="!hidden"
             :class="[
                 isDot?'lu_badge_isDot':''
@@ -25,7 +26,8 @@ export default {
         hidden:{
             type: Boolean,
             default: false
-        }
+        },
+        color: String,
     }
 }
 </script>

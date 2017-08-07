@@ -6,7 +6,7 @@ import router from './router'
 
 import store from '@/store'
 
-import 'alucy/lib/style.min.css'
+// import 'alucy/lib/style.min.css'
 
 // 项目api 挂载全局变量
 import api from '@/utils/Api'
@@ -21,9 +21,9 @@ Vue.prototype.console = Console
 // Vue.use(toast);
 
 // 弹窗插件
-import 'lucy-toast/lib/toast.css';
-import toast from 'lucy-toast';
-Vue.use(toast);
+// import 'lucy-toast/lib/toast.css';
+// import toast from 'lucy-toast';
+// Vue.use(toast);
 
 
 // 挂载axios
@@ -31,15 +31,14 @@ Vue.use(toast);
 // Vue.prototype.$axios = axios
 
 
-import lucy from 'lucy-test01'
+// import lucy from 'lucy-test01'
 
-Vue.prototype.lucy = lucy
+// Vue.prototype.lucy = lucy
 
 
 // import sj from './page/sj/index.js'
 
 // Vue.use(sj);
-
 
 import LucyUI from './UI'
 import './UI/lib/css/index.css';
