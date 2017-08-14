@@ -1,9 +1,9 @@
 <template>
     <div class="hello-wrap">
-        <!-- <i>hahahahhaha</i> -->
-        <!-- <p @click="clicks">{{msg}}</p>
+        <i>hahahahhaha</i>
+        <p @click="clicks">{{msg}}</p>
 
-        <Btn @change="change1"></Btn> -->
+        <Btn @change="change1"></Btn>
 
     </div>
 </template>
