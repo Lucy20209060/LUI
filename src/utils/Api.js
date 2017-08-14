@@ -1,5 +1,5 @@
 const apiPre = process.env.API_HOST;
-console.log(11111111111111)
+
 const Api = {
 
     login:{
@@ -15,4 +15,5 @@ const Api = {
     },
 
 };
+console.log(Api)
 export default Api;

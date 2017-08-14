@@ -10,6 +10,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "anchu-toast": "^1.0.0",
+    "clipboard": "^1.7.1",
     "lucy-toast": "^1.0.1",
     "raf.js": "0.0.4",
     "vue": "^2.3.3",

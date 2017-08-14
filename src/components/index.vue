@@ -117,7 +117,9 @@ export default {
         },
         tap(){
             this.$lu_toast('lu_toast实例')
+            console.log(this.$children)
 
+            this.$lu_message.error('lu_message实例')
         },
         toast(){
             
