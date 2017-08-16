@@ -42,7 +42,11 @@ Vue.prototype.console = Console
 
 import LucyUI from './UI'
 import './UI/lib/css/index.css';
+import 'element-ui/lib/theme-default/index.css'
 Vue.use(LucyUI);
+
+// import anchuToast from 'anchu-toast'
+// Vue.use(anchuToast);
 
 
 

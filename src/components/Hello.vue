@@ -3,7 +3,7 @@
         <i>hahahahhaha</i>
         <p @click="clicks">{{msg}}</p>
 
-        <Btn @change="change1"></Btn>
+        <!-- <Btn @change="change1"></Btn> -->
 
     </div>
 </template>
@@ -11,7 +11,7 @@
 <script>
 // import { Toast } from 'alucy'
 
-import Btn from '@/page/button/button'
+// import Btn from '@/page/button/button'
 
 import { Toast } from 'lucy-toast'
 
@@ -41,11 +41,12 @@ export default {
     	
     },
     components: {
-	    Btn
+	    // Btn
 	  },
     methods:{
     	clicks(){
-    		this.$toolTip('细胞信息提示')
+            // console.log(this.$children)
+    		// this.$anchu_toast('细胞信息提示')
     	},
 
         tap(){
