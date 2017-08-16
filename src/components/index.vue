@@ -4,15 +4,17 @@
         <!-- <p @click="clicks">{{msg}}</p>
 
         <Btn @change="change1"></Btn> -->
+
+        <iframe style="width:100%;height:800px" src="https://b2b.hzanchu.com/#/goodsDetails?id=171"></iframe>
         
         <!-- 按钮 -->
         <h1>按钮类</h1>
         <p>按钮类型 默认/danger/success/warning 四种 [type="danger"]</p>
         <p>
-            <lu_button @click="tap">默认按钮</lu_button>
-            <lu_button type="danger" @click="tap">危险按钮</lu_button>
-            <lu_button type="success" @click="tap">成功按钮</lu_button>
-            <lu_button type="warning" @click="tap">警告按钮</lu_button>
+            <lu_button @click="tapd">默认按钮</lu_button>
+            <lu_button type="danger" @click="tapa">危险按钮</lu_button>
+            <lu_button type="success" @click="tapb">成功按钮</lu_button>
+            <lu_button type="warning" @click="tapc">警告按钮</lu_button>
         </p>
 
         <p>滑过按钮 四种类型 同上 [:plain="true"]</p>
@@ -85,6 +87,15 @@
 
         <hr/>
 
+        <h1>PC端 信息弹窗提示</h1>
+        <p>弹窗类型 默认（info）/error/success/warning 四种 [type="danger"]</p>
+        <p>
+            <lu_button @click="tapd">默认按钮</lu_button>
+            <lu_button type="danger" @click="tapa">危险按钮</lu_button>
+            <lu_button type="success" @click="tapb">成功按钮</lu_button>
+            <lu_button type="warning" @click="tapc">警告按钮</lu_button>
+        </p>
+
     </div>
 </template>
 
@@ -115,12 +126,25 @@ export default {
             console.log(value)
             this.$lu_toast(`${value}`)
         },
-        tap(){
-            this.$lu_toast('lu_toast实例')
-            console.log(this.$children)
+        tap(){},
+        tapa(){
+            // this.$lu_toast('lu_toast实例')
 
-            this.$lu_message.error('lu_message实例')
+            this.$lu_message.error('危险 错误 提示')
         },
+        tapb(){
+
+            this.$lu_message.success('操作成功')
+        },
+        tapc(){
+
+            this.$lu_message.warning('警告提示')
+        },
+        tapd(){
+
+            this.$lu_message.info('默认提示框')
+        },
+
         toast(){
             
             this.$lu_toast({
