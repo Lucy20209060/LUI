@@ -139,10 +139,24 @@ export default {
         tapc(){
 
             this.$lu_message.warning('警告提示')
+
+            this.$anchu_message.info('we21e');
         },
         tapd(){
 
             this.$lu_message.info('默认提示框')
+
+            this.$anchu_messageBox.confirm('是否删除该商品？', {
+            confirmButtonText: '确定',
+            cancelButtonText: '取消',
+            type: 'networkAnomaly'
+        }).then(() => {
+
+            
+
+        }).catch(() => {
+                // 取消
+        });
         },
 
         toast(){

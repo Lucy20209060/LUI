@@ -79,28 +79,9 @@
 </script>
 
 <style scoped>
-    @font-face {font-family: "iconfont";
-        src: url('../assets/iconfont/iconfont.eot?t=1502870622562');
-        src: url('../assets/iconfont/iconfont.eot?t=1502870622562#iefix') format('embedded-opentype'),
-        url('../assets/iconfont/iconfont.woff?t=1502870622562') format('woff'),
-        url('../assets/iconfont/iconfont.ttf?t=1502870622562') format('truetype'),
-        url('../assets/iconfont/iconfont.svg?t=1502870622562#iconfont') format('svg');
-    }
-    .iconfont {
-      font-family:"iconfont" !important;
-      font-size:16px;
-      font-style:normal;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    .icon-warning:before { content: "\e627"; }
-    .icon-error:before { content: "\e628"; }
-    .icon-success:before { content: "\e629"; }
-    .icon-info:before { content: "\e62a"; }
-
 
     .ac_message{
-        box-shadow:0 0 24px 10px rgba(90,90,90,.12);
+        box-shadow:0 0 24px 10px rgba(160,160,160,.12);
         min-width:200px;
         padding:10px 12px;
         box-sizing:border-box;
@@ -108,6 +89,7 @@
         position:fixed;
         left:50%;
         top:30%;
+        opacity: .95;
 
         transform:translateX(-50%) scale(1);
         -ms-transform:translateX(-50%) scale(1);
@@ -184,7 +166,7 @@
         color: #009e4d;
     }
     .ac_message .icon-warning{
-        color: #f7ba2a;
+        color: #ffb35a;
     }
     .ac_message .icon-error{
         color: red;
