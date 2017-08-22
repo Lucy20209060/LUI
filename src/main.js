@@ -41,13 +41,23 @@ Vue.prototype.console = Console
 // Vue.use(sj);
 
 import LucyUI from './UI'
-import 'element-ui/lib/theme-default/index.css'
+// import 'element-ui/lib/theme-default/index.css'
 import './UI/lib/css/index.css';
 Vue.use(LucyUI);
 
-// import anchuToast from 'anchu-toast'
+
+// import LucyUI from '../static/anchu.min.js'
+// import './UI/lib/css/index.css';
+// Vue.use(LucyUI);
+
+
+// import anchuToast from './anchu-toast'
 // Vue.use(anchuToast);
 
+// import messageBox from './anchu-messageBox'
+// Vue.use(messageBox);
+
+console.log(Vue.prototype)
 
 
 Vue.config.productionTip = false

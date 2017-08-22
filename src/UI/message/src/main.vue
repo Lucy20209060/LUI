@@ -100,7 +100,7 @@
 
 
     .ac_message{
-        box-shadow:0 0 24px 10px rgba(90,90,90,.12);
+        box-shadow:0 0 24px 10px rgba(160,160,160,.12);
         min-width:200px;
         padding:10px 12px;
         box-sizing:border-box;
@@ -108,6 +108,7 @@
         position:fixed;
         left:50%;
         top:30%;
+        opacity: .95;
 
         transform:translateX(-50%) scale(1);
         -ms-transform:translateX(-50%) scale(1);
@@ -184,7 +185,7 @@
         color: #009e4d;
     }
     .ac_message .icon-warning{
-        color: #f7ba2a;
+        color: #ffb35a;
     }
     .ac_message .icon-error{
         color: red;

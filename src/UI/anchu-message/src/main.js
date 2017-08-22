@@ -38,7 +38,7 @@ var Message = function(options) {
   return instance.vm;
 };
 
-['success', 'warning', 'info', 'error'].forEach(type => {
+['success', 'warn', 'info', 'error'].forEach(type => {
   Message[type] = options => {
     if (typeof options === 'string') {
       options = {

@@ -6,13 +6,18 @@ import lu_switch from './switch';
 import lu_message from './message';
 import lu_messagebox from './message-box';
 
+import anchu_messageBox from './anchu-message-box';
+import anchu_message from './anchu-message';
+
 const components = [
 	lu_button,
   lu_radio,
   lu_badge,
   lu_toast,
   lu_switch,
-  lu_message
+  lu_message,
+  anchu_messageBox,
+  anchu_message
 ]
 
 const install = function(Vue) {
@@ -26,6 +31,8 @@ const install = function(Vue) {
   Vue.prototype.$lu_toast = lu_toast;
   Vue.prototype.$lu_message = lu_message;
   Vue.prototype.$lu_messagebox = lu_messagebox;
+  Vue.prototype.$anchu_messageBox = anchu_messageBox;
+  Vue.prototype.$anchu_message = anchu_message;
 
 };
 
@@ -42,5 +49,8 @@ export default {
   lu_toast,
   lu_switch,
   lu_message,
-  lu_messagebox
+  lu_messagebox,
+  
+  anchu_messageBox,
+  anchu_message
 }

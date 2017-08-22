@@ -22,105 +22,55 @@ export default {
     },
     methods:{
         tap0(){
-            this.$lu_messagebox({
-          title: '消息',
-          message: '这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容',
-          showCancelButton: true,
+                this.$lu_messagebox.confirm('是否确定删除该商品', '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
-          beforeClose: (action, instance, done) => {
-            if (action === 'confirm') {
-              instance.confirmButtonLoading = true;
-              instance.confirmButtonText = '执行中...';
-              setTimeout(() => {
-                done();
-                setTimeout(() => {
-                  instance.confirmButtonLoading = false;
-                }, 300);
-              }, 3000);
-            } else {
-              done();
-            }
-          }
-        }).then(action => {
-          // this.$message({
-          //   type: 'info',
-          //   message: 'action: ' + action
-          // });
-        console.log(1111)
+          type: 'authentication'
+        }).then(() => {
+          console.log(111111111)
+        }).catch(() => {
+          console.log(222222222)     
         });
         },
 
         tap1() {
-        this.$lu_messagebox.alert('这是一段内容', '标题名称', {
+        this.$anchu_messageBox.confirm('是否确定删除该商品', '提示', {
           confirmButtonText: '确定',
-          callback: action => {
-            // this.$message({
-            //   type: 'info',
-            //   message: `action: ${ action }`
-            // });
-          }
+          cancelButtonText: '取消',
+          type: 'cancelOrder'
+        }).then(() => {
+          console.log(111111111)
+        }).catch(() => {
+          console.log(222222222)     
         });
       },
 
 
       tap2() {
-        this.$lu_messagebox.confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+        this.$anchu_messageBox.confirm('是否确定删除该商品', '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
-          type: 'warning'
+          type: 'cancelRefund'
         }).then(() => {
-          // this.$message({
-          //   type: 'success',
-          //   message: '删除成功!'
-          // });
+          console.log(111111111)
         }).catch(() => {
-          // this.$message({
-          //   type: 'info',
-          //   message: '已取消删除'
-          // });          
+          console.log(222222222)     
         });
       },
-
 
 
 
       tap3() {
-        this.$lu_messagebox({
-          title: '消息',
-          message: '这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容',
-          showCancelButton: true,
+        this.$anchu_messageBox.confirm('是否确定删除该商品', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
-          beforeClose: (action, instance, done) => {
-            if (action === 'confirm') {
-              instance.confirmButtonLoading = true;
-              instance.confirmButtonText = '执行中...';
-              setTimeout(() => {
-                done();
-                setTimeout(() => {
-                  instance.confirmButtonLoading = false;
-                }, 300);
-              }, 3000);
-            } else {
-              done();
-            }
-          }
-        }).then(action => {
-          // this.$message({
-          //   type: 'info',
-          //   message: 'action: ' + action
-          // });
+          type: 'confirmReceipt'
+        }).then(() => {
+          console.log(111111111)
+        }).catch(() => {
+          console.log(222222222)     
         });
-      },
-
-
-
-
-
-
-
-    	
+      },	
 	}
 }
 </script>
