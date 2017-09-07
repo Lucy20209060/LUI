@@ -20,9 +20,11 @@ export default {
         }
     },
     mounted(){
+        console.log('this.$jsEncrypt',this.$jsEncrypt);
         let res = is_login();
-    	console.log(res);
+        console.log(res);
         this.func2();
+
     },
     filter:{
         'filters':function(value){

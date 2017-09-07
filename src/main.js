@@ -42,12 +42,12 @@ Vue.prototype.console = Console
 
 import LucyUI from './UI'
 // import 'element-ui/lib/theme-default/index.css'
-import './UI/lib/css/index.css';
+// import './UI/lib/css/index.css';
 Vue.use(LucyUI);
 
 
 // import LucyUI from '../static/anchu.min.js'
-// import './UI/lib/css/index.css';
+import './UI/lib/css/index.css';
 // Vue.use(LucyUI);
 
 
@@ -57,7 +57,16 @@ Vue.use(LucyUI);
 // import messageBox from './anchu-messageBox'
 // Vue.use(messageBox);
 
-console.log(Vue.prototype)
+
+
+import JsEncrypt from 'jsencrypt/bin/jsencrypt'
+// 将jsencrypt压入到Vue
+Vue.prototype.$jsEncrypt = JsEncrypt
+
+
+
+
+
 
 
 Vue.config.productionTip = false

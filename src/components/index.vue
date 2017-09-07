@@ -25,7 +25,7 @@
             <lu_button :plain="true" type="warning" @click="tap">警告按钮</lu_button>
         </p>
 
-        <p>按钮大小 超大/默认/小型/超小型 四种 [size="large"]</p>
+        <p>按钮大小 超大(large) / 默认 / 小型(small) / 超小型(mini) 四种 [size="large"]</p>
         <p>
             <lu_button type="danger" size="large">超大按钮</lu_button>
             <lu_button type="danger">默认按钮</lu_button>
@@ -95,6 +95,34 @@
             <lu_button type="success" @click="tapb">成功按钮</lu_button>
             <lu_button type="warning" @click="tapc">警告按钮</lu_button>
         </p>
+        
+        <hr/>
+
+        <h1>input输入框</h1>
+        <p>v-model="value"绑定值，maxlength最大输入长度 ，输入框大小 超大(large) / 默认 / 小型(small) / 超小型(mini) 四种 [size="large"],输入时触发@input=" "</p>
+        <p>
+            <lu_input 
+                v-model="inputValue0" 
+                maxlength="5" 
+                size="large" 
+                @input="changeInput"
+                @focus="focusInput"
+                @blur="blurInput"
+            />
+            <span>{{inputValue0}}</span>
+        </p>
+        <p>
+            <lu_input v-model="inputValue1"></lu_input>
+            <span>{{inputValue1}}</span>
+        </p>
+        <p>
+            <lu_input v-model="inputValue2" size="small" ></lu_input>
+            <span>{{inputValue2}}</span>
+        </p>
+        <p>
+            <lu_input v-model="inputValue3" size="mini"></lu_input>
+            <span>{{inputValue3}}</span>
+        </p>
 
     </div>
 </template>
@@ -106,10 +134,18 @@ export default {
         return {
             radio:1,
             witch1:true,
-            witch2:false
+            witch2:false,
+            inputValue0:null,
+            inputValue1:null,
+            inputValue2:null,
+            inputValue3:null,
         }
     },
     mounted(){
+
+        let jse = new this.$jsEncrypt.JSEncrypt()
+        let encrypted = jse.encrypt('Hello, world')
+        console.log(encrypted)
 
     },
     watch: {
@@ -118,6 +154,15 @@ export default {
         // }
     },
     methods:{
+        blurInput(){
+            console.log('blurInput失焦事件触发')
+        },
+        focusInput(){
+            console.log('focusInput聚焦事件触发')
+        },
+        changeInput(value){
+            console.log(value)
+        },
         change1(value){
             console.log(value)
             this.$lu_toast(`${value}`)

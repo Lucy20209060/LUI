@@ -21,21 +21,18 @@ export default {
     data () {
         return {
             msg: 'Welcome to Your Vue.js App 假装有个数据吧',
-            citys:[
-            	{
-                    id:1,
-                    name:'北京'
-                },
-                {
-                    id:2,
-                    name:'浙江'
-                },
-            ],
-            sheng:[],
         }
     },
     mounted(){
     	// this.is_login();
+
+        var tem = [1,2,3];
+
+        console.log(tem)
+
+        for(let i of tem){
+            console.log(i)
+        }
 
 
     	

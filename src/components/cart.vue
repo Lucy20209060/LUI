@@ -4,6 +4,10 @@
         <lu_button @click="tap1">大超哥</lu_button>
         <lu_button @click="tap2">大超哥</lu_button>
         <lu_button @click="tap3">大超哥</lu_button>
+
+        <video src="http://img-cdn.wanyouxi.com/video/20170601_mdzz_recommend_video.mp4" controls="controls">
+            your browser does not support the video tag
+        </video>
     </div>
 </template>
 
@@ -64,7 +68,7 @@ export default {
         this.$anchu_messageBox.confirm('是否确定删除该商品', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
-          type: 'confirmReceipt'
+          type: 'cancelRefund'
         }).then(() => {
           console.log(111111111)
         }).catch(() => {
@@ -86,4 +90,8 @@ export default {
 			}
 		}
 	}
+    video{
+        width: 300px;
+        height: 300px;
+    }
 </style>

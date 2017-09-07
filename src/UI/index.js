@@ -5,6 +5,7 @@ import lu_toast from './toast';
 import lu_switch from './switch';
 import lu_message from './message';
 import lu_messagebox from './message-box';
+import lu_input from './input';
 
 import anchu_messageBox from './anchu-message-box';
 import anchu_message from './anchu-message';
@@ -16,6 +17,9 @@ const components = [
   lu_toast,
   lu_switch,
   lu_message,
+  lu_input,
+
+
   anchu_messageBox,
   anchu_message
 ]
@@ -50,6 +54,7 @@ export default {
   lu_switch,
   lu_message,
   lu_messagebox,
+  lu_input,
   
   anchu_messageBox,
   anchu_message

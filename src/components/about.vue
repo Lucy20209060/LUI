@@ -17,19 +17,21 @@ export default {
         }
     },
     mounted(){
-    	this.lucy.fun2();
+        console.log('this.$jsEncrypt',this.$jsEncrypt);
+        // this.lucy.fun2();
 
-    	const params = {
-    		pid:2
-    	}
+        const params = {
+            pid:2
+        }
 
-    	getAdList(params).then(res => {
-    		console.log(1111)
-            console.log(res.data)
+        // getAdList(params).then(res => {
+        //  console.log(1111)
+     //        console.log(res.data)
             
-        }).catch(error => {
-            // console.log(error.data.data)
-        })
+     //    }).catch(error => {
+     //        // console.log(error.data.data)
+     //    })
+
 
     },
     methods:{
