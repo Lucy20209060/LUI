@@ -8,7 +8,7 @@
         <!-- <iframe style="width:100%;height:800px" src="https://b2b.hzanchu.com/#/goodsDetails?id=171"></iframe> -->
         
         <!-- 按钮 -->
-        <h1>按钮类</h1>
+        <h1>按钮类 lu_button</h1>
         <p>按钮类型 默认/danger/success/warning 四种 [type="danger"]</p>
         <p>
             <lu_button @click="tapd">默认按钮</lu_button>
@@ -54,7 +54,7 @@
 
         <hr/> -->
 
-        <h1>Badge 标记</h1>
+        <h1>Badge 标记 lu_badge</h1>
         <P>数据[:value="7245"] 隐藏Badge [:hidden="true"] 默认false，是否红点显示 [:isDot="true"] 默认 false 设置颜色[color="#333"] 默认 红色</P>
         <p>
             <lu_badge :value="97786" color="#333">
@@ -72,7 +72,7 @@
 
         <hr/>
 
-        <h1>移动端 信息弹窗提示</h1>
+        <h1>移动端 信息弹窗提示 this.$lu_toast</h1>
         <p>提示信息字符串[message:string], 显示位置[position:top/middle/boottom], 显示时间长度[duration:time] 添加自己的class[className="my-class"]</p>
         <p>
             <lu_button type="success" @click="toast">点击弹窗提示</lu_button>
@@ -80,14 +80,14 @@
 
         <hr/>
 
-        <h1>switch 开关</h1>
+        <h1>switch 开关 lu_switch</h1>
         <p>@change,@input事件，返回值 true/false , 绑定初始值[v-model=" "] , 禁用[:disabled="true"]</p>
         <lu_switch v-model="witch1" @change="change1">{{witch1}}</lu_switch>
         <lu_switch v-model="witch2" @input="input1" :disabled="true">{{witch2}}</lu_switch>
 
         <hr/>
 
-        <h1>PC端 信息弹窗提示</h1>
+        <h1>PC端 信息弹窗提示 this.$lu_message</h1>
         <p>弹窗类型 默认（info）/error/success/warning 四种 [type="danger"]</p>
         <p>
             <lu_button @click="tapd">默认按钮</lu_button>
@@ -98,7 +98,7 @@
         
         <hr/>
 
-        <h1>input输入框</h1>
+        <h1>input输入框 lu_input</h1>
         <p>v-model="value"绑定值，maxlength最大输入长度 ，输入框大小 超大(large) / 默认 / 小型(small) / 超小型(mini) 四种 [size="large"],输入时触发@input=" "</p>
         <p>
             <lu_input 

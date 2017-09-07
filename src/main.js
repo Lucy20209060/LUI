@@ -59,9 +59,9 @@ import './UI/lib/css/index.css';
 
 
 
-import JsEncrypt from 'jsencrypt/bin/jsencrypt'
+// import JsEncrypt from 'jsencrypt/bin/jsencrypt'
 // 将jsencrypt压入到Vue
-Vue.prototype.$jsEncrypt = JsEncrypt
+// Vue.prototype.$jsEncrypt = JsEncrypt
 
 
 
