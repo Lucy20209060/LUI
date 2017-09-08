@@ -7,6 +7,7 @@ import lu_message from './message';
 import lu_messagebox from './message-box';
 import lu_input from './input';
 import lu_tag from './tag';
+import lu_notification from './notification';
 
 import anchu_messageBox from './anchu-message-box';
 import anchu_message from './anchu-message';
@@ -20,6 +21,7 @@ const components = [
     lu_message,
     lu_input,
     lu_tag,
+    lu_notification,
 
 
     anchu_messageBox,
@@ -39,6 +41,7 @@ const install = function(Vue) {
     Vue.prototype.$lu_messagebox = lu_messagebox;
     Vue.prototype.$anchu_messageBox = anchu_messageBox;
     Vue.prototype.$anchu_message = anchu_message;
+    Vue.prototype.$lu_notify = lu_notification;
 
 };
 
@@ -58,6 +61,7 @@ export default {
     lu_messagebox,
     lu_input,
     lu_tag,
+    lu_notification,
 
     anchu_messageBox,
     anchu_message

@@ -17,7 +17,7 @@ export default {
         }
     },
     mounted(){
-        console.log('this.$jsEncrypt',this.$jsEncrypt);
+        // console.log('this.$jsEncrypt',this.$jsEncrypt);
         // this.lucy.fun2();
 
         const params = {

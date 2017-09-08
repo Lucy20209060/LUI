@@ -41,7 +41,7 @@ Vue.prototype.console = Console
 // Vue.use(sj);
 
 import LucyUI from './UI'
-// import 'element-ui/lib/theme-default/index.css'
+import 'element-ui/lib/theme-default/index.css'
 // import './UI/lib/css/index.css';
 Vue.use(LucyUI);
 

@@ -46,14 +46,6 @@
 
         <hr/>
 
-        <!-- <h1>单选框</h1>
-
-        <lu_radio v-model="radio" name="tem" label="1">aaa</lu_radio>
-        <lu_radio v-model="radio" name="tem" label="2">bbb</lu_radio>
-        <lu_radio v-model="radio" name="tem" label="3">ccc</lu_radio>
-
-        <hr/> -->
-
         <h1>Badge 标记 (lu_badge)</h1>
         <P>数据[:value="7245"] 隐藏Badge [:hidden="true"] 默认false，是否红点显示 [:isDot="true"] 默认 false 设置颜色[color="#333"] 默认 红色</P>
         <p>
@@ -139,6 +131,23 @@
             <lu_tag color="#009e4d" :closable="true" @close="closeTag(2)">自定义背景色标签</lu_tag>
         </p>
 
+        <hr/>
+
+        <h1>Notification通知 (this.$lu_notify)</h1>
+        <p>
+            <lu_button @click="notify2">不可自动关闭</lu_button>
+            <lu_button @click="notify1">可自动关闭</lu_button>
+        </p>
+        <P>
+            <lu_button @click="notify3">info类</lu_button>
+            <lu_button @click="notify4" type="success">success类</lu_button>
+            <lu_button @click="notify5" type="warning">warning类</lu_button>
+            <lu_button @click="notify6" type="danger">error类</lu_button>
+            <lu_button @click="notify7">偏移的消息</lu_button>
+        </P>
+
+
+
 
 
     </div>
@@ -171,42 +180,116 @@ export default {
         // }
     },
     methods:{
+        notify1(){
+            const h = this.$createElement;
+            console.log(h(
+                'p', 
+                { style: 'color: red'}, 
+                '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'
+                ))
+
+            this.$lu_notify({
+              title: '标题名称',
+              message: h(
+                'p', 
+                { style: 'color: red'}, 
+                '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'
+                )
+            });
+        },
+
+        notify2(){
+            this.$lu_notify({
+              title: '提示',
+              message: '这是一条不会自动关闭的消息',
+              duration: 0
+            });
+        },
+
+        notify3(){
+            this.$lu_notify({
+              title: '提示',
+              message: '这是一条提示消息',
+              type: 'info'
+            });
+        },
+
+        notify4(){
+            this.$lu_notify({
+              title: '成功',
+              message: '这是一条成功的提示消息',
+              type: 'success'
+            });
+        },
+        notify5(){
+            this.$lu_notify({
+              title: '警告',
+              message: '这是一条警告的提示消息',
+              type: 'warning'
+            });
+        },
+        notify6(){
+            this.$lu_notify({
+              title: '错误',
+              message: '这是一条错误的提示消息',
+              type: 'error'
+            });
+        },
+
+        notify7(){
+            this.$lu_notify({
+              title: '成功',
+              message: '这是一条成功的提示消息',
+              type: 'success',
+              offset: 100
+            });
+        },
+
         closeTag(index){
             console.log('closeTag事件触发',index)
         },
         blurInput(){
             console.log('blurInput失焦事件触发')
         },
+
         focusInput(){
             console.log('focusInput聚焦事件触发')
         },
+
         changeInput(value){
             console.log(value)
         },
+
         change1(value){
             console.log(value)
             this.$lu_toast(`${value}`)
         },
+
         input1(value){
             console.log(value)
             this.$lu_toast(`${value}`)
         },
+
         tap(){},
+
         tapa(){
             // this.$lu_toast('lu_toast实例')
 
             this.$lu_message.error('危险 错误 提示')
         },
+
         tapb(){
 
             this.$lu_message.success('操作成功')
         },
+
         tapc(){
 
             this.$lu_message.warning('警告提示')
 
             // this.$anchu_message.info('we21e');
         },
+
         tapd(){
 
             this.$lu_message.info('默认提示框')
