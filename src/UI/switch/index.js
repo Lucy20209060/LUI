@@ -1,1 +1,1 @@
-export { default } from './src/main.vue';
+export { default } from './src/main';

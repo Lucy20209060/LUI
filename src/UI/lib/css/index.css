@@ -1,6 +1,25 @@
 /*
 	全局默认样式
 */
+i,em{
+	font-style:normal;
+}
+[class*=" lu_icon_"], [class^=lu_icon_] {
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: baseline;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
 .is_relative{
 	position: relative;
 }
@@ -10,6 +29,7 @@
 .is_fixed{
 	position: fixed;
 }
+
 
 
 /*
@@ -193,7 +213,7 @@ button{
     text-align: center;
     white-space: nowrap;
     border: 1px solid #fff;
-    z-index: 99999;
+    z-index: 9999;
 }
 /*红点显示*/
 .lu_badge .lu_badge_isDot{

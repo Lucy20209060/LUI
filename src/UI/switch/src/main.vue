@@ -57,7 +57,7 @@
   };
 </script>
 
-<style>
+<style scoped>
   .lu_switch {
     display: -webkit-box;
     display: -ms-flexbox;
