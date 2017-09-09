@@ -50,6 +50,7 @@
 
     computed: {
       typeClass() {
+        // 根据type 返回指定class
         return this.type && typeMap[this.type] ? `el-icon-${ typeMap[this.type] }` : '';
       }
     },
