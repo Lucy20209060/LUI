@@ -135,8 +135,8 @@
 
         <h1>Notification通知 (this.$lu_notify)</h1>
         <p>
-            <lu_button @click="notify2">不可自动关闭</lu_button>
             <lu_button @click="notify1">可自动关闭</lu_button>
+            <lu_button @click="notify2">不可自动关闭</lu_button>
         </p>
         <P>
             <lu_button @click="notify3">info类</lu_button>
@@ -182,11 +182,11 @@ export default {
     methods:{
         notify1(){
             const h = this.$createElement;
-            console.log(h(
-                'p', 
-                { style: 'color: red'}, 
-                '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'
-                ))
+            // console.log(h(
+            //     'p', 
+            //     { style: 'color: red'}, 
+            //     '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'
+            //     ))
 
             this.$lu_notify({
               title: '标题名称',

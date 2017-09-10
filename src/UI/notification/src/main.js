@@ -21,6 +21,10 @@ var Notification = function(options) {
     data: options
   });
 
+  console.log(options)
+
+  console.log(options.message,isVNode(options.message))
+  // 是否有 
   if (isVNode(options.message)) {
     instance.$slots.default = [options.message];
     options.message = '';
