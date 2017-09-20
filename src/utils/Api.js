@@ -15,5 +15,8 @@ const Api = {
     },
 
 };
-console.log(Api)
 export default Api;
+
+export const order = {
+    created:'aaa/bbb/ccc'
+}
