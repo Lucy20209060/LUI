@@ -8,10 +8,10 @@
             <em>
                 <slot></slot>
             </em>
-            <i class="lu_tag_close lu_icon_close"
+            <i class="lu_tag_close lu_icon_close iconfont lu-icon-delete"
                 v-if="closable"
                 @click="handleClose"
-            >X</i>
+            ></i>
         </span>
     </transition>
 </template>
@@ -77,16 +77,11 @@
     .lu_tag_close{
         border-radius: 50%;
         text-align: center;
-        position: relative;
         cursor: pointer;
-        font-size: 12px;
-        -webkit-transform: scale(.75);
-        transform: scale(.75);
-        height: 18px;
+        font-size: 20px;
         width: 18px;
+        height: 18px;
         line-height: 18px;
-        top: 0;
-        right: -2px;
     }
     .lu_tag_close:hover{
         background-color:#fff;

@@ -7,7 +7,7 @@
             @mouseenter="clearTimer"
             @mouseleave="startTimer"
         >
-            <i v-if="visible" class="iconfont" :class="'icon-' + this.type"></i>
+            <i v-if="visible" class="iconfont" :class="'lu-icon-' + this.type"></i>
             <transition name="text">
                 <div v-if="visible" class="ac_message__group">
                     <slot><p>{{ message }}</p></slot>
@@ -79,7 +79,7 @@
 </script>
 
 <style scoped>
-    @font-face {font-family: "iconfont";
+    /*@font-face {font-family: "iconfont";
         src: url('../assets/iconfont/iconfont.eot?t=1502870622562');
         src: url('../assets/iconfont/iconfont.eot?t=1502870622562#iefix') format('embedded-opentype'),
         url('../assets/iconfont/iconfont.woff?t=1502870622562') format('woff'),
@@ -96,7 +96,7 @@
     .icon-warning:before { content: "\e627"; }
     .icon-error:before { content: "\e628"; }
     .icon-success:before { content: "\e629"; }
-    .icon-info:before { content: "\e62a"; }
+    .icon-info:before { content: "\e62a"; }*/
 
 
     .ac_message{
@@ -178,16 +178,16 @@
         left:0;
         top:0
     }
-    .ac_message .icon-info{
-        color: #999;
+    .ac_message .lu-icon-info{
+        color: #20a0ff;
     }
-    .ac_message .icon-success{
+    .ac_message .lu-icon-success{
         color: #009e4d;
     }
-    .ac_message .icon-warning{
+    .ac_message .lu-icon-warning{
         color: #ffb35a;
     }
-    .ac_message .icon-error{
+    .ac_message .lu-icon-error{
         color: red;
     }
 
