@@ -7,7 +7,8 @@
 </template>
 
 <script>
-import { getAdList } from '@/utils/http'
+// import { getAdList } from '@/utils/http'
+import Api from '@/utils/ajax'
 import api,{ order } from '@/utils/Api'
 export default {
 
@@ -22,20 +23,25 @@ export default {
         // console.log('this.$jsEncrypt',this.$jsEncrypt);
         // this.lucy.fun2();
 
-        this.console(api,order,'111')
+        // this.console(getAdList)
 
         const params = {
             pid:2
         }
 
-        getAdList(params).then(res => {
-            this.list = res.data
-        
-            console.log(res.data)
-            
-        }).catch(error => {
-            // console.log(error.data.data)
-        })
+        console.log(Api)
+
+        // Api.getlevel1({
+        //     pid:2
+        // }).then(res => {
+        //     // this.sendCode = true
+        //     // console.log(res.data.data)
+        //     // this.setTimeOut()
+        // }).catch(err => {
+        //     // _.alert('短信发送失败')
+
+        //     console.log('err',err.data)
+        // })
 
 
     },
