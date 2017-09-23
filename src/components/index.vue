@@ -145,6 +145,36 @@
             <lu_button @click="notify6" type="danger">error类</lu_button>
             <lu_button @click="notify7">偏移的消息</lu_button>
         </P>
+        
+        <hr/>
+        <h1>图标</h1>
+        <p class="lu-icon">
+            <lu_icon className="lu-icon-top2"></lu_icon>
+            <lu_icon className="lu-icon-down2"></lu_icon>
+            <lu_icon className="lu-icon-left2"></lu_icon>
+            <lu_icon className="lu-icon-right2"></lu_icon>
+        </p>
+        
+        <p class="lu-icon">
+            <lu_icon className="lu-icon-top"></lu_icon>
+            <lu_icon className="lu-icon-down"></lu_icon>
+            <lu_icon className="lu-icon-left"></lu_icon>
+            <lu_icon className="lu-icon-right"></lu_icon>
+        </p>
+
+        <p class="lu-icon">
+            <lu_icon className="lu-icon-info"></lu_icon>
+            <lu_icon className="lu-icon-info2"></lu_icon>
+            <lu_icon className="lu-icon-error"></lu_icon>
+            <lu_icon className="lu-icon-success"></lu_icon>
+        </p>
+
+        <p class="lu-icon">
+            <lu_icon className="lu-icon-search"></lu_icon>
+            <lu_icon className="lu-icon-delete"></lu_icon>
+            <lu_icon className="lu-icon-delete2"></lu_icon>
+            <lu_icon className="lu-icon-menu"></lu_icon>
+        </p>
 
 
 
@@ -324,5 +354,8 @@ export default {
 <style scoped lang="scss">
     .hello-wrap{
         padding-bottom: 500px;
+    }
+    .lu-icon i{
+        margin: 20px;
     }
 </style>
