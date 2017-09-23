@@ -16,7 +16,3 @@ const Api = {
 
 };
 export default Api;
-
-export const order = {
-    created:'aaa/bbb/ccc'
-}

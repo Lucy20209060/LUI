@@ -20,17 +20,18 @@ axios.interceptors.request.use((config) => {
 
 //返回状态判断
 axios.interceptors.response.use((res) =>{
-    if(!res.data.success){
+    
+    // console.log(res)
+    if(!res.data.error == 0){
         // _.toast(res.data.msg);
         return Promise.reject(res);
     }
     return res;
 }, (error) => {
-    // _.toast("网络异常", 'fail');
     return Promise.reject(error);
 });
 
-export function fetch(url, params) {
+export const fetch = (url, params) => {
     return new Promise((resolve, reject) => {
         axios.post(url, params)
             .then(response => {
@@ -44,106 +45,110 @@ export function fetch(url, params) {
     })
 }
 
-export function getlevel1(params){
-    console.log(params)
-    console.log(api.home.getlevel1)
+// 获取一级分类
+export const getlevel1 =  (params) => {
     return fetch(`${api.home.getlevel1}`, params)
 }
 
-export default {
-    /**
-     * 用户登录
-     */
-    Login(params) {
-        return fetch('/users/api/userLogin', params)
-    },
-
-    getlevel1(params){
-        // console.log(api.home.getlevel1)
-        return fetch('/dev.api.php?s=api/category/getlevel1', params)
-    },
-    
-    /**
-     * 用户注册
-     */
-    Regist(params) {
-        return fetch('/users/api/userRegist', params)
-    },
-
-    /**
-     * 发送注册验证码
-     */
-     RegistVerifiCode(tellphone) {
-         return fetch('/users/api/registVerifiCode', {tellphone: tellphone})
-     },
-
-    /**
-     * 获取约跑步列表
-     */
-    SportsList() {
-        return fetch('/api/sportList')
-    },
-
-    /**
-     * 获取约出行列表
-     */
-    TravelsList() {
-        return fetch('/api/travelList')
-    },
-
-    /**
-     * 获取约跑步详情
-     */
-    SportsDetail(id) {
-        return fetch('/api/sportDetail', {sportId: id})
-    },
-
-    /**
-     * 获取约出行详情
-     */
-    TravelsDetail(id) {
-        return fetch('/api/travelDetail', {travelId: id})
-    },
-
-    /**
-     * 获取出行活动点击次数
-     */
-    travelClicks(id) {
-        return fetch('/api/travelClickNum', {travelId: id})
-    },
-
-    /**
-     * 获取用户信息
-     */
-    UserInfo(id) {
-        return fetch('/users/api/userInfo', {userId: id})
-    },
-
-    /**
-     * 获取用户发布约行个数
-     */
-     getPubTotravelNum(id) {
-         return fetch('/users/api/getPubTotravelNum', {userId: id})
-     },
-
-     /**
-      * 获取用户自己发布的约行
-      */
-      getMyTravel(id) {
-          return fetch('/users/api/myTravel', {userId: id})
-      },
-
-    /**
-     * 发布约行活动
-     */
-    PostTravel(params) {
-        return fetch()
-    },
-
-    /**
-     * 获取全国JSON数据
-     */
-     getAddressJson() {
-         return fetch('/api/address')
-     }
+// 获取站点广告
+export const getAdList = async(params) => {
+    return await fetch(`${api.home.getAdList}`, params)
 }
+
+// export default {
+//     /**
+//      * 用户登录
+//      */
+//     Login(params) {
+//         return fetch('/users/api/userLogin', params)
+//     },
+
+//     getlevel1(params){
+//         // console.log(api.home.getlevel1)
+//         return fetch(`${api.home.getlevel1}`, params)
+//     },
+    
+//     /**
+//      * 用户注册
+//      */
+//     Regist(params) {
+//         return fetch('/users/api/userRegist', params)
+//     },
+
+//     /**
+//      * 发送注册验证码
+//      */
+//      RegistVerifiCode(tellphone) {
+//          return fetch('/users/api/registVerifiCode', {tellphone: tellphone})
+//      },
+
+//     /**
+//      * 获取约跑步列表
+//      */
+//     SportsList() {
+//         return fetch('/api/sportList')
+//     },
+
+//     /**
+//      * 获取约出行列表
+//      */
+//     TravelsList() {
+//         return fetch('/api/travelList')
+//     },
+
+//     /**
+//      * 获取约跑步详情
+//      */
+//     SportsDetail(id) {
+//         return fetch('/api/sportDetail', {sportId: id})
+//     },
+
+//     /**
+//      * 获取约出行详情
+//      */
+//     TravelsDetail(id) {
+//         return fetch('/api/travelDetail', {travelId: id})
+//     },
+
+//     /**
+//      * 获取出行活动点击次数
+//      */
+//     travelClicks(id) {
+//         return fetch('/api/travelClickNum', {travelId: id})
+//     },
+
+//     /**
+//      * 获取用户信息
+//      */
+//     UserInfo(id) {
+//         return fetch('/users/api/userInfo', {userId: id})
+//     },
+
+//     /**
+//      * 获取用户发布约行个数
+//      */
+//      getPubTotravelNum(id) {
+//          return fetch('/users/api/getPubTotravelNum', {userId: id})
+//      },
+
+//      /**
+//       * 获取用户自己发布的约行
+//       */
+//       getMyTravel(id) {
+//           return fetch('/users/api/myTravel', {userId: id})
+//       },
+
+//     /**
+//      * 发布约行活动
+//      */
+//     PostTravel(params) {
+//         return fetch()
+//     },
+
+//     /**
+//      * 获取全国JSON数据
+//      */
+//      getAddressJson() {
+//          return fetch('/api/address')
+//      }
+// }
