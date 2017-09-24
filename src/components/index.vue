@@ -1,11 +1,5 @@
 <template>
     <div class="hello-wrap">
-        <!-- <i>hahahahhaha</i> -->
-        <!-- <p @click="clicks">{{msg}}</p>
-
-        <Btn @change="change1"></Btn> -->
-
-        <!-- <iframe style="width:100%;height:800px" src="https://b2b.hzanchu.com/#/goodsDetails?id=171"></iframe> -->
         
         <!-- 按钮 -->
         <h1>按钮 (lu_button)</h1>
@@ -42,6 +36,12 @@
         <p>
             <lu_button type="danger" :disabled="true" @click="tap">按钮禁用</lu_button>
             <lu_button :plain="true" :disabled="true" type="success" @click="tap">按钮禁用</lu_button>
+        </p>
+        
+        <p>按钮添加图标 icon="lu-icon-delete2"</p>
+        <p>
+            <lu_button icon="lu-icon-delete2">默认按钮</lu_button>
+            <lu_button type="warning" icon="lu-icon-search">警告按钮</lu_button>
         </p>
 
         <hr/>
@@ -174,6 +174,10 @@
             <lu_icon className="lu-icon-delete"></lu_icon>
             <lu_icon className="lu-icon-delete2"></lu_icon>
             <lu_icon className="lu-icon-menu"></lu_icon>
+        </p>
+
+        <p>
+            <lu_button icon="lu-icon-delete2">默认按钮</lu_button>
         </p>
 
 

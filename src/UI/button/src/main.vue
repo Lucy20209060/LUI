@@ -13,7 +13,8 @@
         ]"
         :disabled="disabled"
     >
-        <slot></slot>
+        <i v-if="icon != ''" class="iconfont" :class="icon"></i>
+        <span><slot></slot></span>
     </button>
 
 </template>
@@ -38,6 +39,10 @@ export default {
         radius:{
             type: Boolean,
             default: true
+        },
+        icon:{
+            type: String,
+            default: ''
         },
         plain:Boolean,
         disabled:Boolean,
