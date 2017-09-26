@@ -5,9 +5,9 @@
             :class="[type ? 'lu_tag_' + type : '', {'is-hit': hit}]"
             :style="{backgroundColor: color}"
         >
-            <em>
-                <slot></slot>
-            </em>
+            <!-- <em> -->
+            <slot></slot>
+            <!-- </em> -->
             <i class="lu_tag_close lu_icon_close iconfont lu-icon-delete"
                 v-if="closable"
                 @click="handleClose"
@@ -77,11 +77,16 @@
     .lu_tag_close{
         border-radius: 50%;
         text-align: center;
+        position: relative;
         cursor: pointer;
-        font-size: 20px;
-        width: 18px;
+        font-size: 18px;
+        transform: scale(.75);
         height: 18px;
+        width: 18px;
         line-height: 18px;
+        vertical-align: middle;
+        top: -1px;
+        right: -2px;
     }
     .lu_tag_close:hover{
         background-color:#fff;

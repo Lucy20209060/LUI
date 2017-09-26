@@ -74,8 +74,10 @@
 
         <h1>switch 开关 (lu_switch)</h1>
         <p>@change,@input事件，返回值 true/false , 绑定初始值[v-model=" "] , 禁用[:disabled="true"]</p>
-        <lu_switch v-model="witch1" @change="change1">{{witch1}}</lu_switch>
-        <lu_switch v-model="witch2" @input="input1" :disabled="true">{{witch2}}</lu_switch>
+        <p>
+            <lu_switch v-model="witch1" @change="change1">{{witch1}}</lu_switch>
+            <lu_switch v-model="witch2" @input="input1" :disabled="true">{{witch2}}</lu_switch>
+        </p>
 
         <hr/>
 
@@ -148,37 +150,143 @@
         
         <hr/>
         <h1>图标</h1>
-        <p class="lu-icon">
-            <lu_icon className="lu-icon-top2"></lu_icon>
-            <lu_icon className="lu-icon-down2"></lu_icon>
-            <lu_icon className="lu-icon-left2"></lu_icon>
-            <lu_icon className="lu-icon-right2"></lu_icon>
-        </p>
-        
-        <p class="lu-icon">
-            <lu_icon className="lu-icon-top"></lu_icon>
-            <lu_icon className="lu-icon-down"></lu_icon>
-            <lu_icon className="lu-icon-left"></lu_icon>
-            <lu_icon className="lu-icon-right"></lu_icon>
-        </p>
 
-        <p class="lu-icon">
-            <lu_icon className="lu-icon-info"></lu_icon>
-            <lu_icon className="lu-icon-info2"></lu_icon>
-            <lu_icon className="lu-icon-error"></lu_icon>
-            <lu_icon className="lu-icon-success"></lu_icon>
-        </p>
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-top2"></lu_icon>
+            </li>
+            <li>lu-icon-top2</li>
+        </ul>
 
-        <p class="lu-icon">
-            <lu_icon className="lu-icon-search"></lu_icon>
-            <lu_icon className="lu-icon-delete"></lu_icon>
-            <lu_icon className="lu-icon-delete2"></lu_icon>
-            <lu_icon className="lu-icon-menu"></lu_icon>
-        </p>
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-down2"></lu_icon>
+            </li>
+            <li>lu-icon-down2</li>
+        </ul>
 
-        <p>
-            <lu_button icon="lu-icon-delete2">默认按钮</lu_button>
-        </p>
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-left2"></lu_icon>
+            </li>
+            <li>lu-icon-left2</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-right2"></lu_icon>
+            </li>
+            <li>lu-icon-right2</li>
+        </ul>
+
+        <br/>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-top"></lu_icon>
+            </li>
+            <li>lu-icon-top</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-down"></lu_icon>
+            </li>
+            <li>lu-icon-down</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-left"></lu_icon>
+            </li>
+            <li>lu-icon-left</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-right"></lu_icon>
+            </li>
+            <li>lu-icon-right</li>
+        </ul>
+
+        <br/>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-info"></lu_icon>
+            </li>
+            <li>lu-icon-info</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-info2"></lu_icon>
+            </li>
+            <li>lu-icon-info2</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-error"></lu_icon>
+            </li>
+            <li>lu-icon-error</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-success"></lu_icon>
+            </li>
+            <li>lu-icon-success</li>
+        </ul>
+
+        <br/>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-search"></lu_icon>
+            </li>
+            <li>lu-icon-search</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-delete"></lu_icon>
+            </li>
+            <li>lu-icon-delete</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-delete2"></lu_icon>
+            </li>
+            <li>lu-icon-delete2</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-menu"></lu_icon>
+            </li>
+            <li>lu-icon-menu</li>
+        </ul>
+
+        <br/>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-warning"></lu_icon>
+            </li>
+            <li>lu-icon-warning</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>......</li>
+        </ul>
+
+        <br/>
+
+        <ul class="lu-icon">
+            <li><lu_button icon="lu-icon-delete2">图标按钮</lu_button></li>
+        </ul>
 
 
 
@@ -359,7 +467,18 @@ export default {
     .hello-wrap{
         padding-bottom: 500px;
     }
-    .lu-icon i{
-        margin: 20px;
+    p{
+        padding-left: 40px;
+    }
+    .lu-icon{
+        display: inline-block;
+        width: 150px;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+        list-style: none;
+        i{
+            font-size: 30px;
+        }
     }
 </style>
