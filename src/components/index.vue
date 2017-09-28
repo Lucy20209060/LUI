@@ -288,6 +288,15 @@
             <li><lu_button icon="lu-icon-delete2">图标按钮</lu_button></li>
         </ul>
 
+        <hr/>
+
+        <h1>四位验证码输入框</h1>
+        
+        <p>1-6位验证码输入框  设置单个框的大小[cellWidth="50px"] change事件[@change="changeNum"]返回输入框中的值(string类型)</p>
+
+        <p>
+            <lu_code_input :num='3' cellWidth="50px" @change="changeNum" />
+        </p>
 
 
 
@@ -322,6 +331,9 @@ export default {
         // }
     },
     methods:{
+        changeNum(value){
+            console.log(value)
+        },
         notify1(){
             const h = this.$createElement;
             // console.log(h(

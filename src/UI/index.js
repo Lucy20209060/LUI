@@ -9,6 +9,7 @@ import lu_input from './input';
 import lu_tag from './tag';
 import lu_notification from './notification';
 import lu_icon from './icon';
+import lu_code_input from './code-input';
 
 import anchu_messageBox from './anchu-message-box';
 import anchu_message from './anchu-message';
@@ -24,6 +25,7 @@ const components = [
     lu_tag,
     lu_notification,
     lu_icon,
+    lu_code_input,
 
 
     anchu_messageBox,
@@ -64,6 +66,7 @@ export default {
     lu_tag,
     lu_notification,
     lu_icon,
+    lu_code_input,
 
     anchu_messageBox,
     anchu_message

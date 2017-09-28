@@ -20,19 +20,6 @@ export default {
             type:String,
             default:'lu-icon-info'
         }
-    },
-    watch: {
-        
-    },
-    computed: {
-      
-    },
-    mounted(){
-        
-    },
-    methods:{
-        
-        
     }
 }
 </script>
