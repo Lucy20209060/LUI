@@ -3,6 +3,11 @@
         <i>hahahahhaha</i>
         <input type="text" value="2324323">
         <p v-for="(item,index) in list" key="index">{{item.ad_name}}</p>
+
+
+        {{4234234 | timeStamp }}
+
+        <p :class="4234234 | timeStamp">{{4234234 | timeStamp }}</p>
     </div>
 </template>
 

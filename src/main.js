@@ -63,8 +63,9 @@ import './UI/lib/css/index.css';
 // 将jsencrypt压入到Vue
 // Vue.prototype.$jsEncrypt = JsEncrypt
 
-
-
+// 注册全局过滤器
+import * as filters from './utils/filter.js'
+Object.keys(filters).forEach(k => Vue.filter(k,filters[k]));
 
 
 
