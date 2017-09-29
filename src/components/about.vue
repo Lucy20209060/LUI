@@ -1,7 +1,7 @@
 <template>
     <div class="hello-wrap">
         <i>hahahahhaha</i>
-        <input type="text" value="2324323">
+        <input type="text" v-onlynumber />
         <p v-for="(item,index) in list" key="index">{{item.ad_name}}</p>
 
 
@@ -32,12 +32,9 @@ export default {
           const externalFetchedText = await fetch(`${api.home.getAdList}`, params)
           console.log(externalFetchedText); // Hello, es8
         }
-        sayHello();
+        // sayHello();
 
         console.log(11111111)
-
-
-
 
         let obj = { 
             name: 'lucy', 
@@ -97,15 +94,14 @@ export default {
         //     console.log('err',err)
         // })
 
-        // this.get();
-        // console.log(222222)
+        this.get();
 
     },
     methods:{
 
         get(){
             getAdList({
-                pid:2
+                pid:0
             }).then(res => {
                 // this.sendCode = true
                 console.log('getAdList',res)
