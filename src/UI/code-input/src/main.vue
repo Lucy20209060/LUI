@@ -59,7 +59,7 @@ export default {
         inputChange(){
             let arrTem = [];
             for(let i in this.nums){
-                if( i >=1 && i <= this.num){
+                if( i >=1 && i <= this.num ){
                     arrTem.push(this.nums[i] || 0)
                 }
                 
