@@ -8,3 +8,5 @@
  <lu_button type="success" @click="tapb">成功按钮</lu_button>
  <lu_button type="warning" @click="tapc">警告按钮</lu_button>
 ```
+
+<img src="./static/img/button-1.jpg" />
