@@ -13,7 +13,7 @@
 
 <p>滑过按钮 四种类型 同上 [:plain="true"]</p>
 
-<img src="./static/img/button-2.jpg" />
+<img src="./static/img/button-2.png" />
 
 <p>按钮大小 超大(large) / 默认 / 小型(small) / 超小型(mini) 四种 [size="large"]</p>
 
