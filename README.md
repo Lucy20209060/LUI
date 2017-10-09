@@ -1,4 +1,7 @@
 # LUI
+
+> A Vue.js UI Toolkit for Web
+
 ### 按钮
 
 <p>按钮类型 默认/danger/success/warning 四种 [type="danger"]</p>
