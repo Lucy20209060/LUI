@@ -463,7 +463,7 @@ export default {
         toast(){
             
             this.$lu_toast({
-              message: 'this.$lu_toast()实例',
+              message: '信息弹窗提示',
               position: 'top',
               duration: 1500
             });
