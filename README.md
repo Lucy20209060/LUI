@@ -37,7 +37,7 @@
 
 ### Badge 标记
 
-<p>数据[:value="97786"] 隐藏Badge [:hidden="true"] 默认false，是否红点显示 [:isDot="true"] 默认 false 设置颜色[color="#333"] 默认 红色</p>
+>数据[:value="97786"] 隐藏Badge [:hidden="true"] 默认false，是否红点显示 [:isDot="true"] 默认 false 设置颜色[color="#333"] 默认 红色
 
 ```html
 <lu_badge :value="97786" color="#333">
@@ -57,7 +57,7 @@
 
 ### 移动端 信息弹窗提示
 
-<p>提示信息字符串[message:string], 显示位置[position:top/middle/boottom], 显示时间长度[duration:time] 添加自己的class[className="my-class"]</p>
+>提示信息字符串[message:string], 显示位置[position:top/middle/boottom], 显示时间长度[duration:time] 添加自己的class[className="my-class"]
 
 ```javascript
 this.$lu_toast({
@@ -71,7 +71,7 @@ this.$lu_toast({
 
 ### switch 开关
 
-<p>@change,@input事件，返回值 true/false , 绑定初始值[v-model=" "] , 禁用[:disabled="true"]</p>
+>@change,@input事件，返回值 true/false , 绑定初始值[v-model=" "] , 禁用[:disabled="true"]
 
 ```html
 <lu_switch v-model="witch1" @change="change1">{{witch1}}</lu_switch>
