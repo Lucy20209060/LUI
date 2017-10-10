@@ -1,6 +1,6 @@
 # LUI
 
->A Vue.js UI Toolkit for Web
+	A Vue.js UI Toolkit for Web
 
 `卢超`<br />`2017/06/17`
 ****
