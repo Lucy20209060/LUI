@@ -117,5 +117,21 @@ this.$lu_message.error('危险错误提示')
 
 <img src="./static/img/input-1.png" />
 
+### tag标签
+
+>类型 (默认) / gray / primary / success / warning / danger 六种 也可以通过color="#009e4d"设置背景色 是否可关闭 :closable="true" 默认false
+
+```html
+<lu_tag :closable="true" @close="closeTag(1)">默认标签</lu_tag>
+<lu_tag type="gray" :closable="true">gray标签</lu_tag>
+<lu_tag type="primary" :closable="true">primary标签</lu_tag>
+<lu_tag type="success" :closable="true">success标签</lu_tag>
+<lu_tag type="warning" :closable="true">warning标签</lu_tag>
+<lu_tag type="danger" :closable="true">danger标签</lu_tag>
+<lu_tag color="#009e4d" :closable="true" @close="closeTag(2)">自定义背景色标签</lu_tag>
+```
+
+<img src="./static/img/tag-1.png" />
+
 
 	工作繁忙 未完待续......
