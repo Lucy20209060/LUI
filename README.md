@@ -83,5 +83,39 @@ this.$lu_toast({
 
 <img src="./static/img/switch-1.png" />
 
+### PC端 信息弹窗提示
+
+>默认（info）/error/success/warning 四种 [type="danger"]
+
+```javascript
+this.$lu_message({
+    type:'error',
+    message: '危险错误提示'
+})
+或
+this.$lu_message.error('危险错误提示')
+```
+
+<img src="./static/img/message-1.png" />
+<img src="./static/img/message-2.png" />
+<img src="./static/img/message-3.png" />
+<img src="./static/img/message-4.png" />
+
+### input输入框
+
+>v-model="value"绑定值，maxlength最大输入长度 ，输入框大小 超大(large) / 默认 / 小型(small) / 超小型(mini) 四种 [size="large"],输入时触发@input=" "
+
+```html
+<lu_input 
+    v-model="inputValue0" 
+    maxlength="5" 
+    size="large" 
+    @input="changeInput"
+    @focus="focusInput"
+    @blur="blurInput" />
+```
+
+<img src="./static/img/input-1.png" />
+
 
 	工作繁忙 未完待续......

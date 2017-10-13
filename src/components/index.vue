@@ -428,7 +428,12 @@ export default {
         tapa(){
             // this.$lu_toast('lu_toast实例')
 
-            this.$lu_message.error('危险 错误 提示')
+            this.$lu_message({
+                type:'error',
+                message: '危险 错误 提示'
+            })
+
+            // this.$lu_message.error('危险 错误 提示')
         },
 
         tapb(){
