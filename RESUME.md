@@ -28,10 +28,10 @@
 - 了解模块化开发`Commonjs` `AMD` `CMD`等规范
 - 了解`vue源码`及其原理,了解Element、iview、Mint等UI框架原理，掌握Vue插件、UI框架封装方法
 
->- 在github发布一套模仿Element的vue UI框架[LUI](https://github.com/Lucy20209060/LUI "LUI")<br />
->- 在npm上发布多款vue[插件](https://www.npmjs.com/~luchao)<br />
->- 关注SegmentFault、掘金、知乎、简书等前端相关专题,关注前端技术<br />
->- 坚持做`技术笔记`
+> 1.在github发布一套模仿Element的vue UI框架[LUI](https://github.com/Lucy20209060/LUI "LUI")<br />
+> 2.在npm上发布多款vue[插件](https://www.npmjs.com/~luchao)<br />
+> 3.关注SegmentFault、掘金、知乎、简书等前端相关专题,关注前端技术<br />
+> 4.坚持做`技术笔记`
 
 ***
 
@@ -62,7 +62,7 @@
 #### (2016.12——2017.11)杭州安厨电子商务管理有限公司
 
 > 职位：前端开发工程师<br />
-> 岗位职责：负责项目开发、维护、迭代，项目搭建，制定前端代码规范及基础代码，新人带领，技术攻关，参与需求评审
+> 岗位职责：负责项目开发、维护、迭代，项目搭建，制定前端代码规范及基础代码，新人带领，技术攻关，参与UI评审
 
 #### (2015.10——2016.11)景德镇红叶陶瓷股份有限公司
 
