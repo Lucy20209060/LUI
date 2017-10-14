@@ -3,11 +3,9 @@
 
 ### 联系方式
 
-|联系方式|17681886725|
-|---|---|
-|邮箱|luchaoet@icloud.com|
-|---|---|
-|github|https://github.com/Lucy20209060|
+|手机号码|邮箱|github|
+|---|---|---|
+|17681886725|luchaoet@icloud.com|https://github.com/Lucy20209060|
 
 ***
 
