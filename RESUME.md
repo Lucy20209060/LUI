@@ -1,15 +1,16 @@
 
 # 卢超 简历
 
-### 联系方式
+### 基本信息
 
-|属性|属性值|
-|---|---|
-|姓名|卢超|
-|工作年限|2年|
-|手机号码|17681886725|
-|邮箱|luchaoet@icloud.com|
-|github|https://github.com/Lucy20209060|
+|   属性 |  属性值  						|
+| :----: | :------------------------------- |
+| 姓名   |卢超								|
+|工作年限|2年								|
+|手机号码|17681886725						|
+|  邮箱  |luchaoet@icloud.com				|
+| github |https://github.com/Lucy20209060	|
+|  专业  |计算机科学与技术(本科)			|
 
 ***
 
@@ -27,9 +28,11 @@
 - 了解模块化开发Commonjs、AMD、CMD等规范
 - 了解vue源码及其原理,了解Element、iview、Mint等UI框架原理，掌握Vue插件、UI框架封装方法
 
-> - 在github发布一套模仿Element的vue UI框架[LUI](https://github.com/Lucy20209060/LUI "LUI")<br />
-> - 在npm上发布多款vue[插件](https://www.npmjs.com/~luchao)<br />
-> - 关注SegmentFault、掘金、知乎、简书等前端相关专题,关注前端技术<br />
-> - 坚持做技术笔记
+>- 在github发布一套模仿Element的vue UI框架[LUI](https://github.com/Lucy20209060/LUI "LUI")<br />
+>- 在npm上发布多款vue[插件](https://www.npmjs.com/~luchao)<br />
+>- 关注SegmentFault、掘金、知乎、简书等前端相关专题,关注前端技术<br />
+>- 坚持做技术笔记
 
 ***
+
+### 爱好
