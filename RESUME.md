@@ -1,7 +1,13 @@
 
 # 卢超 简历
 
-### 技能树
+|联系方式|邮箱|github|
+|---|---|---|
+|17681886725|luchaoet@icloud.com|https://github.com/Lucy20209060|
+
+***
+
+### 技能
 
 - 精通HTML4、HTML5、CSS3规范,熟悉W3C标准
 - 熟练掌握原生js,熟练掌握DOM操作，理解闭包、面向对象、原型链,熟悉ES6,ES7,ES8
@@ -17,3 +23,5 @@
 - 在npm上发布多款vue[插件](https://www.npmjs.com/~luchao)
 - 关注SegmentFault、掘金、知乎、简书等前端相关专题,关注前端技术
 - 坚持做技术笔记
+
+***
