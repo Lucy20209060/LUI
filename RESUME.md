@@ -37,11 +37,11 @@
 
 ### 项目经验
 
-#### 安厨供应链 `[移动端](https://m.hzanchu.com/home)` `[PC端](https://b2b.hzanchu.com)`
+#### 安厨供应链 [移动端](https://m.hzanchu.com/home) [PC端](https://b2b.hzanchu.com)
 
 > 安厨供应链，安厨电商旗下B2B平台，安厨电商六大版块之一
 
-#### 安厨微店 `微信项目`
+#### 安厨微店 (微信项目)
 
 > 安厨微店，安厨电商旗下B2C平台，安厨电商六大版块之一
 
