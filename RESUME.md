@@ -27,9 +27,9 @@
 - 了解模块化开发Commonjs、AMD、CMD等规范
 - 了解vue源码及其原理,了解Element、iview、Mint等UI框架原理，掌握Vue插件、UI框架封装方法
 
->在github发布一套模仿Element的vue UI框架[LUI](https://github.com/Lucy20209060/LUI "LUI")<br />
->在npm上发布多款vue[插件](https://www.npmjs.com/~luchao)<br />
->关注SegmentFault、掘金、知乎、简书等前端相关专题,关注前端技术<br />
->坚持做技术笔记
+> ·在github发布一套模仿Element的vue UI框架[LUI](https://github.com/Lucy20209060/LUI "LUI")<br />
+> ·在npm上发布多款vue[插件](https://www.npmjs.com/~luchao)<br />
+> ·关注SegmentFault、掘金、知乎、简书等前端相关专题,关注前端技术<br />
+> ·坚持做技术笔记
 
 ***
