@@ -1,5 +1,5 @@
 
-# 卢超 简历
+# 卢超
 
 ## Web前端开发工程师
 
@@ -30,8 +30,8 @@
 - 了解模块化开发`Commonjs` `AMD` `CMD`等规范
 - 了解`vue源码`及其原理,了解Element、iview、Mint等UI框架原理，掌握Vue插件、UI框架封装方法
 
-> 1.在github发布一套模仿Element的vue UI框架[LUI](https://github.com/Lucy20209060/LUI "LUI")<br />
-> 2.在npm上发布多款vue[插件](https://www.npmjs.com/~luchao)<br />
+> 1.在github发布一套模仿Element的vue UI框架——[LUI](https://github.com/Lucy20209060/LUI "LUI")<br />
+> 2.在npm上发布多款[vue插件](https://www.npmjs.com/~luchao)<br />
 > 3.关注SegmentFault、掘金、知乎、简书等前端相关专题,关注前端技术<br />
 > 4.坚持做`技术笔记`
 
@@ -41,7 +41,7 @@
 
 #### 安厨供应链 [移动端](https://m.hzanchu.com/home)、[PC端](https://b2b.hzanchu.com)
 
-> 功能：农产品电商B2B平台<br />
+> 功能：农产品电商B2B平台，较普遍电商网站，增加了批量下单、余额、物流匹配等功能<br />
 > 技术栈：webpack + vue + vuex<br />
 > 项目难点：`代码重构` `SEO` `批量下单购买` `面包屑` `地址物流匹配` `弹窗插件` `页面访问权限` `三级联动` `七鱼客服接入` `微信支付` `分享` `上拉加载下拉刷新`
 
