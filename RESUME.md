@@ -39,13 +39,13 @@
 
 #### 安厨供应链 [移动端](https://m.hzanchu.com/home) [PC端](https://b2b.hzanchu.com)
 
-> 安厨电商旗下B2B平台<br />
-> 技术栈：webpack + vue + vuex
+> 安厨电商旗下B2B平台
+	技术栈：webpack + vue + vuex
 
 #### 安厨微店 (微信项目)
 
-> 安厨电商旗下B2C平台<br />
-> 技术栈：webpack + vue + vuex
+> 安厨电商旗下B2C平台
+	技术栈：webpack + vue + vuex
 
 ***
 
