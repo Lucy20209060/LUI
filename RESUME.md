@@ -23,10 +23,11 @@
 - 熟练处理浏览器兼容问题，bug快速定位、解决
 - 熟练掌握`jQuery` `Zepto` `Bootstrap`框架
 - 熟悉`微信开发` `微信小程序`开发
-- 熟练运用`Vue+vuex` `React+redux` `Angular+redux`，结合`webpack`进行模块化开发
+- 熟练运用`Vue + Vuex` `React + Redux/Flux` `Angular + Redux`，结合`webpack`进行模块化开发
 - 熟练使用`Sass` `Less` `CSS Modules`
-- 了解`Node.js` `Express` `Next.js`
 - 熟练使用`git`
+- 了解`Node.js` `Express` `Next.js`
+- 了解前端自动化构建工具`webpack` `gulp`
 - 了解模块化开发`Commonjs` `AMD` `CMD`等规范
 - 了解`vue源码`及其原理,了解Element、iview、Mint等UI框架原理，掌握Vue插件、UI框架封装方法
 
