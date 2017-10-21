@@ -23,10 +23,10 @@
 - 熟练处理浏览器兼容问题，bug快速定位、解决
 - 熟练掌握`jQuery` `Zepto` `Bootstrap`框架
 - 熟悉`微信开发` `微信小程序`开发
-- 熟练运用`Vue + Vuex` `React + Redux/Flux` `Angular + Redux`，结合`webpack`进行模块化开发
+- 熟练运用`Vue + Vuex` `React + Redux/Flux` `Angular + Redux` `Next.js` `Nuxt.js`
 - 熟练使用`Sass` `Less` `CSS Modules`
 - 熟练使用`git`
-- 了解`Node.js` `Express` `Next.js`
+- 了解`Node.js` `Express`
 - 了解前端自动化构建工具`webpack` `gulp`
 - 了解模块化开发`Commonjs` `AMD` `CMD`等规范
 - 了解`vue源码`及其原理,了解Element、iview、Mint等UI框架原理，掌握Vue插件、UI框架封装方法
@@ -52,10 +52,15 @@
 > 技术栈：webpack + vue + vuex<br />
 项目难点：同上
 
-#### 安厨官网、安厨微店官网、微店运营管理后台系统、技术部OA系统
+#### 安厨微店官网、微店运营管理后台系统、技术部OA系统
 
-> 功能：官网，后台商品管理，OA系统集个人管理、部门信息、bug管理、绩效管理、任务管理、项目版本管理、api说明等功能<br />
+> 功能：后台商品运营管理，OA系统集个人管理、部门信息、bug管理、绩效管理、任务管理、项目版本管理、api说明等功能<br />
 > 技术栈：webpack + vue + vuex<br />
+项目难点：无
+
+#### [安厨官网](http://www.hzanchu.com)
+
+> 技术栈：Nuxt<br />
 项目难点：vue动画
 
 ***
