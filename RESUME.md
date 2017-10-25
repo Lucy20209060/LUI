@@ -23,7 +23,7 @@
 - 熟练处理浏览器兼容问题，bug快速定位、解决
 - 熟练掌握`jQuery` `Zepto` `Bootstrap`框架
 - 熟悉`微信开发` `微信小程序`开发
-- 熟练运用`Vue + Vuex` `React + Redux/Flux` `Angular` `Next.js` `Nuxt.js`
+- 熟练运用`Vue + Vuex` `React + Redux/Flux` `Angular2` `Next.js` `Nuxt.js`
 - 熟练使用`Sass` `Less` `CSS Modules`
 - 熟练使用`git`
 - 了解`Node.js` `Express`
@@ -60,8 +60,8 @@
 
 #### [安厨官网](http://www.hzanchu.com)
 
-> 技术栈：Nuxt<br />
-项目难点：vue动画
+> 技术栈：Nuxt.js<br />
+项目难点：无
 
 ***
 
