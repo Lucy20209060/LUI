@@ -8,12 +8,19 @@
         {{4234234 | timeStamp }}
 
         <p :class="4234234 | timeStamp">{{4234234 | timeStamp }}</p>
+
+        <button @click="setCache">cache</button>
+
+        <button @click="getCache">getCache</button>
     </div>
 </template>
 
 <script>
 // import { getAdList } from '@/utils/http'
 import api from '@/utils/Api'
+
+// import cache from '@/utils/cache'
+import cache from '@/utils/cache2'
 
 import { getlevel1,getAdList,fetch } from '@/utils/ajax'
 
@@ -111,6 +118,15 @@ export default {
 
                 console.log('err',err)
             })
+        },
+        setCache () {
+            cache.set('name', 'lucy', 10)
+            cache.set('name2', 'lucy2', 60)
+        },
+        getCache () {
+            let a = cache.get('name')
+            let b = cache.get('name2')
+            console.log(a,b)
         }
 
 	}
