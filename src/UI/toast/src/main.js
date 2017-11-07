@@ -1,5 +1,6 @@
 import Vue from 'vue';
 
+ // 创建构造器
 const ToastConstructor = Vue.extend(require('./main.vue'));
 
 // 使用过的实例数组
@@ -30,7 +31,7 @@ let returnAnInstance = instance => {
   }
 };
 
-// 删除DOM元素
+// 移除弹窗DOM元素
 let removeDom = event => {
   if (event.target.parentNode) {
     event.target.parentNode.removeChild(event.target);
@@ -40,7 +41,7 @@ let removeDom = event => {
 
 // 原型上挂载close方法 删除DOM元素
 ToastConstructor.prototype.close = function() {
-  // 隐藏并删除DOM元素
+  // 隐藏v-show
   this.visible = false;
   // 添加 过渡完成后删除事件
   this.$el.addEventListener('transitionend', removeDom);
@@ -88,7 +89,7 @@ let Toast = (options = {}) => {
 
   // DOM更新循环结束
   Vue.nextTick(function() {
-    // DOM卸载标志
+    // 显示v-show
     instance.visible = true;
     // 移除 过渡完成后删除事件
     instance.$el.removeEventListener('transitionend', removeDom);
