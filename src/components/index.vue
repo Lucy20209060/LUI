@@ -335,11 +335,14 @@ export default {
         },
         notify1(){
             const h = this.$createElement;
-            // console.log(h(
-            //     'p', 
-            //     { style: 'color: red'}, 
-            //     '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'
-            //     ))
+            console.log({
+              title: '标题名称',
+              message: h(
+                'p', 
+                { style: 'color: red'}, 
+                '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'
+                )
+            })
 
             this.$lu_notify({
               title: '标题名称',
@@ -347,7 +350,13 @@ export default {
                 'p', 
                 { style: 'color: red'}, 
                 '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'
-                )
+                ),
+              onClose:function(){
+                console.log('回调函数onClose')
+              },
+              onClick:function(){
+                console.log('回调函数onClick')
+              }
             });
         },
 

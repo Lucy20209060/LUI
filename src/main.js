@@ -41,7 +41,8 @@ Vue.prototype.console = Console
 // Vue.use(sj);
 
 import LucyUI from './UI'
-import 'element-ui/lib/theme-default/index.css'
+// Notification 样式 图标  暂时必须需要element Notification不需要了 
+// import 'element-ui/lib/theme-default/index.css'
 import './UI/lib/css/index.css';
 Vue.use(LucyUI);
 
