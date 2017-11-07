@@ -8,6 +8,7 @@ let instances = [];
 let seed = 1;
 
 var Message = function(options) {
+  console.log(typeof options)
   if (Vue.prototype.$isServer) return;
   options = options || {};
   if (typeof options === 'string') {
