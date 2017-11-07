@@ -50,6 +50,7 @@ const PopupManager = {
     }
   },
 
+  // z-index
   nextZIndex: function() {
     return PopupManager.zIndex++;
   },

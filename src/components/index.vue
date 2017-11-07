@@ -426,19 +426,33 @@ export default {
         tap(){},
 
         tapa(){
-            // this.$lu_toast('lu_toast实例')
+            // this.$lu_message('lu_toast实例')
+
+            // console.log(this.$lu_message('lu_toast实例'))
 
             this.$lu_message({
                 type:'error',
-                message: '危险 错误 提示'
+                message: '危险 错误 提示',
+                duration:30000,
+                showClose:true,
+                onClose:function(){
+                    console.log(11111111111)
+                }
             })
-
-            // this.$lu_message.error('危险 错误 提示')
         },
 
         tapb(){
 
-            this.$lu_message.success('操作成功')
+            this.$lu_message({
+                type:'success',
+                message: '操作成功',
+                duration:3000,
+                showClose:true,
+                onClose:function(e){
+                    // 
+                    console.log('回调返回的是实例',e)
+                }
+            })
         },
 
         tapc(){

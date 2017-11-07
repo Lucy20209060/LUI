@@ -7,12 +7,13 @@
             @mouseenter="clearTimer"
             @mouseleave="startTimer"
         >
-            <i v-if="visible" class="iconfont" :class="'lu-icon-' + this.type"></i>
+            <i v-show="visible" class="iconfont" :class="'lu-icon-' + this.type"></i>
             <transition name="text">
-                <div v-if="visible" class="ac_message__group">
+                <div v-show="visible" class="ac_message__group">
                     <slot><p>{{ message }}</p></slot>
                 </div>
             </transition>
+            <div v-if="showClose" class="el-message__closeBtn el-icon-close" @click="close"></div>
         </div>
     </transition>
 </template>
@@ -155,13 +156,14 @@
     .ac_message__group.is-with-icon{
         margin-left:0
     }
-    .ac_message__closeBtn{
-        top:3px;
-        right:0;
-        position:absolute;
-        cursor:pointer;
-        color:#bfcbd9;
-        font-size:14px
+    /*删除 X*/
+    .el-message__closeBtn {
+        top: 14px;
+        right: 13px;
+        position: absolute;
+        cursor: pointer;
+        color: #bfcbd9;
+        font-size: 14px;
     }
     .ac_message__closeBtn:hover{
         color:#97a8be
