@@ -1,5 +1,4 @@
 /*
-
 	使用localStorage完成对缓存管理
 
 	通过Cache.get(key)获取key对应的缓存数据 没有则返回null 或自定义返回值defaultValue
@@ -62,7 +61,7 @@ const cache = {
     this.setExpire()
   },
 
-  // 初始化expire localStorage => this.expire
+	// 初始化expire localStorage => this.expire
 	initExpire () {
 		let expire = localStorage.getItem(this.EXPIRE_KEY) || null
 		this.expire = expire !== null ? JSON.parse(expire) : {}
@@ -71,7 +70,7 @@ const cache = {
 	// 存储localStorage this.expire => localStorage
 	setExpire () {
 		localStorage.setItem(this.EXPIRE_KEY, JSON.stringify(this.expire))
-  }
+	}
  }
 
  export default cache;

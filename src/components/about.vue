@@ -39,9 +39,8 @@ export default {
           const externalFetchedText = await fetch(`${api.home.getAdList}`, params)
           console.log(externalFetchedText); // Hello, es8
         }
+        
         // sayHello();
-
-        console.log(11111111)
 
         let obj = { 
             name: 'lucy', 
@@ -58,6 +57,11 @@ export default {
                 }
             }
         }
+
+        // for of 不能循环对象
+        // for (let [k,v] of Object.entries(obj)) {
+        //     console.log(k,v);
+        // }
 
         // console.log(Object.getOwnPropertyDescriptors(obj))
         // console.log(obj)
@@ -102,6 +106,25 @@ export default {
         // })
 
         this.get();
+
+        // 构造函数 有prototype属性
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+            this.showMessage=function(){
+               console.log(this.name,this.age);
+            };
+        }
+        // Person.prototype = 
+        // 创建实例对象 有__proto__属性 指向Person.prototype属性
+        var person1=new Person('tan',26);
+        var person2=new Person('song',16);
+
+        person1.showMessage();
+
+    // console.log(person1,person2)
+
+        
 
     },
     methods:{
