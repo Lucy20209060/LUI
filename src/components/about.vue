@@ -24,21 +24,29 @@ import cache from '@/utils/cache2'
 
 import { getlevel1,getAdList,fetch } from '@/utils/ajax'
 
-export default {
 
+import miXins from './mixins';
+
+export default {
     name: 'hello',
+    mixins:[miXins],
     data () {
         return {
             msg: 'about',
             list:[]
         }
     },
+    created(){
+        console.log(111111)
+    },
     mounted(){
+        console.log(222222)
+        this.login()
 
-        async function sayHello(params) { 
-          const externalFetchedText = await fetch(`${api.home.getAdList}`, params)
-          console.log(externalFetchedText); // Hello, es8
-        }
+        // async function sayHello(params) { 
+        //   const externalFetchedText = await fetch(`${api.home.getAdList}`, params)
+        //   console.log(externalFetchedText); // Hello, es8
+        // }
         
         // sayHello();
 
@@ -105,7 +113,7 @@ export default {
         //     console.log('err',err)
         // })
 
-        this.get();
+        // this.get();
 
         // 构造函数 有prototype属性
         function Person(name,age){
