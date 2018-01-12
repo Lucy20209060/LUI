@@ -51,10 +51,8 @@ export default {
         */
         const arr5 = _.dropRight([1, 2, 3]);
         // [1,2]
-        const arr5 = _.dropRight([1, 2, 3],2);
+        const arr6 = _.dropRight([1, 2, 3],2);
         // [1]
-// => [1, 2]
-
 
 
 
