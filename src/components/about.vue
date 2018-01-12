@@ -37,10 +37,9 @@ export default {
         }
     },
     created(){
-        console.log(111111)
+        
     },
     mounted(){
-        console.log(222222)
         this.login()
 
         // async function sayHello(params) { 

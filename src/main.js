@@ -6,8 +6,12 @@ import router from './router'
 
 import store from '@/store'
 
-// import 'alucy/lib/style.min.css'
+import lodash from 'lodash'
+// import VueLodash from 'vue-lodash'
+// Vue.use(lodash)
 
+
+// import 'alucy/lib/style.min.css'
 // 项目api 挂载全局变量
 import api from '@/utils/Api'
 Vue.prototype.$api = api
