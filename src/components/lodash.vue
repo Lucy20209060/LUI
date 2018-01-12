@@ -38,7 +38,20 @@ export default {
         const arr3 = _.difference(arr0,['a','b'],['c',1])
         // [1]
 
-        console.log(arr3)
+        /*
+            drop
+            剔除掉数组的前n个元素 n默认等于1
+        */
+        const arr4 = _.drop(arr0,3)
+        // ['d',1]
+
+
+
+
+
+
+
+        console.log(arr4)
     },
     methods:{
         interval(){
