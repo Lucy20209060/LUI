@@ -14,12 +14,14 @@ export default {
         }
     },
     mounted(){
+        //====================================== Array ========================================
         /*
             chunk
             将某个数组按特定的长度划分成多个数组
         */
-        const arr1 = _.chunk(['a', 'b', 'c', 'd',1], 2) 
-        //[['a','b'],['c','d'],[1]]
+        const arr0 = ['a', 'b', 'c', 'd',1]
+        const arr1 = _.chunk(arr0, 2) 
+        // [['a','b'],['c','d'],[1]]
 
         /*
             compact
@@ -29,8 +31,14 @@ export default {
         const arr2 = _.compact([false,null,true,0,'',' ',undefined,NaN,'a',1])
         // [true, " ", "a", 1]
 
+        /*
+            difference 
+            后续数组中出现的值 会在第一个数组中剔除掉 并返回剔除干净后的第一个数组
+        */
+        const arr3 = _.difference(arr0,['a','b'],['c',1])
+        // [1]
 
-        console.log(arr2)
+        console.log(arr3)
     },
     methods:{
         interval(){
