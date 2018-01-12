@@ -53,9 +53,7 @@ export default {
         // [1,2]
         const arr6 = _.dropRight([1, 2, 3],2);
         // [1]
-
-
-
+        
         console.log(arr4)
     },
     methods:{
