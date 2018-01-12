@@ -45,8 +45,15 @@ export default {
         const arr4 = _.drop(arr0,3)
         // ['d',1]
 
-
-
+        /*
+            dropRight
+            删除掉数组右边的n个元素 n默认等于1
+        */
+        const arr5 = _.dropRight([1, 2, 3]);
+        // [1,2]
+        const arr5 = _.dropRight([1, 2, 3],2);
+        // [1]
+// => [1, 2]
 
 
 
