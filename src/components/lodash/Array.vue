@@ -102,7 +102,23 @@ export default {
         const str1 = _.first([])
         // undefined
 
-        console.log([1][0])
+        /*
+            flatten
+            降低多层嵌套数组的层级 默认降低一级
+        */
+        const arr9 = _.flatten([1, [2, 3, [4]]])
+        // [1,2, 3, [4]]
+
+        /*
+            flattenDeep
+            相当于 _.flatten(array,true)
+        */
+
+
+
+
+
+        console.log(arr10)
     },
     methods:{
 
