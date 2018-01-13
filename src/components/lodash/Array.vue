@@ -111,14 +111,32 @@ export default {
 
         /*
             flattenDeep
-            相当于 _.flatten(array,true)
+            将多层嵌套数组降为一层
+        */
+
+        /*
+            indexOf(array, value, [fromIndex=0])
+            获取value在数组array中的索引
+            fromIndex = n       从前索引值n开始
+                        -1      负数 从后开始
+                        true    二分法查找
+        */
+        _.indexOf([1, 2, 1, 2], 2);
+        // 1
+        _.indexOf([1, 2, 1, 2], 2, 2);
+        // 3
+        _.indexOf([1, 1, 2, 2], 2, true);
+        // 2
+
+        /*
+            initial
+            删除数组的最后一个元素
         */
 
 
 
 
-
-        console.log(arr10)
+        console.log()
     },
     methods:{
 
