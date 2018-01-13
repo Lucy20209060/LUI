@@ -81,12 +81,28 @@ export default {
         ];
 
         let returnIndex = _.findIndex(users, function(chr) {
-        return chr.user == 'barney';
+            return chr.user == 'barney';
         });
         // 0
 
+        const returnIndex2 = _.findIndex(users, { 'user': 'fred', 'active': false });
+        const returnIndex3 = _.findIndex(users,'active',false)
 
-        console.log(returnIndex)
+        /*
+            findLastIndex
+            与findIndex查询顺序相反
+        */
+
+        /*
+            first
+            获取数组的第一个元素
+        */
+        const str = _.first(arr0)
+        // 0
+        const str1 = _.first([])
+        // undefined
+
+        console.log([1][0])
     },
     methods:{
 
