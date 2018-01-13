@@ -70,9 +70,23 @@ export default {
         const arr8 = _.fill(arr01,5,1,4)
         // ["a", 5, 5, 5, 1]
 
+        /*
+            findIndex
+            返回匹配条件的第一个元素的索引值 未匹配返回 -1
+        */
+        var users = [
+            { 'user': 'barney',  'active': false },
+            { 'user': 'fred',    'active': false },
+            { 'user': 'pebbles', 'active': true }
+        ];
+
+        let returnIndex = _.findIndex(users, function(chr) {
+        return chr.user == 'barney';
+        });
+        // 0
 
 
-        console.log(arr8)
+        console.log(returnIndex)
     },
     methods:{
         interval(){
