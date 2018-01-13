@@ -47,14 +47,32 @@ export default {
 
         /*
             dropRight
-            删除掉数组右边的n个元素 n默认等于1
+            删除掉数组尾部的n个元素 n默认等于1
         */
         const arr5 = _.dropRight([1, 2, 3]);
         // [1,2]
         const arr6 = _.dropRight([1, 2, 3],2);
         // [1]
-        
-        console.log(arr4)
+
+        /*
+            dropRightWhile
+
+        */
+
+        /*
+            fill
+            替换掉数组中的元素
+        */
+        const arr01 = ['a', 'b', 'c', 'd',1]
+        // const arr7 = _.fill(arr01,5)
+        // [5,5,5,5,5]
+
+        const arr8 = _.fill(arr01,5,1,4)
+        // ["a", 5, 5, 5, 1]
+
+
+
+        console.log(arr8)
     },
     methods:{
         interval(){
