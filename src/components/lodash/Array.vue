@@ -180,6 +180,28 @@ export default {
         // arr14 = [5,15]
         // arr15 = [10,20,34]
 
+        /*
+            rest
+            获取数组除第一个元素外的所有元素
+        */
+
+        /*
+            slice
+            从start位置到end位置（不包括end位置）截取数组
+        */
+        const arr16 = _.slice([1,2,3,4,5,6,7,8,9,10],2,6)
+        // [3,4,5,6]
+
+        /*
+            sortedIndex
+        */
+
+        /*
+            take
+            从数组的起始位置，截取n个元素 n默认为1
+        */
+        _.take([1, 2, 3], 2);
+        // [1, 2]
 
 
 
@@ -189,7 +211,7 @@ export default {
 
 
 
-        console.log(arr14,arr15)
+        console.log(arr16)
     },
     methods:{
 
