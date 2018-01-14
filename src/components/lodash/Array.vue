@@ -153,17 +153,25 @@ export default {
         _.lastIndexOf([1, 2, 1, 2], 2);
         // 3
 
-
-
-
-
-
-
-
+        /*
+            pull
+            移除数组中所有和values相等的元素
+        */
+        const arr11 = [1,2,3,1,2,3]
+        _.pull(arr11,2,3)
         
 
 
-        console.log(arr10)
+
+
+
+
+
+
+
+
+
+        console.log(arr11)
     },
     methods:{
 
