@@ -133,10 +133,37 @@ export default {
             删除数组的最后一个元素
         */
 
+        /*
+            intersection
+            提取出多个数组中的相同元素
+        */
+        const arr10 = _.intersection([1,2,3],[2,3],[3])
+        // [3]
+
+        /*
+            last
+            取出数组中的最后一位元素
+        */
+
+        /*
+            lastIndexOf
+            从右便遍历数组 返回第一个匹配值的索引值 否则返回-1
+            与indexOf相似
+        */
+        _.lastIndexOf([1, 2, 1, 2], 2);
+        // 3
 
 
 
-        console.log()
+
+
+
+
+
+        
+
+
+        console.log(arr10)
     },
     methods:{
 
