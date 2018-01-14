@@ -155,11 +155,30 @@ export default {
 
         /*
             pull
-            移除数组中所有和values相等的元素
+            将数组中所有和values相等的元素移除
         */
         const arr11 = [1,2,3,1,2,3]
         _.pull(arr11,2,3)
         
+        /*
+            pullAt
+            移除数组中指定索引的元素 会改变这个数组 并返回移除的数组
+        */
+        const arr12 = [5,10,15,20,34]
+        const arr13 = _.pullAt(arr12,2,4)
+        // 删除后的数组   arr12 = [5, 10, 20]
+        // 删除的元素     arr13 = [15, 34]
+
+        /*
+            remove
+            移除数组中满足条件的所有的元素 改变这个数组 并返回移除的元素
+        */
+        const arr14 = [5,10,15,20,34]
+        const arr15 = _.remove(arr14,function(n){
+            return n % 2 == 0;
+        })
+        // arr14 = [5,15]
+        // arr15 = [10,20,34]
 
 
 
@@ -170,8 +189,7 @@ export default {
 
 
 
-
-        console.log(arr11)
+        console.log(arr14,arr15)
     },
     methods:{
 
