@@ -45,6 +45,7 @@ export default {
     },
     created() {
         console.log(this.small)
+        console.log(this.pageCount)
     }
 }
 </script>

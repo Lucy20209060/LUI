@@ -301,7 +301,11 @@
         <h1>分页</h1>
 
         <p>
-            <lu_pagination :small="true" />
+            <!-- page-count  pageCount -->
+            <lu_pagination :small="true" :page-count="34" /> 
+            <i class="iconfont lu-youjiantou"></i>
+            <i class="iconfont lu-zuojiantou"></i>
+
         </p>
 
 
