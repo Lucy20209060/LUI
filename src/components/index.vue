@@ -298,6 +298,12 @@
             <lu_code_input :num='3' cellWidth="50px" @change="changeNum" />
         </p>
 
+        <h1>分页</h1>
+
+        <p>
+            <lu_pagination />
+        </p>
+
 
 
     </div>
