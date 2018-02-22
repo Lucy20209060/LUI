@@ -15,9 +15,23 @@ export default {
         }
     },
     props: {
-        small:{
+        small: {
             type:Boolean,
             default:false
+        },
+        background: {
+            type:Boolean,
+            default:false
+        },
+        'page-count': Number,
+        'current-page': Number,
+        'prev-text': {
+            type:String,
+            default:'上一页'
+        },
+        'next-text': {
+            type:String,
+            default:'下一页'
         }
     }
 }
