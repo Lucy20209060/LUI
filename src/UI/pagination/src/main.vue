@@ -1,7 +1,7 @@
 <template>
     <i 
         class="iconfont lu_icon"
-    >
+    >{{small}}
     </i>
 </template>
 
@@ -15,24 +15,36 @@ export default {
         }
     },
     props: {
+        // 分页大小类型
         small: {
             type:Boolean,
             default:false
         },
+        // 页数背景色
         background: {
             type:Boolean,
             default:false
         },
-        'page-count': Number,
-        'current-page': Number,
-        'prev-text': {
+        // 总页数
+        pageCount: Number,
+        // 当前页
+        currentPage: {
+            type: Number,
+            default: 1
+        },
+        // 上一页字符
+        prevText: {
             type:String,
             default:'上一页'
         },
-        'next-text': {
+        // 下一页字符
+        nextText: {
             type:String,
             default:'下一页'
         }
+    },
+    created() {
+        console.log(this.small)
     }
 }
 </script>

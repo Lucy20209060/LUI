@@ -301,7 +301,7 @@
         <h1>分页</h1>
 
         <p>
-            <lu_pagination />
+            <lu_pagination :small="true" />
         </p>
 
 
