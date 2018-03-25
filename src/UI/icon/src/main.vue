@@ -9,13 +9,8 @@
 <script>
 export default {
     name: 'lu_icon',
-    data () {
-        return {
-            
-            
-        }
-    },
     props: {
+        // 图标class 使用 iconfont
         className:{
             type:String,
             default:'lu-icon-info'
