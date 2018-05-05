@@ -302,10 +302,7 @@
 
         <p>
             <!-- page-count  pageCount -->
-            <lu_pagination :small="true" :page-count="34" /> 
-            <i class="iconfont lu-youjiantou"></i>
-            <i class="iconfont lu-zuojiantou"></i>
-
+            <lu_pagination :small="true" :page-count="34" />
         </p>
 
 

@@ -1,8 +1,12 @@
 <template>
-    <i 
-        class="iconfont lu_icon"
-    >{{small}}
-    </i>
+    <div 
+        :class="[
+            small?'lu_pagination_small':''
+        ]"
+    >
+        <i class="iconfont lu-youjiantou"></i>
+        <i class="iconfont lu-zuojiantou"></i>
+    </div>
 </template>
 
 <script>
