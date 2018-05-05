@@ -302,7 +302,14 @@
 
         <p>
             <!-- page-count  pageCount -->
-            <lu_pagination :small="true" :page-count="34" />
+            <lu_pagination 
+                :small="true" 
+                :page-count="20" 
+                :current-page="currentPage" 
+                @current-change="handleCurrentChange"
+                @prev-click="prevClick"
+                @next-click="nextClick"
+            />
         </p>
 
 
@@ -322,6 +329,7 @@ export default {
             inputValue1:null,
             inputValue2:null,
             inputValue3:null,
+            currentPage:2
         }
     },
     mounted(){
@@ -337,6 +345,16 @@ export default {
         // }
     },
     methods:{
+        handleCurrentChange(val) {
+            console.log(`当前页: ${val}`);
+            this.currentPage = val
+        },
+        prevClick(val){
+            this.currentPage = val
+        },
+        nextClick(val){
+            this.currentPage = val
+        },
         changeNum(value){
             console.log(value)
         },
