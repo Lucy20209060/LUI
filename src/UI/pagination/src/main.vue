@@ -5,6 +5,12 @@
         ]"
     >
         <i class="iconfont lu-youjiantou"></i>
+        <em 
+            v-for="(item,index) in pageCount" 
+            :key="index"
+        >
+            {{item}}
+        </em>
         <i class="iconfont lu-zuojiantou"></i>
     </div>
 </template>
@@ -48,8 +54,8 @@ export default {
         }
     },
     created() {
-        console.log(this.small)
-        console.log(this.pageCount)
+        // console.log(this.small)
+        // console.log(this.pageCount)
     }
 }
 </script>
