@@ -350,9 +350,11 @@ export default {
             this.currentPage = val
         },
         prevClick(val){
+            console.log(`上一页`);
             this.currentPage = val
         },
         nextClick(val){
+            console.log(`下一页`);
             this.currentPage = val
         },
         changeNum(value){

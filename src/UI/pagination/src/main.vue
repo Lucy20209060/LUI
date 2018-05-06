@@ -106,11 +106,15 @@ export default {
 		-ms-user-select:none;
 		user-select:none;
         .iconfont{
-            width:35px;
+            min-width:35px;
             height:28px;
             text-align: center;
             line-height: 28px;
             cursor: pointer;
+            background:#f4f4f5;
+            margin: 0 5px;
+            font-size: 13px;
+            border-radius: 2px;
             &:hover{
                 color: #20a0ff;
             }
@@ -119,7 +123,11 @@ export default {
             @extend .iconfont
         }
         .current-page{
-            color: #20a0ff;
+            color: #fff;
+            background: #409EFF;
+            &:hover{
+                color: #fff;
+            }
         }
         .last-page{
             cursor: not-allowed;
