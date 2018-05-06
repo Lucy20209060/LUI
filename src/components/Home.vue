@@ -7,7 +7,7 @@
         <div class="home-title">哦哦哦哦哦哦</div>
         <div>
             <!-- 源码中可知in和of都可以 -->
-            <em v-for="(item,index) of itemData">{{item}}</em>
+            <em v-for="(item,index) of itemData" :key="index">{{item}}</em>
         </div>
 
     </div>
@@ -26,9 +26,9 @@ export default {
     },
     mounted(){
         console.log('this.$jsEncrypt',this.$jsEncrypt);
-        let res = is_login();
-        console.log(res);
-        this.func2();
+        // let res = is_login();
+        // console.log(res);
+        // this.func2();
 
     },
     filter:{

@@ -2,7 +2,7 @@
     <div class="hello-wrap">
         <i>hahahahhaha</i>
         <input type="text" v-onlynumber />
-        <p v-for="(item,index) in list" key="index">{{item.ad_name}}</p>
+        <p v-for="(item,index) in list" :key="index">{{item.ad_name}}</p>
 
 
         {{4234234 | timeStamp }}

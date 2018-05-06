@@ -3,15 +3,13 @@
         <i>hahahahhaha</i>
         <p @click="clicks">{{msg}}</p>
 
-        <!-- <Btn @change="change1"></Btn> -->
+        <button v-clickoutside="handleClose"></button>
 
     </div>
 </template>
 
 <script>
-// import { Toast } from 'alucy'
-
-// import Btn from '@/page/button/button'
+import Clickoutside from '../UI/src/utils/clickoutside';
 
 import { Toast } from 'lucy-toast'
 
@@ -22,10 +20,9 @@ export default {
         return {
             msg: 'Welcome to Your Vue.js App 假装有个数据吧',
         }
-    },
+	},
+	directives: { Clickoutside },
     mounted(){
-    	// this.is_login();
-
         var tem = [1,2,3];
 
         console.log(tem)
@@ -41,6 +38,9 @@ export default {
 	    // Btn
 	  },
     methods:{
+		handleClose(){
+			console.log('点击了外部')
+		},
     	clicks(){
             // console.log(this.$children)
     		// this.$anchu_toast('细胞信息提示')
