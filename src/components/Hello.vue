@@ -3,7 +3,7 @@
         <i>hahahahhaha</i>
         <p @click="clicks">{{msg}}</p>
 
-        <button v-clickoutside="handleClose"></button>
+        <button v-clickoutside="handleClose">点击外部试试这个触发函数</button>
 
     </div>
 </template>
@@ -11,7 +11,7 @@
 <script>
 import Clickoutside from '../UI/src/utils/clickoutside';
 
-import { Toast } from 'lucy-toast'
+// import { Toast } from 'lucy-toast'
 
 export default {
 	
