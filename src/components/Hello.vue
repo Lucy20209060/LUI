@@ -4,7 +4,7 @@
         <p @click="clicks">{{msg}}</p>
 
         <!-- <Btn @change="change1"></Btn> -->
-
+		<Datepicker/>
     </div>
 </template>
 
@@ -14,6 +14,7 @@
 // import Btn from '@/page/button/button'
 
 import { Toast } from 'lucy-toast'
+import Datepicker from './Datepicker.vue'
 
 export default {
 	
@@ -38,7 +39,8 @@ export default {
     	
     },
     components: {
-	    // Btn
+		// Btn
+		Datepicker
 	  },
     methods:{
     	clicks(){
@@ -82,7 +84,7 @@ export default {
 	$class-pre:'hello';
 	.#{$class-pre}{
 		&-wrap{
-			font-size: 30px;
+			// font-size: 30px;
 			i{
 				color: red;
 			}
