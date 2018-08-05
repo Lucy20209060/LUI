@@ -7,9 +7,8 @@ let instance;
 let instances = [];
 let seed = 1;
 
-var Notification = function(options) {
+var Notification = function(options = {}) {
   if (Vue.prototype.$isServer) return;
-  options = options || {};
   let userOnClose = options.onClose;
   let id = 'notification_' + seed++;
 
@@ -21,18 +20,19 @@ var Notification = function(options) {
     data: options
   });
 
-  console.log(options)
-
-  console.log(options.message,isVNode(options.message))
-  // 是否有 
   if (isVNode(options.message)) {
     instance.$slots.default = [options.message];
     options.message = '';
   }
+  // 删除时需要匹配id
   instance.id = id;
+
+  // 在文档之外渲染并且随后挂载到body
   instance.vm = instance.$mount();
   document.body.appendChild(instance.vm.$el);
+  // 显示
   instance.vm.visible = true;
+  // 设置z-index
   instance.dom = instance.vm.$el;
   instance.dom.style.zIndex = PopupManager.nextZIndex();
 
@@ -44,6 +44,7 @@ var Notification = function(options) {
   topDist += 16;
   instance.top = topDist;
   instances.push(instance);
+  console.log(instances)
   return instance.vm;
 };
 

@@ -1,5 +1,6 @@
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 export function hasOwn(obj, key) {
+  // 用来判断某个对象是否含有指定的属性
   return hasOwnProperty.call(obj, key);
 };
 

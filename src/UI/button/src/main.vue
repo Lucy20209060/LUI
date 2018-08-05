@@ -28,23 +28,29 @@ export default {
         }
     },
     props: {
+        // 类型
         type: {
             type: String,
             default: 'default'
         },
+        // 大小
         size:{
             type: String,
             default: ''
         },
+        // 是否圆角
         radius:{
             type: Boolean,
             default: true
         },
+        // icon图标
         icon:{
             type: String,
             default: ''
         },
+        // 滑过效果
         plain:Boolean,
+        // 是否禁用
         disabled:Boolean,
     },
     mounted(){
@@ -52,6 +58,7 @@ export default {
     },
     methods:{
         btnClick(evt){
+            // 触发当前实例上的事件
             this.$emit('click',evt);
         }
     }

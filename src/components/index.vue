@@ -298,6 +298,20 @@
             <lu_code_input :num='3' cellWidth="50px" @change="changeNum" />
         </p>
 
+        <h1>分页</h1>
+
+        <p>
+            <!-- page-count  pageCount -->
+            <lu_pagination 
+                :small="true" 
+                :page-count="20" 
+                :current-page="currentPage" 
+                @current-change="handleCurrentChange"
+                @prev-click="prevClick"
+                @next-click="nextClick"
+            />
+        </p>
+
 
 
     </div>
@@ -315,6 +329,7 @@ export default {
             inputValue1:null,
             inputValue2:null,
             inputValue3:null,
+            currentPage:2
         }
     },
     mounted(){
@@ -330,16 +345,31 @@ export default {
         // }
     },
     methods:{
+        handleCurrentChange(val) {
+            console.log(`当前页: ${val}`);
+            this.currentPage = val
+        },
+        prevClick(val){
+            console.log(`上一页`);
+            this.currentPage = val
+        },
+        nextClick(val){
+            console.log(`下一页`);
+            this.currentPage = val
+        },
         changeNum(value){
             console.log(value)
         },
         notify1(){
             const h = this.$createElement;
-            // console.log(h(
-            //     'p', 
-            //     { style: 'color: red'}, 
-            //     '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'
-            //     ))
+            console.log({
+              title: '标题名称',
+              message: h(
+                'p', 
+                { style: 'color: red'}, 
+                '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'
+                )
+            })
 
             this.$lu_notify({
               title: '标题名称',
@@ -347,7 +377,13 @@ export default {
                 'p', 
                 { style: 'color: red'}, 
                 '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'
-                )
+                ),
+              onClose:function(){
+                console.log('回调函数onClose')
+              },
+              onClick:function(){
+                console.log('回调函数onClick')
+              }
             });
         },
 
@@ -426,19 +462,33 @@ export default {
         tap(){},
 
         tapa(){
-            // this.$lu_toast('lu_toast实例')
+            // this.$lu_message('lu_toast实例')
+
+            // console.log(this.$lu_message('lu_toast实例'))
 
             this.$lu_message({
                 type:'error',
-                message: '危险 错误 提示'
+                message: '危险 错误 提示',
+                duration:30000,
+                showClose:true,
+                onClose:function(){
+                    console.log(11111111111)
+                }
             })
-
-            // this.$lu_message.error('危险 错误 提示')
         },
 
         tapb(){
 
-            this.$lu_message.success('操作成功')
+            this.$lu_message({
+                type:'success',
+                message: '操作成功',
+                duration:3000,
+                showClose:true,
+                onClose:function(e){
+                    // 
+                    console.log('回调返回的是实例',e)
+                }
+            })
         },
 
         tapc(){
@@ -466,7 +516,6 @@ export default {
         },
 
         toast(){
-            
             this.$lu_toast({
               message: '信息弹窗提示',
               position: 'top',

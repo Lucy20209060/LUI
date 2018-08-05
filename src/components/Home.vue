@@ -5,6 +5,10 @@
         <input v-model="datas" />
         <div class="home-title" @click="tap">哈哈哈哈哈哈</div>
         <div class="home-title">哦哦哦哦哦哦</div>
+        <div>
+            <!-- 源码中可知in和of都可以 -->
+            <em v-for="(item,index) of itemData" :key="index">{{item}}</em>
+        </div>
 
     </div>
 </template>
@@ -16,14 +20,15 @@ export default {
     data () {
         return {
             msg: 'home 页面aaaa',
-            datas:44
+            datas:44,
+            itemData:[1,2,3,4,5,6]
         }
     },
     mounted(){
         console.log('this.$jsEncrypt',this.$jsEncrypt);
-        let res = is_login();
-        console.log(res);
-        this.func2();
+        // let res = is_login();
+        // console.log(res);
+        // this.func2();
 
     },
     filter:{

@@ -6,8 +6,12 @@ import router from './router'
 
 import store from '@/store'
 
-// import 'alucy/lib/style.min.css'
+import lodash from 'lodash'
+// import VueLodash from 'vue-lodash'
+// Vue.use(lodash)
 
+
+// import 'alucy/lib/style.min.css'
 // 项目api 挂载全局变量
 import api from '@/utils/Api'
 Vue.prototype.$api = api
@@ -41,13 +45,14 @@ Vue.prototype.console = Console
 // Vue.use(sj);
 
 import LucyUI from './UI'
-import 'element-ui/lib/theme-default/index.css'
-// import './UI/lib/css/index.css';
+// Notification 样式 图标  暂时必须需要element Notification不需要了 
+// import 'element-ui/lib/theme-default/index.css'
+import './UI/lib/css/index.css';
 Vue.use(LucyUI);
 
 
 // import LucyUI from '../static/anchu.min.js'
-import './UI/lib/css/index.css';
+// import './UI/lib/css/index.css';
 // Vue.use(LucyUI);
 
 
