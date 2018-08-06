@@ -4,17 +4,13 @@
         <p @click="clicks">{{msg}}</p>
 
         <!-- <Btn @change="change1"></Btn> -->
-		<Datepicker/>
+		<lu_date_picker />
     </div>
 </template>
 
 <script>
 // import { Toast } from 'alucy'
-
-// import Btn from '@/page/button/button'
-
 import { Toast } from 'lucy-toast'
-import Datepicker from './Datepicker.vue'
 
 export default {
 	
@@ -40,7 +36,7 @@ export default {
     },
     components: {
 		// Btn
-		Datepicker
+		// Datepicker
 	  },
     methods:{
     	clicks(){

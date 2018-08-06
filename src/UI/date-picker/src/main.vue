@@ -54,6 +54,7 @@
 
 <script>
 export default {
+    name: 'lu_date_picker',
   data() {
     return {
       dateValue: "", // 输入框显示日期
@@ -259,7 +260,7 @@ export default {
 }
 .topbar .year,
 .topbar .month {
-  width: 60px;
+  width: 50px;
 }
 .year-list {
   height: 200px;

@@ -11,6 +11,7 @@ import lu_notification from './notification';
 import lu_icon from './icon';
 import lu_code_input from './code-input';
 import lu_pagination from './pagination';
+import lu_date_picker from './date-picker';
 
 import anchu_messageBox from './anchu-message-box';
 import anchu_message from './anchu-message';
@@ -28,7 +29,7 @@ const components = [
     lu_icon,
     lu_code_input,
     lu_pagination,
-
+    lu_date_picker,
 
     anchu_messageBox,
     anchu_message
@@ -70,6 +71,7 @@ export default {
     lu_icon,
     lu_code_input,
     lu_pagination,
+    lu_date_picker,
 
     anchu_messageBox,
     anchu_message

@@ -7,7 +7,6 @@ import Home from '@/components/Home'
 import about from '@/components/about'
 import cart from '@/components/cart'
 import test from '@/components/test'
-import array from '@/components/lodash/Array'
 Vue.use(Router)
 
 const routes = [
@@ -16,8 +15,7 @@ const routes = [
 	{ path: '/home',name: 'home',component: Home },
 	{ path: '/cart',name: 'cart',component: cart },
 	{ path: '/about',name: 'about',component: about },
-	{ path: '/test',name: 'test',component: test },
-	{ path: '/array',name: 'array',component: array }
+	{ path: '/test',name: 'test',component: test }
 ]
 
 const router = new Router({
