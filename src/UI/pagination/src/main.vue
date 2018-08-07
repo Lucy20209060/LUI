@@ -75,25 +75,46 @@ export default {
             const pageCount = this.pageCount;
             let pageArr = null;
             if(pageCount <= 8){
-                pageArr =  Array.from({ length: pageCount },(val, index) => {
+                // 页数较少时 直接渲染
+                pageArr =  Array.from({ length: pageCount },(value, index) => {
                     return index + 1;
                 })
             }else{
+                // 当前页数在中间 存在左右箭头
                 if(currentPage > 4 && currentPage <= pageCount-4){
-                    pageArr = [1, 'left', currentPage-2, currentPage-1, currentPage,currentPage+1, currentPage+2,'right',pageCount];
-                }else{
-
+                    pageArr = [1, 'left', currentPage-2, currentPage-1, currentPage,currentPage+1, currentPage+2, 'right', pageCount];
+                }
+                // 当前页数在左侧 存在右箭头 
+                else if(currentPage <= 4){
+                    pageArr = Array.from({ length: 6 },(value, index) => {
+                        return index + 1;
+                    })
+                    pageArr = pageArr.concat(['right', pageCount])
+                }
+                // 当前页数在右侧 存在左箭头
+                else if(currentPage > pageCount - 4){
+                    pageArr = Array.from({ length: 6 },(value, index) => {
+                        return pageCount - (5 - index)
+                    })
+                    pageArr = [1, 'left'].concat(pageArr);
                 }
             }
-            console.log(pageArr)
             return pageArr;
         }
     },
     created() {},
     methods:{
+        // 触发当前页变化函数
         currentChange(index){
-            // 触发当前页变化函数
-            this.$emit('current-change', index);
+            // 点击当前页 不触发
+            if(index === this.currentPage)return;
+            let i = index;
+            if(index === 'left'){
+                i = this.currentPage - 4;
+            }else if(index === 'right'){
+                i = this.currentPage + 4;
+            }
+            this.$emit('current-change', i);
         },
         nextChange(){
             if(this.currentPage >= this.pageCount) return;
