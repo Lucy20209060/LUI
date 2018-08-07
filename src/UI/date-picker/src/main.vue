@@ -102,8 +102,11 @@ export default {
   },
   computed: {
     dateList() {
-      //获取当月的天数
-      let currentMonthLength = new Date(this.tmpYear, this.tmpMonth + 1, 0).getDate();
+			/**
+			 * 获取某月的天数
+			 * new Date(2018, 8, 0).getDate() => 获取2018年7月份的天数
+			*/
+			let currentMonthLength = new Date(this.tmpYear, this.tmpMonth + 1, 0).getDate();
       //先将当月的日期塞入dateList
       let dateList = Array.from(
         { length: currentMonthLength },
@@ -113,7 +116,8 @@ export default {
             value: index + 1
           };
         }
-      );
+			);
+			// console.log(dateList)
       // 获取当月1号的星期是为了确定在1号前需要插多少天
       let startDay = new Date(this.tmpYear, this.tmpMonth, 1).getDay();
       // 确认上个月一共多少天
@@ -138,10 +142,6 @@ export default {
       return this.monthList[this.tmpMonth].label;
     },
     yearList() {
-        // Array.from({ length: 12 }, (value, index) => {
-        //     console.log(value,index)
-        //     this.tmpYear + index
-        // })
       return Array.from({ length: 12 }, (value, index) => this.tmpYear + index);
     }
   },
@@ -193,10 +193,9 @@ export default {
       if (item.previousMonth) this.tmpMonth--;
       if (item.nextMonth) this.tmpMonth++;
       let selectDay = new Date(this.tmpYear, this.tmpMonth, this.nowValue);
-      console.log(selectDay.getTime())
       this.dateValue = this.formatDate(selectDay.getTime());
       this.panelState = !this.panelState;
-      this.$emit("input", selectDay);
+      this.$emit("change", this.dateValue);
     },
     selectYear(item) {
       this.tmpYear = item;

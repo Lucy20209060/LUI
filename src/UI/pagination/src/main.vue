@@ -13,14 +13,14 @@
             @click="prevChange"
         ></i>
         <em 
-            v-for="(item,index) in pageCount" 
+            v-for="(item,index) in pageArr" 
             :key="index"
             :class="[
                 currentPage === item ? 'current-page' :''
             ]"
             @click='currentChange(item)'
         >
-            {{item}}
+            {{typeof item === 'number' ? item : '...'}}
         </em>
         <i 
             class="iconfont lu-icon-right" 
@@ -69,10 +69,27 @@ export default {
             default:'下一页'
         }
     },
-    created() {
-        // console.log(this.small)
-        // console.log(this.pageCount)
+    computed:{
+        pageArr:function() {
+            const currentPage = this.currentPage;
+            const pageCount = this.pageCount;
+            let pageArr = null;
+            if(pageCount <= 8){
+                pageArr =  Array.from({ length: pageCount },(val, index) => {
+                    return index + 1;
+                })
+            }else{
+                if(currentPage > 4 && currentPage <= pageCount-4){
+                    pageArr = [1, 'left', currentPage-2, currentPage-1, currentPage,currentPage+1, currentPage+2,'right',pageCount];
+                }else{
+
+                }
+            }
+            console.log(pageArr)
+            return pageArr;
+        }
     },
+    created() {},
     methods:{
         currentChange(index){
             // 触发当前页变化函数

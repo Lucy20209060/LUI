@@ -314,7 +314,7 @@
 
         <h1>时间选择器</h1>
         <p>
-            <lu_date_picker />
+            <lu_date_picker @change="dateOnChange" />
         </p>
 
 
@@ -334,7 +334,7 @@ export default {
             inputValue1:null,
             inputValue2:null,
             inputValue3:null,
-            currentPage:2
+            currentPage:6
         }
     },
     mounted(){
@@ -350,6 +350,10 @@ export default {
         // }
     },
     methods:{
+        dateOnChange(value) {
+            console.log(value)
+        },
+
         handleCurrentChange(val) {
             console.log(`当前页: ${val}`);
             this.currentPage = val
