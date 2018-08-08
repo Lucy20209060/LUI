@@ -20,9 +20,12 @@
                 currentPage === item ? 'current-page' :''
             ]"
             @click='currentChange(item)'
+            @mouseenter='moreMouseEnter(item)'
+            @mouseleave='moreMouseLeave(item)'
         >
             <i v-if="typeof item === 'number'">{{item}}</i>
-            <i v-else class='iconfont lu-icon-more'></i>
+            <i v-if="item === 'left' || item === 'right'" class='iconfont lu-icon-more'></i>
+            <i v-if="item === 'left-arrow'" class='iconfont lu-icon-left-arrow'></i>
         </em>
         <i 
             :class="[
@@ -110,6 +113,18 @@ export default {
     },
     created() {},
     methods:{
+        moreMouseEnter(item){
+            
+            // if(item === 'left')this.pageArr[1] = 'left-arrow';
+            // if(item === 'right')this.pageArr[this.pageArr.length - 2] = 'right-arrow';
+            // this.pageArr=[1,2,3,4]
+            // console.log(this.pageArr)
+        },
+        moreMouseLeave(item){
+            // if(item === 'left-arrow')this.pageArr[1] = 'left';
+            // if(item === 'right-arrow')this.pageArr[this.pageArr.length - 2] = 'right';
+            // console.log(this.pageArr)
+        },
         // 触发当前页变化函数
         currentChange(index){
             // 点击当前页 不触发
