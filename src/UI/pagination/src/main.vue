@@ -6,11 +6,12 @@
         ]"
     >
         <i 
-            class="iconfont lu-icon-left"
             :class="[
+                'iconfont',
                 currentPage <= 1 ? 'first-page' :''
             ]"
             @click="prevChange"
+            v-html="prevText"
         ></i>
         <em 
             v-for="(item,index) in pageArr" 
@@ -20,14 +21,16 @@
             ]"
             @click='currentChange(item)'
         >
-            {{typeof item === 'number' ? item : '...'}}
+            <i v-if="typeof item === 'number'">{{item}}</i>
+            <i v-else class='iconfont lu-icon-more'></i>
         </em>
         <i 
-            class="iconfont lu-icon-right" 
             :class="[
-                currentPage === pageCount ? 'last-page' :''
+                'iconfont',
+                currentPage >= pageCount ? 'last-page' :''
             ]"
             @click="nextChange"
+            v-html="nextText"
         ></i>
     </div>
 </template>
@@ -52,7 +55,10 @@ export default {
             default:false
         },
         // 总页数
-        pageCount: Number,
+        pageCount: {
+            type: Number,
+            default: 10
+        },
         // 当前页
         currentPage: {
             type: Number,
@@ -61,12 +67,12 @@ export default {
         // 上一页字符
         prevText: {
             type:String,
-            default:'上一页'
+            default:'&#xe612;'
         },
         // 下一页字符
         nextText: {
             type:String,
-            default:'下一页'
+            default:'&#xe60b;'
         }
     },
     computed:{
@@ -74,7 +80,7 @@ export default {
             const currentPage = this.currentPage;
             const pageCount = this.pageCount;
             let pageArr = null;
-            if(pageCount <= 8){
+            if(pageCount < 8){
                 // 页数较少时 直接渲染
                 pageArr =  Array.from({ length: pageCount },(value, index) => {
                     return index + 1;
@@ -110,18 +116,24 @@ export default {
             if(index === this.currentPage)return;
             let i = index;
             if(index === 'left'){
-                i = this.currentPage - 4;
+                // 递减 防止超过范围
+                const currentPage = this.currentPage - 5;
+                i = currentPage <= 0 ? 1 : currentPage;
             }else if(index === 'right'){
-                i = this.currentPage + 4;
+                // 递增 防止超过范围
+                const currentPage = this.currentPage + 5;
+                i = currentPage >= this.pageCount ? this.pageCount : currentPage;
             }
             this.$emit('current-change', i);
         },
+        // 下一页 按钮
         nextChange(){
             if(this.currentPage >= this.pageCount) return;
             // 触发当前页变化函数
             this.$emit('next-click', this.currentPage + 1);
             this.$emit('current-change', this.currentPage + 1);
         },
+        // 上一页 按钮
         prevChange(){
             if(this.currentPage <= 1) return;
             // 触发当前页变化函数
@@ -143,7 +155,8 @@ export default {
 		-moz-user-select:none;
 		-ms-user-select:none;
 		user-select:none;
-        .iconfont{
+        em{
+            // padding: 0 5px;
             min-width:35px;
             height:28px;
             text-align: center;
@@ -157,8 +170,10 @@ export default {
                 color: #20a0ff;
             }
         }
-        em{
-            @extend .iconfont
+        .iconfont{
+            @extend em;
+            padding:0 5px;
+            box-sizing: border-box;
         }
         .current-page{
             color: #fff;
@@ -169,6 +184,10 @@ export default {
         }
         .last-page{
             cursor: not-allowed;
+            color: #c0c4cc;
+            &:hover{
+                color: #c0c4cc;
+            }
         }
         .first-page{
             @extend .last-page

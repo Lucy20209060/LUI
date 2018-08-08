@@ -320,16 +320,19 @@
         </p>
 
         <h1>分页</h1>
-
+        <p>page-count 总页数 默认10</p>
+        <p>current-page 当前页数 默认1</p>
+        <p>prev-text / next-text  替代图标显示的 上一页 / 下一页 文字</p>
         <p>
             <!-- page-count  pageCount -->
             <lu_pagination 
                 :small="true" 
-                :page-count="20" 
+                :page-count="100" 
                 :current-page="currentPage" 
                 @current-change="handleCurrentChange"
                 @prev-click="prevClick"
                 @next-click="nextClick"
+                
             />
         </p>
 
