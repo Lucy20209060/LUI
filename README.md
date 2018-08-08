@@ -147,10 +147,12 @@ this.$lu_message.error('危险错误提示')
 
 <img src="./static/img/pagination-1.png" />
 
+****
 
-> git log 记录
+> log 记录
 
 * 2018-08-06 11:39:55 feat:DatePicker
 * 2018-08-08 00:41:05 feat:DatePicker组件完成
 * 2018-08-08 10:34:49 feat:添加若干iconfont图标
-* 2018-08-08 11:33:52 feat:完善lu_pagination组件* 2018-08-08 14:49:34 docs:添加pagination分页器文档
+* 2018-08-08 11:33:52 feat:完善lu_pagination组件
+* 2018-08-08 14:49:34 docs:添加pagination分页器文档* 2018-08-08 14:54:00 docs:添加pagination分页器文档
