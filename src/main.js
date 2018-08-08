@@ -48,6 +48,8 @@ import LucyUI from './UI'
 // Notification 样式 图标  暂时必须需要element Notification不需要了 
 // import 'element-ui/lib/theme-default/index.css'
 import './UI/lib/css/index.css';
+import './UI/lib/css/iconfont.css'
+
 Vue.use(LucyUI);
 
 

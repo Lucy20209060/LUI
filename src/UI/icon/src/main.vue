@@ -1,22 +1,18 @@
 <template>
-    <i 
-        class="iconfont lu_icon" 
-        :class="className"
-    >
-    </i>
+    <i :class="['iconfont', 'lu_icon', className]"></i>
 </template>
 
 <script>
-export default {
-    name: 'lu_icon',
-    props: {
-        // 图标class 使用 iconfont
-        className:{
-            type:String,
-            default:'lu-icon-info'
+    export default {
+        name: 'lu_icon',
+        props: {
+            // 图标class 使用 iconfont
+            className:{
+                type:String,
+                default:'lu-icon-info'
+            }
         }
     }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

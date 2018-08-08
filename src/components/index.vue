@@ -279,6 +279,27 @@
         </ul>
 
         <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-more"></lu_icon>
+            </li>
+            <li>lu-icon-more</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-left-arrow"></lu_icon>
+            </li>
+            <li>lu-icon-left-arrow</li>
+        </ul>
+
+        <ul class="lu-icon">
+            <li>
+                <lu_icon className="lu-icon-right-arrow"></lu_icon>
+            </li>
+            <li>lu-icon-right-arrow</li>
+        </ul>
+
+        <ul class="lu-icon">
             <li>......</li>
         </ul>
 
