@@ -24,8 +24,7 @@
             @mouseleave='moreMouseLeave(item)'
         >
             <i v-if="typeof item === 'number'">{{item}}</i>
-            <i v-if="item === 'left' || item === 'right'" class='iconfont lu-icon-more'></i>
-            <i v-if="item === 'left-arrow'" class='iconfont lu-icon-left-arrow'></i>
+            <i v-else :ref="item" class='iconfont lu-icon-more'></i>
         </em>
         <i 
             :class="[
@@ -113,17 +112,15 @@ export default {
     },
     created() {},
     methods:{
+        // 省略号鼠标滑过显示对应的左右箭头
         moreMouseEnter(item){
-            
-            // if(item === 'left')this.pageArr[1] = 'left-arrow';
-            // if(item === 'right')this.pageArr[this.pageArr.length - 2] = 'right-arrow';
-            // this.pageArr=[1,2,3,4]
-            // console.log(this.pageArr)
+            if(this.$refs[item] === undefined)return;
+            this.$refs[item][0].setAttribute('class',`iconfont lu-icon-${item}-arrow`);           
         },
+        // 左右箭头鼠标滑出 显示省略号
         moreMouseLeave(item){
-            // if(item === 'left-arrow')this.pageArr[1] = 'left';
-            // if(item === 'right-arrow')this.pageArr[this.pageArr.length - 2] = 'right';
-            // console.log(this.pageArr)
+            if(this.$refs[item] === undefined)return;
+            this.$refs[item][0].setAttribute('class',`iconfont lu-icon-more`);
         },
         // 触发当前页变化函数
         currentChange(index){
