@@ -76,7 +76,7 @@
         <p>@change,@input事件，返回值 true/false , 绑定初始值[v-model=" "] , 禁用[:disabled="true"]</p>
         <p>
             <lu_switch v-model="witch1" @change="change1">{{witch1}}</lu_switch>
-            <lu_switch v-model="witch2" @input="input1" :disabled="true">{{witch2}}</lu_switch>
+            <lu_switch v-model="witch2" @input="input1" :disabled="true"></lu_switch>
         </p>
 
         <hr/>
@@ -309,7 +309,7 @@
             <li><lu_button icon="lu-icon-delete2">图标按钮</lu_button></li>
         </ul>
 
-        <hr/>
+        <hr>
 
         <h1>四位验证码输入框</h1>
         
@@ -318,6 +318,8 @@
         <p>
             <lu_code_input :num='3' cellWidth="50px" @change="changeNum" />
         </p>
+
+        <hr>
 
         <h1>分页</h1>
         <p>page-count 总页数 默认10</p>
@@ -336,10 +338,22 @@
             />
         </p>
 
+        <hr>
+
         <h1>时间选择器</h1>
         <p>
             <lu_date_picker @change="dateOnChange" />
         </p>
+
+        <hr>
+
+        <h1>Tabs 标签页</h1>
+
+        <p>
+            <lu_tab :tabs="tabs"/>
+        </p>
+
+        <hr>
 
 
 
@@ -358,7 +372,30 @@ export default {
             inputValue1:null,
             inputValue2:null,
             inputValue3:null,
-            currentPage:6
+            currentPage:6,
+
+            tabs:[
+                {
+                    title:"标题1",
+                    value:1,
+                    content:'哈哈哈哈哈哈哈哈哈'
+                },
+                {
+                    title:"标题2标题2",
+                    value:2,
+                    content:'呵呵呵呵呵呵'
+                },
+                {
+                    title:"标题3标题3标题3标题3",
+                    value:3,
+                    content:'嘿嘿嘿嘿嘿'
+                },
+                {
+                    title:"标题4标题4标题4标题4",
+                    value:4,
+                    content:'哟哟哟哟哟哟哟哟'
+                },
+            ]
         }
     },
     mounted(){
@@ -483,12 +520,12 @@ export default {
         },
 
         change1(value){
-            console.log(value)
+            // console.log(value)
             this.$lu_toast(`${value}`)
         },
 
         input1(value){
-            console.log(value)
+            // console.log(value)
             this.$lu_toast(`${value}`)
         },
 

@@ -28,7 +28,7 @@
     name: 'lu_switch',
     data() {
       return {
-        // visible: false
+        
       }
     },
     props: {
@@ -59,13 +59,10 @@
 
 <style scoped>
   .lu_switch {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: inline-flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .lu_switch * {
     pointer-events: none;

@@ -301,7 +301,8 @@ export default {
 .date-panel {
   width: 210px;
   box-shadow: 0 0 8px #ccc;
-  background: #fff;
+	background: #fff;
+	position: absolute;
 }
 ul {
   list-style: none;
