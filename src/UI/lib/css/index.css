@@ -4,6 +4,10 @@
 i,em{
 	font-style:normal;
 }
+dl,dt,dd{
+	margin: 0;
+	padding: 0;
+}
 [class*=" lu_icon_"], [class^=lu_icon_] {
     speak: none;
     font-style: normal;

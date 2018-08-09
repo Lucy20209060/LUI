@@ -5,12 +5,12 @@
                 v-for="(item,index) in tabs"
                 :key="index"
                 :class="[
-                    currentValue === item.value ? 'tabActive' : null
+                    currentValue === index ? 'tabActive' : null
                 ]"
-                @click="currentValueChange(item)"
+                @click="currentValueChange(index)"
             >{{item.title}}</span>
         </dt>
-        <dd></dd>
+        <dd>{{tabs[currentValue].content}}</dd>
     </dl>
 </template>
 
@@ -19,7 +19,7 @@ export default {
     name: 'lu_tab',
     data () {
         return {
-            currentValue: this.tabs[0].value
+            currentValue: 0
         }
     },
     props: {
@@ -32,10 +32,9 @@ export default {
         console.log(this.currentValue)
     },
     methods:{
-        currentValueChange(item){
-            if(!item.value)return console.error('not value');
-            this.currentValue = item.value;
-            // console.log(item)
+        currentValueChange(index){
+            if(!this.tabs[index].value)return console.error('not value');
+            this.currentValue = index;
         }
     }
 }
@@ -44,7 +43,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .lu_tab{
-        margin: 0;
+        
     }
     .lu_tab dt{
         display: flex;
@@ -62,9 +61,28 @@ export default {
         cursor: pointer;
         color: #333;
         transition: color .3s;
+        position: relative;
     }
     .lu_tab dt span:hover,
     .lu_tab dt span.tabActive{
         color: #409eff;
+    }
+    .lu_tab dt span:after{
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 2px;
+        left: 50%;
+        bottom: -2px;
+        background:transparent;
+        transition: all .3s;
+    }
+    .lu_tab dt span.tabActive:after{
+        width: 100%;
+        left: 0;
+        background:#409eff;
+    }
+    .lu_tab dd{
+        padding-top: 15px;
     }
 </style>
