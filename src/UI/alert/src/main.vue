@@ -1,25 +1,29 @@
 <template>
-    <div 
-        class="lu_alert"
-        :class="alertClass"
-    >
-        <i 
-            v-if="showIcon" 
-            :class="[
-                `iconfont ${icon}`,
-                title ? 'istitle' : null
-            ]"
-        ></i>
-        <p class="title_desc">
-            <span 
+    <transition name="lu_alert_fade">
+        <div 
+            class="lu_alert"
+            :class="alertClass"
+            v-show="visible"
+        >
+            <i 
+                v-if="showIcon" 
                 :class="[
+                    `iconfont ${icon}`,
                     title ? 'istitle' : null
-                ]" 
-                v-if="title"
-            >{{title}}</span>
-            <em>{{description}}</em>
-        </p>
-    </div>
+                ]"
+            ></i>
+            <p class="title_desc">
+                <span 
+                    :class="[
+                        title ? 'istitle' : null
+                    ]" 
+                    v-if="title"
+                >{{title}}</span>
+                <em>{{description}}</em>
+            </p>
+            <i class="close iconfont lu-icon-delete" @click="close()"></i>
+        </div>
+    </transition>
 </template>
 
 <script>
@@ -45,7 +49,7 @@ export default {
     name: 'lu_alert',
     data () {
         return {
-            currentValue: 0
+            visible: true
         }
     },
     props: {
@@ -77,7 +81,10 @@ export default {
         }
     },
     methods:{
-       
+        close() {
+            this.visible = false;
+            this.$emit('close');
+        }
     }
 }
 </script>
@@ -93,6 +100,15 @@ export default {
         background-color: #fff;
         display: flex;
         align-items: center;
+        opacity: 1;
+        transition: opacity .2s;
+    }
+    .lu_alert .close{
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform:translateY(-50%);
+        cursor: pointer;
     }
     .lu_alert_center{
         justify-content:center;
@@ -131,5 +147,9 @@ export default {
     .lu_alert_error{
         background-color: #fef0f0;
         color: #f56c6c;
+    }
+    .lu_alert_fade-enter,
+    .lu_alert_fade-leave-active {
+        opacity: 0;
     }
 </style>

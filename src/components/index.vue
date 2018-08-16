@@ -389,6 +389,7 @@
                 title="错误提示的文案"
                 type="error"
                 description="文字说明文字说明文字说明文字说明文字说明文字说明"
+                @close="close()"
             />
         </p>
 
@@ -450,6 +451,9 @@ export default {
         // }
     },
     methods:{
+        close() {
+            console.log('close')
+        },
         dateOnChange(value) {
             console.log(value)
         },
