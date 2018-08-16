@@ -355,6 +355,45 @@
 
         <hr>
 
+        <h1>alert 警告</h1>
+
+        <p>
+            <lu_alert 
+                title="成功提示的文案"
+                type="success"
+                description="文字说明文字说明文字说明文字说明文字说明文字说明"
+                show-icon 
+            />
+
+            <br />
+
+            <lu_alert 
+                title="消息提示的文案"
+                type="info"
+                description="文字说明文字说明文字说明文字说明文字说明文字说明"
+                show-icon 
+                center
+            />
+
+            <br />
+
+            <lu_alert 
+                type="warning"
+                description="文字说明文字说明文字说明文字说明文字说明文字说明"
+                show-icon 
+            />
+
+            <br />
+
+            <lu_alert 
+                title="错误提示的文案"
+                type="error"
+                description="文字说明文字说明文字说明文字说明文字说明文字说明"
+            />
+        </p>
+
+        <hr>
+
 
 
     </div>
