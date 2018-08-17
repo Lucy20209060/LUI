@@ -10,10 +10,10 @@
 >按钮类型 默认/danger/success/warning 四种 [type="danger"]
 
 ```html
- <lu_button>默认按钮</lu_button>
- <lu_button type="danger">危险按钮</lu_button>
- <lu_button type="success">成功按钮</lu_button>
- <lu_button type="warning">警告按钮</lu_button>
+ <lu-button>默认按钮</lu-button>
+ <lu-button type="danger">危险按钮</lu-button>
+ <lu-button type="success">成功按钮</lu-button>
+ <lu-button type="warning">警告按钮</lu-button>
 ```
 
 <img src="./static/img/button-1.png" />
@@ -43,17 +43,17 @@
 >数据[:value="97786"] 隐藏Badge [:hidden="true"] 默认false，是否红点显示 [:isDot="true"] 默认 false 设置颜色[color="#333"] 默认 红色
 
 ```html
-<lu_badge :value="97786" color="#333">
-    <lu_button size="small">小型按钮</lu_button>
-</lu_badge>
+<lu-badge :value="97786" color="#333">
+    <lu-button size="small">小型按钮</lu-button>
+</lu-badge>
 
-<lu_badge :value="7245" :isDot="true">
-    <lu_button size="small">小型按钮</lu_button>
-</lu_badge>
+<lu-badge :value="7245" :isDot="true">
+    <lu-button size="small">小型按钮</lu-button>
+</lu-badge>
 
-<lu_badge :value="7245" :hidden="true">
-    <lu_button size="small">小型按钮</lu_button>
-</lu_badge>
+<lu-badge :value="7245" :hidden="true">
+    <lu-button size="small">小型按钮</lu-button>
+</lu-badge>
 ```
 
 <img src="./static/img/badge-1.png" />
@@ -77,8 +77,8 @@ this.$lu_toast({
 >@change,@input事件，返回值 true/false , 绑定初始值[v-model=" "] , 禁用[:disabled="true"]
 
 ```html
-<lu_switch v-model="witch1" @change="change1">{{witch1}}</lu_switch>
-<lu_switch v-model="witch2" @input="input1" :disabled="true">{{witch2}}</lu_switch>
+<lu-switch v-model="witch1" @change="change1">{{witch1}}</lu-switch>
+<lu-switch v-model="witch2" @input="input1" :disabled="true">{{witch2}}</lu-switch>
 ```
 
 <img src="./static/img/switch-1.png" />
@@ -106,7 +106,7 @@ this.$lu_message.error('危险错误提示')
 >v-model="value"绑定值，maxlength最大输入长度 ，输入框大小 超大(large) / 默认 / 小型(small) / 超小型(mini) 四种 [size="large"],输入时触发@input=" "
 
 ```html
-<lu_input 
+<lu-input 
     v-model="inputValue0" 
     maxlength="5" 
     size="large" 
@@ -122,13 +122,13 @@ this.$lu_message.error('危险错误提示')
 >类型 (默认) / gray / primary / success / warning / danger 六种 也可以通过color="#009e4d"设置背景色 是否可关闭 :closable="true" 默认false
 
 ```html
-<lu_tag :closable="true" @close="closeTag(1)">默认标签</lu_tag>
-<lu_tag type="gray" :closable="true">gray标签</lu_tag>
-<lu_tag type="primary" :closable="true">primary标签</lu_tag>
-<lu_tag type="success" :closable="true">success标签</lu_tag>
-<lu_tag type="warning" :closable="true">warning标签</lu_tag>
-<lu_tag type="danger" :closable="true">danger标签</lu_tag>
-<lu_tag color="#009e4d" :closable="true" @close="closeTag(2)">自定义背景色标签</lu_tag>
+<lu-tag :closable="true" @close="closeTag(1)">默认标签</lu-tag>
+<lu-tag type="gray" :closable="true">gray标签</lu-tag>
+<lu-tag type="primary" :closable="true">primary标签</lu-tag>
+<lu-tag type="success" :closable="true">success标签</lu-tag>
+<lu-tag type="warning" :closable="true">warning标签</lu-tag>
+<lu-tag type="danger" :closable="true">danger标签</lu-tag>
+<lu-tag color="#009e4d" :closable="true" @close="closeTag(2)">自定义背景色标签</lu-tag>
 ```
 
 <img src="./static/img/tag-1.png" />
@@ -136,7 +136,7 @@ this.$lu_message.error('危险错误提示')
 ### pagination 分页
 
 ```html
-<lu_pagination 
+<lu-pagination 
     :page-count="100" 
     :current-page="currentPage" 
     @current-change="handleCurrentChange"
@@ -154,5 +154,12 @@ this.$lu_message.error('危险错误提示')
 * 2018-08-06 11:39:55 feat:DatePicker
 * 2018-08-08 00:41:05 feat:DatePicker组件完成
 * 2018-08-08 10:34:49 feat:添加若干iconfont图标
-* 2018-08-08 11:33:52 feat:完善lu_pagination组件
-* 2018-08-08 14:49:34 docs:添加pagination分页器文档* 2018-08-08 14:54:00 docs:添加pagination分页器文档* 2018-08-08 15:21:27 feat:完善lu_pagination组件* 2018-08-09 18:04:54 feat:tab* 2018-08-09 18:17:20 style:完善tab* 2018-08-16 16:04:08 feat:alert组件* 2018-08-16 16:38:08 feat:alert组件关闭事件* 2018-08-17 10:56:42 style:重命名所有组件名称
+* 2018-08-08 11:33:52 feat:完善lu-pagination组件
+* 2018-08-08 14:49:34 docs:添加pagination分页器文档
+* 2018-08-08 14:54:00 docs:添加pagination分页器文档
+* 2018-08-08 15:21:27 feat:完善lu-pagination组件
+* 2018-08-09 18:04:54 feat:tab
+* 2018-08-09 18:17:20 style:完善tab
+* 2018-08-16 16:04:08 feat:alert组件
+* 2018-08-16 16:38:08 feat:alert组件关闭事件
+* 2018-08-17 10:56:42 style:重命名所有组件名称* 2018-08-17 11:00:36 docs:修改文档README.md
