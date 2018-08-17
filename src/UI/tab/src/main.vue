@@ -16,7 +16,7 @@
 
 <script>
 export default {
-    name: 'lu_tab',
+    name: 'LuTab',
     data () {
         return {
             currentValue: 0

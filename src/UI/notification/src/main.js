@@ -44,7 +44,7 @@ var Notification = function(options = {}) {
   topDist += 16;
   instance.top = topDist;
   instances.push(instance);
-  console.log(instances)
+  // console.log(instances)
   return instance.vm;
 };
 

@@ -2,23 +2,22 @@
     <transition name="lu_alert_fade">
         <div 
             class="lu_alert"
-            :class="alertClass"
+            :class="[
+                alertClass,
+                center ? 'is-center' : null,
+                title ? 'is-title' : null
+            ]"
             v-show="visible"
         >
             <i 
                 v-if="showIcon" 
                 :class="[
-                    `iconfont ${icon}`,
-                    title ? 'istitle' : null
+                    'icon-type',
+                    `iconfont ${icon}`
                 ]"
             ></i>
             <p class="title_desc">
-                <span 
-                    :class="[
-                        title ? 'istitle' : null
-                    ]" 
-                    v-if="title"
-                >{{title}}</span>
+                <span v-if="title">{{title}}</span>
                 <em>{{description}}</em>
             </p>
             <i class="close iconfont lu-icon-delete" @click="close()"></i>
@@ -46,7 +45,7 @@ const TYPE_CLASSES_ICON = {
     }
 }
 export default {
-    name: 'lu_alert',
+    name: 'LuAlert',
     data () {
         return {
             visible: true
@@ -63,14 +62,12 @@ export default {
             type: Boolean,
             default: false
         },
-        center:{
-            type: Boolean,
-            default: true
-        }
+        center:Boolean,
+        // close: Function
 
     },
     mounted(){
-       console.log(this.center)
+    //    console.log(this.close)
     },
     computed:{
         icon:function() {
@@ -110,7 +107,7 @@ export default {
         transform:translateY(-50%);
         cursor: pointer;
     }
-    .lu_alert_center{
+    .is-center{
         justify-content:center;
     }
     .title_desc{
@@ -121,7 +118,7 @@ export default {
     .title_desc span{
         font-size: 12px;
     }
-    .title_desc span.istitle{
+    .is-title .title_desc span{
         font-size: 13px;
         font-weight: 700;
         padding-bottom: 8px;
@@ -129,7 +126,7 @@ export default {
     .title_desc em{
         font-size: 12px;
     }
-    .lu_alert .iconfont.istitle{
+    .is-title .icon-type{
         font-size: 28px;
     }
     .lu_alert_success{

@@ -16,7 +16,7 @@
 
 <script>
 export default {
-    name: 'lu_badge',
+    name: 'LuBadge',
     props:{
         // 标记值
         value:[String,Number],

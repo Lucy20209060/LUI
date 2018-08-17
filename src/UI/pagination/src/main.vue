@@ -39,7 +39,7 @@
 
 <script>
 export default {
-    name: 'lu_pagination',
+    name: 'LuPagination',
     data () {
         return {
             

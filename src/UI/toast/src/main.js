@@ -72,7 +72,7 @@ let Toast = (options = {}) => {
   // ToastConstructor 实例
   let instance = getAnInstance();
 
-  console.log(instance)
+  // console.log(instance)
 
   // 弹窗关闭标志
   instance.closed = false;

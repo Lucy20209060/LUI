@@ -54,7 +54,7 @@
 
 <script>
 export default {
-    name: 'lu_date_picker',
+    name: 'LuDatePicker',
   data() {
     return {
       dateValue: "", // 输入框显示日期
@@ -302,7 +302,8 @@ export default {
   width: 210px;
   box-shadow: 0 0 8px #ccc;
 	background: #fff;
-	position: absolute;
+  position: absolute;
+  z-index: 99999;
 }
 ul {
   list-style: none;

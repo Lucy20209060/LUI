@@ -1,39 +1,40 @@
-import lu_button from './button';
-import lu_radio from './radio';
-import lu_badge from './badge';
-import lu_toast from './toast';
-import lu_switch from './switch';
-import lu_message from './message';
-import lu_messagebox from './message-box';
-import lu_input from './input';
-import lu_tag from './tag';
-import lu_notification from './notification';
-import lu_icon from './icon';
-import lu_code_input from './code-input';
-import lu_pagination from './pagination';
-import lu_date_picker from './date-picker';
-import lu_tab from './tab';
-import lu_alert from './alert';
+import Button from './button';
+import Radio from './radio';
+import Badge from './badge';
+import Toast from './toast';
+import Switch from './switch';
+import Message from './message';
+import Messagebox from './message-box';
+import Input from './input';
+import Tag from './tag';
+import Notification from './notification';
+import Icon from './icon';
+import CodeInput from './code-input';
+import Pagination from './pagination';
+import DatePicker from './date-picker';
+import Tab from './tab';
+import Alert from './alert';
 
 import anchu_messageBox from './anchu-message-box';
 import anchu_message from './anchu-message';
 
 const components = [
-	lu_button,
-    lu_radio,
-    lu_badge,
-    lu_toast,
-    lu_switch,
-    lu_message,
-    lu_input,
-    lu_tag,
-    lu_notification,
-    lu_icon,
-    lu_code_input,
-    lu_pagination,
-    lu_date_picker,
-    lu_tab,
-    lu_alert,
+	Button,
+    Radio,
+    Badge,
+    Toast,
+    Switch,
+    Message,
+    Messagebox,
+    Input,
+    Tag,
+    Notification,
+    Icon,
+    CodeInput,
+    Pagination,
+    DatePicker,
+    Tab,
+    Alert,
 
     anchu_messageBox,
     anchu_message
@@ -46,12 +47,12 @@ const install = function(Vue) {
         Vue.component(component.name, component);
     });
 
-    Vue.prototype.$lu_toast = lu_toast;
-    Vue.prototype.$lu_message = lu_message;
-    Vue.prototype.$lu_messagebox = lu_messagebox;
+    Vue.prototype.$lu_toast = Toast;
+    Vue.prototype.$lu_message = Message;
+    Vue.prototype.$lu_messagebox = Messagebox;
     Vue.prototype.$anchu_messageBox = anchu_messageBox;
     Vue.prototype.$anchu_message = anchu_message;
-    Vue.prototype.$lu_notify = lu_notification;
+    Vue.prototype.$lu_notify = Notification;
 
 };
 
@@ -62,22 +63,22 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
     install,
-    lu_button,
-    lu_radio,
-    lu_badge,
-    lu_toast,
-    lu_switch,
-    lu_message,
-    lu_messagebox,
-    lu_input,
-    lu_tag,
-    lu_notification,
-    lu_icon,
-    lu_code_input,
-    lu_pagination,
-    lu_date_picker,
-    lu_tab,
-    lu_alert,
+    Button,
+    Radio,
+    Badge,
+    Toast,
+    Switch,
+    Message,
+    Messagebox,
+    Input,
+    Tag,
+    Notification,
+    Icon,
+    CodeInput,
+    Pagination,
+    DatePicker,
+    Tab,
+    Alert,
 
     anchu_messageBox,
     anchu_message

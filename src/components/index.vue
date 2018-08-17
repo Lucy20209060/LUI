@@ -2,64 +2,64 @@
     <div class="hello-wrap">
         
         <!-- 按钮 -->
-        <h1>按钮 (lu_button)</h1>
+        <h1>按钮 (lu-button)</h1>
         <p>按钮类型 默认/danger/success/warning 四种 [type="danger"]</p>
         <p>
-            <lu_button @click="tapd">默认按钮</lu_button>
-            <lu_button type="danger" @click="tapa">危险按钮</lu_button>
-            <lu_button type="success" @click="tapb">成功按钮</lu_button>
-            <lu_button type="warning" @click="tapc">警告按钮</lu_button>
+            <lu-button @click="tapd">默认按钮</lu-button>
+            <lu-button type="danger" @click="tapa">危险按钮</lu-button>
+            <lu-button type="success" @click="tapb">成功按钮</lu-button>
+            <lu-button type="warning" @click="tapc">警告按钮</lu-button>
         </p>
 
         <p>滑过按钮 四种类型 同上 [:plain="true"]</p>
         <p>  
-            <lu_button :plain="true" @click="tap">默认按钮</lu_button>
-            <lu_button :plain="true" type="danger"  @click="tap">危险按钮</lu_button>
-            <lu_button :plain="true" type="success" @click="tap">成功按钮</lu_button>
-            <lu_button :plain="true" type="warning" @click="tap">警告按钮</lu_button>
+            <lu-button :plain="true" @click="tap">默认按钮</lu-button>
+            <lu-button :plain="true" type="danger"  @click="tap">危险按钮</lu-button>
+            <lu-button :plain="true" type="success" @click="tap">成功按钮</lu-button>
+            <lu-button :plain="true" type="warning" @click="tap">警告按钮</lu-button>
         </p>
 
         <p>按钮大小 超大(large) / 默认 / 小型(small) / 超小型(mini) 四种 [size="large"]</p>
         <p>
-            <lu_button type="danger" size="large">超大按钮</lu_button>
-            <lu_button type="danger">默认按钮</lu_button>
-            <lu_button type="danger" size="small">小型按钮</lu_button>
-            <lu_button type="danger" size="mini">微小按钮</lu_button>
+            <lu-button type="danger" size="large">超大按钮</lu-button>
+            <lu-button type="danger">默认按钮</lu-button>
+            <lu-button type="danger" size="small">小型按钮</lu-button>
+            <lu-button type="danger" size="mini">微小按钮</lu-button>
         </p>
         
         <p>去除按钮默认圆角 [:radius="false"]</p>
         <p>
-            <lu_button type="danger" :radius="false">去除默认的圆角</lu_button>
+            <lu-button type="danger" :radius="false">去除默认的圆角</lu-button>
         </p>
 
         <p>按钮禁用 [:disabled="true"]</p>
         <p>
-            <lu_button type="danger" :disabled="true" @click="tap">按钮禁用</lu_button>
-            <lu_button :plain="true" :disabled="true" type="success" @click="tap">按钮禁用</lu_button>
+            <lu-button type="danger" :disabled="true" @click="tap">按钮禁用</lu-button>
+            <lu-button :plain="true" :disabled="true" type="success" @click="tap">按钮禁用</lu-button>
         </p>
         
         <p>按钮添加图标 icon="lu-icon-delete2"</p>
         <p>
-            <lu_button icon="lu-icon-delete2">默认按钮</lu_button>
-            <lu_button type="warning" icon="lu-icon-search">警告按钮</lu_button>
+            <lu-button icon="lu-icon-delete2">默认按钮</lu-button>
+            <lu-button type="warning" icon="lu-icon-search">警告按钮</lu-button>
         </p>
 
         <hr/>
 
-        <h1>Badge 标记 (lu_badge)</h1>
+        <h1>Badge 标记 (lu-badge)</h1>
         <P>数据[:value="7245"] 隐藏Badge [:hidden="true"] 默认false，是否红点显示 [:isDot="true"] 默认 false 设置颜色[color="#333"] 默认 红色</P>
         <p>
-            <lu_badge :value="97786" color="#333">
-                <lu_button size="small">小型按钮</lu_button>
-            </lu_badge>
+            <lu-badge :value="97786" color="#333">
+                <lu-button size="small">小型按钮</lu-button>
+            </lu-badge>
 
-            <lu_badge :value="7245" :isDot="true">
-                <lu_button size="small">小型按钮</lu_button>
-            </lu_badge>
+            <lu-badge :value="7245" :isDot="true">
+                <lu-button size="small">小型按钮</lu-button>
+            </lu-badge>
 
-            <lu_badge :value="7245" :hidden="true">
-                <lu_button size="small">小型按钮</lu_button>
-            </lu_badge>
+            <lu-badge :value="7245" :hidden="true">
+                <lu-button size="small">小型按钮</lu-button>
+            </lu-badge>
         </p>
 
         <hr/>
@@ -67,16 +67,16 @@
         <h1>移动端 信息弹窗提示 (this.$lu_toast)</h1>
         <p>提示信息字符串[message:string], 显示位置[position:top/middle/boottom], 显示时间长度[duration:time] 添加自己的class[className="my-class"]</p>
         <p>
-            <lu_button type="success" @click="toast">点击弹窗提示</lu_button>
+            <lu-button type="success" @click="toast">点击弹窗提示</lu-button>
         </p>
 
         <hr/>
 
-        <h1>switch 开关 (lu_switch)</h1>
+        <h1>switch 开关 (lu-switch)</h1>
         <p>@change,@input事件，返回值 true/false , 绑定初始值[v-model=" "] , 禁用[:disabled="true"]</p>
         <p>
-            <lu_switch v-model="witch1" @change="change1">{{witch1}}</lu_switch>
-            <lu_switch v-model="witch2" @input="input1" :disabled="true"></lu_switch>
+            <lu-switch v-model="witch1" @change="change1">{{witch1}}</lu-switch>
+            <lu-switch v-model="witch2" @input="input1" :disabled="true"></lu-switch>
         </p>
 
         <hr/>
@@ -84,18 +84,18 @@
         <h1>PC端 信息弹窗提示 (this.$lu_message)</h1>
         <p>弹窗类型 默认（info）/error/success/warning 四种 [type="danger"]</p>
         <p>
-            <lu_button @click="tapd">默认按钮</lu_button>
-            <lu_button type="danger" @click="tapa">危险按钮</lu_button>
-            <lu_button type="success" @click="tapb">成功按钮</lu_button>
-            <lu_button type="warning" @click="tapc">警告按钮</lu_button>
+            <lu-button @click="tapd">默认按钮</lu-button>
+            <lu-button type="danger" @click="tapa">危险按钮</lu-button>
+            <lu-button type="success" @click="tapb">成功按钮</lu-button>
+            <lu-button type="warning" @click="tapc">警告按钮</lu-button>
         </p>
         
         <hr/>
 
-        <h1>input输入框 (lu_input)</h1>
+        <h1>input输入框 (lu-input)</h1>
         <p>v-model="value"绑定值，maxlength最大输入长度 ，输入框大小 超大(large) / 默认 / 小型(small) / 超小型(mini) 四种 [size="large"],输入时触发@input=" "</p>
         <p>
-            <lu_input 
+            <lu-input 
                 v-model="inputValue0" 
                 maxlength="5" 
                 size="large" 
@@ -106,75 +106,75 @@
             <span>{{inputValue0}}</span>
         </p>
         <p>
-            <lu_input v-model="inputValue1"></lu_input>
+            <lu-input v-model="inputValue1"></lu-input>
             <span>{{inputValue1}}</span>
         </p>
         <p>
-            <lu_input v-model="inputValue2" size="small" ></lu_input>
+            <lu-input v-model="inputValue2" size="small" ></lu-input>
             <span>{{inputValue2}}</span>
         </p>
         <p>
-            <lu_input v-model="inputValue3" size="mini"></lu_input>
+            <lu-input v-model="inputValue3" size="mini"></lu-input>
             <span>{{inputValue3}}</span>
         </p>
 
         <hr/>
 
-        <h1>Tag标签 (lu_tag)</h1>
+        <h1>Tag标签 (lu-tag)</h1>
         <p>(默认) / gray / primary / success / warning / danger 六种类型 也可以通过color="#009e4d"设置背景色</p>
         <p>:closable="true" 是否可关闭 默认false</p>
         <p>
-            <lu_tag :closable="true" @close="closeTag(1)">默认标签</lu_tag>
-            <lu_tag type="gray" :closable="true">gray标签</lu_tag>
-            <lu_tag type="primary" :closable="true">primary标签</lu_tag>
-            <lu_tag type="success" :closable="true">success标签</lu_tag>
-            <lu_tag type="warning" :closable="true">warning标签</lu_tag>
-            <lu_tag type="danger" :closable="true">danger标签</lu_tag>
-            <lu_tag color="#009e4d" :closable="true" @close="closeTag(2)">自定义背景色标签</lu_tag>
+            <lu-tag :closable="true" @close="closeTag(1)">默认标签</lu-tag>
+            <lu-tag type="gray" :closable="true">gray标签</lu-tag>
+            <lu-tag type="primary" :closable="true">primary标签</lu-tag>
+            <lu-tag type="success" :closable="true">success标签</lu-tag>
+            <lu-tag type="warning" :closable="true">warning标签</lu-tag>
+            <lu-tag type="danger" :closable="true">danger标签</lu-tag>
+            <lu-tag color="#009e4d" :closable="true" @close="closeTag(2)">自定义背景色标签</lu-tag>
         </p>
 
         <hr/>
 
         <h1>Notification通知 (this.$lu_notify)</h1>
         <p>
-            <lu_button @click="notify1">可自动关闭</lu_button>
-            <lu_button @click="notify2">不可自动关闭</lu_button>
+            <lu-button @click="notify1">可自动关闭</lu-button>
+            <lu-button @click="notify2">不可自动关闭</lu-button>
         </p>
         <P>
-            <lu_button @click="notify3">info类</lu_button>
-            <lu_button @click="notify4" type="success">success类</lu_button>
-            <lu_button @click="notify5" type="warning">warning类</lu_button>
-            <lu_button @click="notify6" type="danger">error类</lu_button>
-            <lu_button @click="notify7">偏移的消息</lu_button>
+            <lu-button @click="notify3">info类</lu-button>
+            <lu-button @click="notify4" type="success">success类</lu-button>
+            <lu-button @click="notify5" type="warning">warning类</lu-button>
+            <lu-button @click="notify6" type="danger">error类</lu-button>
+            <lu-button @click="notify7">偏移的消息</lu-button>
         </P>
         
         <hr/>
-        <h1>图标</h1>
+        <h1>图标(lu-icon)</h1>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-top2"></lu_icon>
+                <lu-icon className="lu-icon-top2"></lu-icon>
             </li>
             <li>lu-icon-top2</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-down2"></lu_icon>
+                <lu-icon className="lu-icon-down2"></lu-icon>
             </li>
             <li>lu-icon-down2</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-left2"></lu_icon>
+                <lu-icon className="lu-icon-left2"></lu-icon>
             </li>
             <li>lu-icon-left2</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-right2"></lu_icon>
+                <lu-icon className="lu-icon-right2"></lu-icon>
             </li>
             <li>lu-icon-right2</li>
         </ul>
@@ -183,28 +183,28 @@
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-top"></lu_icon>
+                <lu-icon className="lu-icon-top"></lu-icon>
             </li>
             <li>lu-icon-top</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-down"></lu_icon>
+                <lu-icon className="lu-icon-down"></lu-icon>
             </li>
             <li>lu-icon-down</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-left"></lu_icon>
+                <lu-icon className="lu-icon-left"></lu-icon>
             </li>
             <li>lu-icon-left</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-right"></lu_icon>
+                <lu-icon className="lu-icon-right"></lu-icon>
             </li>
             <li>lu-icon-right</li>
         </ul>
@@ -213,28 +213,28 @@
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-info"></lu_icon>
+                <lu-icon className="lu-icon-info"></lu-icon>
             </li>
             <li>lu-icon-info</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-info2"></lu_icon>
+                <lu-icon className="lu-icon-info2"></lu-icon>
             </li>
             <li>lu-icon-info2</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-error"></lu_icon>
+                <lu-icon className="lu-icon-error"></lu-icon>
             </li>
             <li>lu-icon-error</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-success"></lu_icon>
+                <lu-icon className="lu-icon-success"></lu-icon>
             </li>
             <li>lu-icon-success</li>
         </ul>
@@ -243,28 +243,28 @@
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-search"></lu_icon>
+                <lu-icon className="lu-icon-search"></lu-icon>
             </li>
             <li>lu-icon-search</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-delete"></lu_icon>
+                <lu-icon className="lu-icon-delete"></lu-icon>
             </li>
             <li>lu-icon-delete</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-delete2"></lu_icon>
+                <lu-icon className="lu-icon-delete2"></lu-icon>
             </li>
             <li>lu-icon-delete2</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-menu"></lu_icon>
+                <lu-icon className="lu-icon-menu"></lu-icon>
             </li>
             <li>lu-icon-menu</li>
         </ul>
@@ -273,28 +273,28 @@
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-warning"></lu_icon>
+                <lu-icon className="lu-icon-warning"></lu-icon>
             </li>
             <li>lu-icon-warning</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-more"></lu_icon>
+                <lu-icon className="lu-icon-more"></lu-icon>
             </li>
             <li>lu-icon-more</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-left-arrow"></lu_icon>
+                <lu-icon className="lu-icon-left-arrow"></lu-icon>
             </li>
             <li>lu-icon-left-arrow</li>
         </ul>
 
         <ul class="lu-icon">
             <li>
-                <lu_icon className="lu-icon-right-arrow"></lu_icon>
+                <lu-icon className="lu-icon-right-arrow"></lu-icon>
             </li>
             <li>lu-icon-right-arrow</li>
         </ul>
@@ -306,7 +306,7 @@
         <br/>
 
         <ul class="lu-icon">
-            <li><lu_button icon="lu-icon-delete2">图标按钮</lu_button></li>
+            <li><lu-button icon="lu-icon-delete2">图标按钮</lu-button></li>
         </ul>
 
         <hr>
@@ -316,7 +316,7 @@
         <p>1-6位验证码输入框  设置单个框的大小[cellWidth="50px"] change事件[@change="changeNum"]返回输入框中的值(string类型)</p>
 
         <p>
-            <lu_code_input :num='3' cellWidth="50px" @change="changeNum" />
+            <lu-code-input :num='3' cellWidth="50px" @change="changeNum" />
         </p>
 
         <hr>
@@ -327,7 +327,7 @@
         <p>prev-text / next-text  替代图标显示的 上一页 / 下一页 文字</p>
         <p>
             <!-- page-count  pageCount -->
-            <lu_pagination 
+            <lu-pagination 
                 :small="true" 
                 :page-count="100" 
                 :current-page="currentPage" 
@@ -342,7 +342,7 @@
 
         <h1>时间选择器</h1>
         <p>
-            <lu_date_picker @change="dateOnChange" />
+            <lu-date-picker @change="dateOnChange" />
         </p>
 
         <hr>
@@ -350,7 +350,7 @@
         <h1>Tabs 标签页</h1>
 
         <p>
-            <lu_tab :tabs="tabs"/>
+            <lu-tab :tabs="tabs"/>
         </p>
 
         <hr>
@@ -358,7 +358,7 @@
         <h1>alert 警告</h1>
 
         <p>
-            <lu_alert 
+            <lu-alert 
                 title="成功提示的文案"
                 type="success"
                 description="文字说明文字说明文字说明文字说明文字说明文字说明"
@@ -367,7 +367,7 @@
 
             <br />
 
-            <lu_alert 
+            <lu-alert 
                 title="消息提示的文案"
                 type="info"
                 description="文字说明文字说明文字说明文字说明文字说明文字说明"
@@ -377,7 +377,7 @@
 
             <br />
 
-            <lu_alert 
+            <lu-alert 
                 type="warning"
                 description="文字说明文字说明文字说明文字说明文字说明文字说明"
                 show-icon 
@@ -385,7 +385,7 @@
 
             <br />
 
-            <lu_alert 
+            <lu-alert 
                 title="错误提示的文案"
                 type="error"
                 description="文字说明文字说明文字说明文字说明文字说明文字说明"

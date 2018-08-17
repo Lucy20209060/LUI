@@ -2,8 +2,8 @@
     <div class="lu_code_input">
         <i 
             class="lu_code_input-i"
-            v-for="item in num" 
-            key="index" 
+            v-for="(item,index) in num" 
+            :key="index" 
             :style="{ 
                 width: cellWidth,
                 height: cellWidth  
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-    name: 'lu_code_input',
+    name: 'LuCodeInput',
     data () {
         return {
             nums:{

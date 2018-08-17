@@ -1,7 +1,6 @@
 <template>
     <label class="lu_radio">
         <input type="radio" class="lu_radio_input" :name="name" :value="label" />
-        
         <span>
             <slot></slot>
             <template v-if="!$slots.default">{{label}}</template>
@@ -13,7 +12,7 @@
 
 <script>
 export default {
-    name: 'lu_radio',
+    name: 'LuRadio',
     data () {
         return {
             

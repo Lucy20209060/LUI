@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: 'lu_icon',
+        name: 'LuIcon',
         props: {
             // 图标class 使用 iconfont
             className:{

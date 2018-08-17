@@ -18,7 +18,7 @@
 
 <script>
     export default {
-        name: 'lu_tag',
+        name: 'LuTag',
         props: {
             text: String,
             closable: Boolean,

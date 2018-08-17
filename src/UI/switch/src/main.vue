@@ -25,7 +25,7 @@
 
 <script type="text/babel">
   export default {
-    name: 'lu_switch',
+    name: 'LuSwitch',
     data() {
       return {
         

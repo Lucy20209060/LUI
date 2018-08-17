@@ -21,7 +21,7 @@
 
 <script>
 export default {
-    name: 'lu_button',
+    name: 'LuButton',
     data () {
         return {
             
