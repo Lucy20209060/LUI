@@ -8,7 +8,7 @@
                     currentValue === index ? 'tabActive' : null
                 ]"
                 @click="currentValueChange(index)"
-            >{{item.title}}</span>
+            >{{item.label}}</span>
         </dt>
         <dd>{{tabs[currentValue].content}}</dd>
     </dl>
@@ -42,9 +42,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .lu_tab{
-        
-    }
     .lu_tab dt{
         display: flex;
         user-select: none;

@@ -41,14 +41,14 @@ export default {
         
     },
     computed: {
-      currentValue: {
-        get() {
-            return this.value;
-        },
-        set(val) {
-            this.$emit('input', val);
+        currentValue: {
+            get() {
+                return this.value;
+            },
+            set(val) {
+                this.$emit('input', val);
+            }
         }
-      }
     },
     mounted(){
         

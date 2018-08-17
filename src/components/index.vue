@@ -395,6 +395,13 @@
 
         <hr>
 
+        <p>
+            <h1>Radio 单选框(lu-radio)</h1>
+            <lu-radio name="radio" v-model="radio" :resource="resource"  />
+        </p>
+
+        <hr>
+
 
 
     </div>
@@ -405,7 +412,7 @@ export default {
     name: 'index',
     data () {
         return {
-            radio:1,
+            radio:3,
             witch1:true,
             witch2:false,
             inputValue0:null,
@@ -414,27 +421,54 @@ export default {
             inputValue3:null,
             currentPage:6,
 
+            resource:[
+                {
+                    label:'选择1',
+                    value:1,
+                    disabled:false
+                },
+                {
+                    label:'选择2',
+                    value:2
+                },
+                {
+                    label:'选择3',
+                    value:3,
+                    disabled:true
+                },
+                {
+                    label:'选择4',
+                    value:4,
+                    disabled:false
+                },
+                {
+                    label:'选择5',
+                    value:5,
+                    disabled: 324
+                }
+            ],
+
             tabs:[
                 {
-                    title:"标题1",
+                    label:"标题1",
                     value:1,
                     content:'哈哈哈哈哈哈哈哈哈'
                 },
                 {
-                    title:"标题2标题2",
+                    label:"标题2标题2",
                     value:2,
                     content:'呵呵呵呵呵呵'
                 },
                 {
-                    title:"标题3标题3标题3标题3",
+                    label:"标题3标题3标题3标题3",
                     value:3,
                     content:'嘿嘿嘿嘿嘿'
                 },
                 {
-                    title:"标题4标题4标题4标题4",
+                    label:"标题4标题4标题4标题4",
                     value:4,
                     content:'哟哟哟哟哟哟哟哟'
-                },
+                }
             ]
         }
     },
