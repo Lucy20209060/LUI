@@ -10,7 +10,7 @@
                 @click="currentValueChange(index)"
             >{{item.label}}</span>
         </dt>
-        <dd>{{tabs[currentValue].content}}</dd>
+        <dd v-show="!!tabs[currentValue].content">{{tabs[currentValue].content}}</dd>
     </dl>
 </template>
 
@@ -33,8 +33,10 @@ export default {
     },
     methods:{
         currentValueChange(index){
-            if(!this.tabs[index].value)return console.error('not value');
+            const value = this.tabs[index].value;
+            if(!value)return console.error('not value');
             this.currentValue = index;
+            this.$emit('change', index, value);
         }
     }
 }

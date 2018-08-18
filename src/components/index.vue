@@ -350,7 +350,7 @@
         <h1>Tabs 标签页</h1>
 
         <p>
-            <lu-tab :tabs="tabs"/>
+            <lu-tab :tabs="tabs" @change="tabChange"/>
         </p>
 
         <hr>
@@ -468,6 +468,15 @@ export default {
                     label:"标题4标题4标题4标题4",
                     value:4,
                     content:'哟哟哟哟哟哟哟哟'
+                },
+                {
+                    label:"标题5",
+                    value:5,
+                    content:''
+                },
+                {
+                    label:"标题6",
+                    value:6
                 }
             ]
         }
@@ -485,6 +494,9 @@ export default {
         // }
     },
     methods:{
+        tabChange(index,value){
+            console.log(index,value)
+        },
         close() {
             console.log('close')
         },
