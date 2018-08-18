@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { findIndex } from 'lodash';
 export default {
     name: 'LuTab',
     data () {
@@ -26,15 +27,21 @@ export default {
         tabs:{
             type: Array,
             default: []
-        }
+        },
+        defaultValue:[Number, String]
     },
     mounted(){
-        console.log(this.currentValue)
+        // 初始值
+        const index = findIndex(this.tabs, (item) => {
+            return item.value === this.defaultValue
+        })
+        this.currentValue = index === -1 ? 0 : index;
     },
     methods:{
         currentValueChange(index){
             const value = this.tabs[index].value;
             if(!value)return console.error('not value');
+            if(this.currentValue === index)return;
             this.currentValue = index;
             this.$emit('change', index, value);
         }

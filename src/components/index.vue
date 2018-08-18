@@ -350,7 +350,7 @@
         <h1>Tabs 标签页</h1>
 
         <p>
-            <lu-tab :tabs="tabs" @change="tabChange"/>
+            <lu-tab :default-value="defaultValue" :tabs="tabs" @change="tabChange"/>
         </p>
 
         <hr>
@@ -448,35 +448,36 @@ export default {
                 }
             ],
 
+            defaultValue: 'about',
             tabs:[
                 {
                     label:"标题1",
-                    value:1,
+                    value:'index',
                     content:'哈哈哈哈哈哈哈哈哈'
                 },
                 {
                     label:"标题2标题2",
-                    value:2,
+                    value:'about',
                     content:'呵呵呵呵呵呵'
                 },
                 {
                     label:"标题3标题3标题3标题3",
-                    value:3,
+                    value:'mine',
                     content:'嘿嘿嘿嘿嘿'
                 },
                 {
                     label:"标题4标题4标题4标题4",
-                    value:4,
+                    value:'detail',
                     content:'哟哟哟哟哟哟哟哟'
                 },
                 {
                     label:"标题5",
-                    value:5,
+                    value:'homePage',
                     content:''
                 },
                 {
                     label:"标题6",
-                    value:6
+                    value:'user'
                 }
             ]
         }
