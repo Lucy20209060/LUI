@@ -20,7 +20,7 @@
                 <span v-if="title">{{title}}</span>
                 <em>{{description}}</em>
             </p>
-            <i class="close iconfont lu-icon-delete" @click="close()"></i>
+            <i class="close iconfont lu-icon-delete" v-if="closable" @click="close()"></i>
         </div>
     </transition>
 </template>
@@ -63,11 +63,14 @@ export default {
             default: false
         },
         center:Boolean,
-        // close: Function
+        closable: {
+            type: Boolean,
+            default: true
+        }
 
     },
     mounted(){
-    //    console.log(this.close)
+       console.log()
     },
     computed:{
         icon:function() {

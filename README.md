@@ -166,4 +166,4 @@ this.$lu_message.error('危险错误提示')
 * 2018-08-17 11:00:36 docs:修改文档README.md
 * 2018-08-17 16:22:13 feat:Radio单选框组件完成
 * 2018-08-18 12:19:35 fix:tab组件回调返回index,value
-* 2018-08-18 14:32:22 fix:tab组件增加初始值参数* 2018-08-19 23:19:10 fix:修改README.md
+* 2018-08-18 14:32:22 fix:tab组件增加初始值参数* 2018-08-19 23:19:10 fix:修改README.md* 2018-08-20 10:03:49 fix:alert组件增加closable参数

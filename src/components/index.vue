@@ -363,6 +363,7 @@
                 type="success"
                 description="文字说明文字说明文字说明文字说明文字说明文字说明"
                 show-icon 
+                :closable="false"
             />
 
             <br />
