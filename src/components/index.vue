@@ -403,6 +403,13 @@
 
         <hr>
 
+        <p>
+            <h1>InputNumber 计数器(lu-input-number)</h1>
+            <lu-input-number />
+        </p>
+
+        <hr>
+
 
 
     </div>

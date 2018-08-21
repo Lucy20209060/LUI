@@ -8,6 +8,10 @@ dl,dt,dd,p{
 	margin: 0;
 	padding: 0;
 }
+input{
+	outline: none;
+	border: 0;
+}
 [class*=" lu_icon_"], [class^=lu_icon_] {
     speak: none;
     font-style: normal;
@@ -32,6 +36,9 @@ dl,dt,dd,p{
 }
 .is_fixed{
 	position: fixed;
+}
+.not-allowed{
+	cursor: not-allowed;
 }
 
 /*

@@ -14,6 +14,7 @@ import Pagination from './pagination';
 import DatePicker from './date-picker';
 import Tab from './tab';
 import Alert from './alert';
+import InputNumber from './input-number';
 
 import anchu_messageBox from './anchu-message-box';
 import anchu_message from './anchu-message';
@@ -35,6 +36,7 @@ const components = [
     DatePicker,
     Tab,
     Alert,
+    InputNumber,
 
     anchu_messageBox,
     anchu_message
@@ -79,6 +81,7 @@ export default {
     DatePicker,
     Tab,
     Alert,
+    InputNumber,
 
     anchu_messageBox,
     anchu_message

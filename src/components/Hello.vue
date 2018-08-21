@@ -4,7 +4,7 @@
         <p @click="clicks">{{msg}}</p>
 
         <!-- <Btn @change="change1"></Btn> -->
-		<lu_date_picker />
+		<lu-date-picker />
     </div>
 </template>
 
@@ -21,15 +21,10 @@ export default {
         }
     },
     mounted(){
-    	// this.is_login();
-
-        var tem = [1,2,3];
-
-        console.log(tem)
-
-        for(let i of tem){
-            console.log(i)
-        }
+		let base64Reg = /^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)$/g;
+		
+		// var reg=/boy(s)?\s+and\s+girl(s)?/gi;
+ console.log(base64Reg.test('na='));
 
 
     	
