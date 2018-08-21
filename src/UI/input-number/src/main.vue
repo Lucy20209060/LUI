@@ -9,11 +9,13 @@
             class="iconfont lu-icon-reduce" 
             @mouseover="inputOver('reduce')" 
             @mouseout="inputOut('reduce')"
+            @click="reduceClick"
         ></i>
         <i 
             class="iconfont lu-icon-add"
             @mouseover="inputOver('add')" 
             @mouseout="inputOut('add')"
+            @click="addClick"
         ></i>
         <input type="text" v-model="inputValue" />
     </div>
@@ -44,20 +46,59 @@ export default {
         //     type: Boolean,
         //     default: true
         // }
+        value: {
+            type: Number,
+            default: 1
+        },
+        step: {
+            type: Number,
+            default: 1
+        },
+        min: Number,
+        max: Number
 
     },
     mounted(){
-       
+        let temValue = null;
+        if(this.min && this.value <= this.min){
+            temValue = this.min;
+            console.error('Incorrect value(value <= min)')
+        }else if(this.max && this.value >= this.max){
+            temValue = this.max;
+            console.error('Incorrect value(value >= max)')
+        }else{
+            temValue = this.value;
+        }
+        this.inputValue = temValue;
     },
     computed:{
         
     },
     methods:{
-        inputOver(){
+        inputOver() {
             this.activeSign = true;
         },
-        inputOut(){
+        inputOut() {
             this.activeSign = false;
+        },
+        addClick() {
+            const ceilingNum = this.inputValue + this.step;
+            // 存在最大值 则数值增加时需要收到限制
+            if(this.max){
+                ceilingNum <= this.max ? this.inputValue = ceilingNum : null
+            }else{
+                this.inputValue = ceilingNum;
+            }
+        },
+        reduceClick() {
+            // this.inputValue -= this.step
+            const floorNum = this.inputValue - this.step;
+            // 存在最大值 则数值增加时需要收到限制
+            if(this.min){
+                floorNum > this.min ? this.inputValue = floorNum : null
+            }else{
+                this.inputValue = floorNum;
+            }
         }
     }
 }
@@ -88,6 +129,9 @@ export default {
         text-align: center;
         line-height: 40px;
         
+    }
+    .lu_input_number_wrap i:hover{
+        color: #409eff;
     }
     .lu_input_number_wrap input{
         width: 180px;
