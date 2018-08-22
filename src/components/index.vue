@@ -500,9 +500,9 @@ export default {
 
     },
     watch: {
-        // 'radio'(val, oldValue) {
-        //     console.log(val)
-        // }
+        'numberInputValue'(val, oldValue) {
+            console.log(val)
+        }
     },
     methods:{
         tabChange(index,value){

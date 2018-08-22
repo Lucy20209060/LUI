@@ -31,21 +31,6 @@ export default {
         }
     },
     props: {
-        // title: String,
-        // type:{
-        //     type: String,
-        //     default: 'info'
-        // },
-        // description: String,
-        // showIcon: {
-        //     type: Boolean,
-        //     default: false
-        // },
-        // center:Boolean,
-        // closable: {
-        //     type: Boolean,
-        //     default: true
-        // }
         value: {
             type: Number,
             default: 1
@@ -56,7 +41,6 @@ export default {
         },
         min: Number,
         max: Number
-
     },
     mounted(){
         let temValue = null;
@@ -71,9 +55,12 @@ export default {
         }
         this.inputValue = temValue;
     },
-    computed:{
-        
+    watch:{
+        inputValue(newVal, oldValue){
+            this.$emit('input',newVal)
+        }
     },
+
     methods:{
         inputOver() {
             this.activeSign = true;
