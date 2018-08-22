@@ -405,7 +405,7 @@
 
         <p>
             <h1>InputNumber 计数器(lu-input-number)</h1>
-            <lu-input-number v-model="numberInputValue" :step="3" :min="-2" :max="10" />
+            <lu-input-number v-model="numberInputValue" :step="1" :min="-2" :max="10" />
         </p>
 
         <hr>

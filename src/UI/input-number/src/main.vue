@@ -17,7 +17,11 @@
             @mouseout="inputOut('add')"
             @click="addClick"
         ></i>
-        <input type="text" v-model="inputValue" />
+        <input 
+            type="text" 
+            @input="inputEnter"
+            v-model="inputValue" 
+        />
     </div>
 </template>
 
@@ -32,7 +36,7 @@ export default {
     },
     props: {
         value: {
-            type: Number,
+            type: [ Number, String ],
             default: 1
         },
         step: {
@@ -44,19 +48,21 @@ export default {
     },
     mounted(){
         let temValue = null;
-        if(this.min && this.value <= this.min){
+        const value = Number(this.value);
+        if(this.min && value <= this.min){
             temValue = this.min;
             console.error('Incorrect value(value <= min)')
-        }else if(this.max && this.value >= this.max){
+        }else if(this.max && value >= this.max){
             temValue = this.max;
             console.error('Incorrect value(value >= max)')
         }else{
-            temValue = this.value;
+            temValue = value;
         }
         this.inputValue = temValue;
     },
     watch:{
         inputValue(newVal, oldValue){
+            // 实时更新v-model
             this.$emit('input',newVal)
         }
     },
@@ -69,10 +75,10 @@ export default {
             this.activeSign = false;
         },
         addClick() {
-            const ceilingNum = this.inputValue + this.step;
+            const ceilingNum = Number(this.inputValue) + this.step;
             // 存在最大值 则数值增加时需要收到限制
             if(this.max){
-                ceilingNum <= this.max ? this.inputValue = ceilingNum : null
+                this.inputValue = ceilingNum <= this.max ? ceilingNum : this.max;
             }else{
                 this.inputValue = ceilingNum;
             }
@@ -82,9 +88,21 @@ export default {
             const floorNum = this.inputValue - this.step;
             // 存在最大值 则数值增加时需要收到限制
             if(this.min){
-                floorNum > this.min ? this.inputValue = floorNum : null
+                floorNum >= this.min ? this.inputValue = floorNum : null;
             }else{
                 this.inputValue = floorNum;
+            }
+        },
+        inputEnter() {
+            const currNum = Number(this.inputValue);
+            if(this.max && currNum >= this.max){
+                this.inputValue = this.max;
+            }else if(this.min && currNum <= this.min){
+                this.inputValue = this.min;
+            }else if(currNum === 0){
+                this.inputValue = currNum;
+            }else{
+                this.inputValue = 1;
             }
         }
     }
