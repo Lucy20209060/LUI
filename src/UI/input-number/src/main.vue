@@ -9,12 +9,18 @@
             class="iconfont lu-icon-reduce" 
             @mouseover="inputOver('reduce')" 
             @mouseout="inputOut('reduce')"
+            :class="[
+                {'limit-value': inputValue === min}
+            ]"
             @click="reduceClick"
         ></i>
         <i 
             class="iconfont lu-icon-add"
             @mouseover="inputOver('add')" 
             @mouseout="inputOut('add')"
+            :class="[
+                {'limit-value': inputValue === max}
+            ]"
             @click="addClick"
         ></i>
         <input 
@@ -43,7 +49,10 @@ export default {
             type: Number,
             default: 1
         },
-        min: Number,
+        min: {
+            type: Number,
+            default: 0
+        },
         max: Number
     },
     mounted(){
@@ -135,6 +144,11 @@ export default {
         line-height: 40px;
         
     }
+    .lu_input_number_wrap .limit-value, 
+    .lu_input_number_wrap .limit-value:hover{
+        cursor: not-allowed;
+        color: #c0c4cc;
+    }
     .lu_input_number_wrap i:hover{
         color: #409eff;
     }
@@ -157,9 +171,6 @@ export default {
     }
     .iconfont{
         cursor: pointer;
-    }
-    .not-allowed{
-        cursor: not-allowed;
     }
 
 
