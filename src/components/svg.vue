@@ -26,7 +26,7 @@
 
 
         <div class="svg-demo">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <g fill="none" stroke="black" stroke-width="6">
                     <path stroke-linecap="butt" d="M5 20 l215 0" />
                     <path stroke-linecap="round" d="M5 40 l215 0" />
@@ -34,6 +34,39 @@
                 </g>
             </svg>
         </div>
+
+        <!-- 
+            circle 创建圆 
+            cx cy 定义圆的中心坐标
+            r 定义圆的半径
+        -->
+        <div class="svg-demo">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <circle 
+                    cx="100" 
+                    cy="100" 
+                    r="60" 
+                    stroke="black"
+                    stroke-width="2" 
+                    fill="red"
+                />
+            </svg>
+        </div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
+        <div class="svg-demo"></div>
 
 
 
