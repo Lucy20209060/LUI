@@ -176,4 +176,4 @@ this.$lu_message.error('危险错误提示')
 * 2018-08-24 00:58:20 feat:input-number组件增加极限值样式
 * 2018-08-25 19:38:47 feat:Progress进度条完成
 * 2018-08-26 00:22:33 feat:svg-rect创建矩形
-* 2018-08-26 00:28:06 feat:svg-circle创建圆* 2018-08-26 00:33:36 feat:svg-ellipse创建椭圆
+* 2018-08-26 00:28:06 feat:svg-circle创建圆* 2018-08-26 00:33:36 feat:svg-ellipse创建椭圆* 2018-08-26 00:55:22 feat:svg-line创建直线

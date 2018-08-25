@@ -69,7 +69,24 @@
                 />
             </svg>
         </div>
-        <div class="svg-demo"></div>
+
+        <!-- 
+            line 创建直线
+            x1 y1 起点坐标
+            x2 y2 终点坐标
+         -->
+        <div class="svg-demo">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <line 
+                    x1="10" 
+                    y1="10" 
+                    x2="180" 
+                    y2="180"
+                    stroke-linecap="round"
+                    style="stroke:rgb(255,0,0);stroke-width:10"
+                />
+            </svg>
+        </div>
         <div class="svg-demo"></div>
         <div class="svg-demo"></div>
         <div class="svg-demo"></div>
