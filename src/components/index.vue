@@ -406,9 +406,20 @@
         <p>
             <h1>InputNumber 计数器(lu-input-number)</h1>
             <lu-input-number v-model="numberInputValue" :step="1" :min="-2" :max="10" />
-        </p>
+        </p> 
 
         <hr>
+
+        <p>
+            <h1>Progress 进度条(lu-progress)</h1>
+            <lu-progress :percent="percentNumber" size="large" /> <br>
+            <lu-progress :percent="percentNumber" size="medium" /> <br>
+            <lu-progress :percent="percentNumber" size="small" /> <br>
+            <button @click="percentAdd">add</button>
+        </p> 
+        <hr>
+
+        
 
 
 
@@ -420,6 +431,7 @@ export default {
     name: 'index',
     data () {
         return {
+            percentNumber: 0,
             radio:3,
             witch1:true,
             witch2:false,
@@ -505,6 +517,13 @@ export default {
         }
     },
     methods:{
+        percentAdd(){
+            if(this.percentNumber >= 100){
+                this.percentNumber = 0;
+            }else{
+                this.percentNumber = this.percentNumber + 10
+            }
+        },
         tabChange(index,value){
             console.log(index,value)
         },
