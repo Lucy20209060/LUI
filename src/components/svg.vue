@@ -52,7 +52,23 @@
                 />
             </svg>
         </div>
-        <div class="svg-demo"></div>
+
+        <!-- 
+            ellipse 创建椭圆
+            cx cy 定义椭圆的中心坐标
+            rx ry 定义椭圆x y轴的半径
+         -->
+        <div class="svg-demo">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <ellipse 
+                    cx="100" 
+                    cy="100" 
+                    rx="80" 
+                    ry="50"
+                    style="fill:yellow;stroke:purple;stroke-width:2"
+                />
+            </svg>
+        </div>
         <div class="svg-demo"></div>
         <div class="svg-demo"></div>
         <div class="svg-demo"></div>
