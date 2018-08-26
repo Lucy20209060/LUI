@@ -100,7 +100,19 @@
                 />
             </svg>
         </div>
-        <div class="svg-demo"></div>
+
+        <!-- 
+            polyline 创建曲线
+            points 每个拐点的坐标
+         -->
+        <div class="svg-demo">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <polyline 
+                points="20,20 40,25 60,40 80,120 120,140 200,180"
+                style="fill:none;stroke:black;stroke-width:3" 
+            />
+            </svg>
+        </div>
         <div class="svg-demo"></div>
         <div class="svg-demo"></div>
         <div class="svg-demo"></div>
