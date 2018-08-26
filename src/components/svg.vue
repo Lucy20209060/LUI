@@ -87,7 +87,19 @@
                 />
             </svg>
         </div>
-        <div class="svg-demo"></div>
+
+        <!-- 
+            polygon 创建不少于三边的多边形
+            points 每个点的坐标
+         -->
+        <div class="svg-demo">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <polygon 
+                    points="10,10 190,40 160,190"
+                    style="fill:lime;stroke:purple;stroke-width:1"
+                />
+            </svg>
+        </div>
         <div class="svg-demo"></div>
         <div class="svg-demo"></div>
         <div class="svg-demo"></div>
