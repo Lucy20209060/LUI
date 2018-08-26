@@ -164,9 +164,34 @@
                 </text>
             </svg>
         </div>
-        <div class="svg-demo"></div>
-        <div class="svg-demo"></div>
-        <div class="svg-demo"></div>
+        <div class="svg-demo">
+            <!-- 
+                所有svg滤镜定义在<defs>元素中 定义短并且含有特殊元素（滤镜）定义
+                linearGradient 定义线性渐变（水平，垂直，或者角渐变） 该标签必须嵌套在defs中
+                x1,y1 x2,y2 渐变的开始和结束位置
+                渐变的颜色范围可由两种或多种颜色组成。每种颜色通过一个<stop>标签来规定。offset属性用来定义渐变的开始和结束位置
+             -->
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:0.2" />
+                    <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+            </svg>
+        </div>
+
+        <div class="svg-demo">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <path d="M 50,50 m 0,-48
+            a 48,48 0 1 1 0,96
+            a 48,48 0 1 1 0,-96" stroke="red" stroke-width="5" fill="none" />
+                <!-- <path d="M 50,50 m 0,-48
+            a 48,48 0 1 1 0,96
+            a 48,48 0 1 1 0,-96" stroke="blue" stroke-width="5" fill="none" stop-opacity='.6' /> -->
+            </svg>
+        </div>
         <div class="svg-demo"></div>
         <div class="svg-demo"></div>
         <div class="svg-demo"></div>
