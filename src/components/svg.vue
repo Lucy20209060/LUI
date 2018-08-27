@@ -27,7 +27,7 @@
         <div class="svg-demo">
             <!-- 
                 stroke-dasharray 创建虚线
-                x1,x2 虚线宽度和间隔宽度
+                x1,x2 实线长度和虚线长度
              -->
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <g fill="none" stroke="black" stroke-width="6">
@@ -122,14 +122,14 @@
                 path 定义一个路径
                 M = moveto 移动到x,y坐标
                 L = lineto 上一个坐标到这个坐标用直线连接
-                H = horizontal lineto 绘制平行线
+                H = horizontal lineto 绘制水平线
                 V = vertical lineto 绘制垂直线
-                C = curveto
+                C = curveto 三次贝赛曲线
                 S = smooth curveto
-                Q = quadratic Bézier curve
-                T = smooth quadratic Bézier curveto
-                A = elliptical Arc
-                Z = closepath 从当前点画一条直线到路径的起点
+                Q = quadratic Bézier curve 二次贝赛曲线
+                T = smooth quadratic Bézier curveto 映射
+                A = elliptical Arc 弧线
+                Z = closepath 关闭路径 从当前点画一条直线到路径的起点
             -->
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <path d="M150 0 L75 195 L195 195 Z" />
@@ -183,13 +183,30 @@
         </div>
 
         <div class="svg-demo">
+            <!-- 
+                a 50,50   0   1     1      0,100
+                 两个半径     0小弧  0逆时针  目的地坐标
+                             1大弧  1顺时针
+             -->
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
-            <path d="M 50,50 m 0,-48
-            a 48,48 0 1 1 0,96
-            a 48,48 0 1 1 0,-96" stroke="red" stroke-width="5" fill="none" />
-                <!-- <path d="M 50,50 m 0,-48
-            a 48,48 0 1 1 0,96
-            a 48,48 0 1 1 0,-96" stroke="blue" stroke-width="5" fill="none" stop-opacity='.6' /> -->
+
+            <path d="M 100,50
+            a 50,50 0 1 1 0,100
+            a 50,50 0 1 1 0,-100" stroke="#eeeff3" stroke-width="5" fill="none" />
+
+            <path 
+                d="M 100,50
+                a 50,50 0 1 1 0,100
+                a 50,50 0 1 1 0,-100" 
+                stroke="#5485f7" 
+                stroke-width="5" 
+                fill="none" 
+                :stroke-dasharray="presize"
+                stroke-dashoffset='0' 
+                transition='all 1s cubic-bezier(.65,.2,.35,1)'
+                :stroke-linecap="`${data === 0 ? null : 'round' }`"
+                style="transition: all 1s cubic-bezier(.65,.2,.35,1)"
+            />
             </svg>
         </div>
         <div class="svg-demo"></div>
@@ -198,7 +215,7 @@
         <div class="svg-demo"></div>
 
 
-
+        <button @click="click">点击{{data}}</button>
 
 
 
@@ -211,15 +228,22 @@ export default {
     name: 'svg',
     data () {
         return {
-            
+            data: 100
         }
     },
     mounted(){
-        
     },
     methods:{
-        
-	}
+        click(){
+            this.data = this.data >= 100 ? 0 : this.data + 10
+        }
+    },
+    computed: {
+        presize() {
+            // 3.12 约等于 Math.PI
+            return `${2 * 50 * 3.12 * this.data/100}px,100000px`
+        }
+    },
 }
 </script>
 
