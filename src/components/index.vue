@@ -412,6 +412,10 @@
 
         <p>
             <h1>Progress 进度条(lu-progress)</h1>
+            <lu-progress :percent="percentNumber" size="large" shape="circle" />
+            <lu-progress :percent="percentNumber" size="medium" shape="circle" />
+            <lu-progress :percent="percentNumber" size="small" shape="circle" /> 
+
             <lu-progress :percent="percentNumber" size="large" /> <br>
             <lu-progress :percent="percentNumber" size="medium" /> <br>
             <lu-progress :percent="percentNumber" size="small" /> <br>
@@ -662,7 +666,7 @@ export default {
                 duration:30000,
                 showClose:true,
                 onClose:function(){
-                    console.log(11111111111)
+                    console.log(11)
                 }
             })
         },

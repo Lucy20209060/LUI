@@ -241,7 +241,7 @@ export default {
     computed: {
         presize() {
             // 3.12 约等于 Math.PI
-            return `${2 * 50 * 3.12 * this.data/100}px,100000px`
+            return `${2 * 50 * 3.12 * this.data/100}px,100000px`;
         }
     },
 }
