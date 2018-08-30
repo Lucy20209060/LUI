@@ -180,17 +180,35 @@ this.$lu_message.error('危险错误提示')
 
 >name 原生name属性
 
+```html
+<lu-radio name="radio" v-model="radio" :resource="resource"  />
+```
+
 <img src="./static/img/radio-1.png" />
 
 ### InputNumber 计数器(lu-input-number)
 
 >step 计数器步长,min max 最小值 最大值
 
+```html
+<lu-input-number v-model="numberInputValue" :step="1" :min="-2" :max="10" />
+```
+
 <img src="./static/img/inputNumber-1.png" />
 
 ### Progress 进度条(lu-progress)
 
 >percent 百分比, size 大小 large/medium/small（默认), shape类型 circle 圆形/line 直线（默认）
+
+```html
+<lu-progress :percent="percentNumber" size="large" shape="circle" />
+<lu-progress :percent="percentNumber" size="medium" shape="circle" />
+<lu-progress :percent="percentNumber" size="small" shape="circle" /> 
+
+<lu-progress :percent="percentNumber" size="large" />
+<lu-progress :percent="percentNumber" size="medium" />
+<lu-progress :percent="percentNumber" size="small" />
+```
 
 <img src="./static/img/progress-1.png" />
 
@@ -231,4 +249,5 @@ this.$lu_message.error('危险错误提示')
 * 2018-08-26 17:17:24 feat:svg-stroke属性
 * 2018-08-27 00:06:41 feat:svg-linearGradient定义线性渐变
 * 2018-08-28 00:44:33 feat:使用svg绘制圆形进度条
-* 2018-08-29 01:14:45 feat:Progress进度条组件完成* 2018-08-30 23:38:02 docs:增加Alert,Radio,InputNumber,Progress文档
+* 2018-08-29 01:14:45 feat:Progress进度条组件完成
+* 2018-08-30 23:38:02 docs:增加Alert,Radio,InputNumber,Progress文档* 2018-08-30 23:42:11 docs:增加Alert,Radio,InputNumber,Progress代码示例
