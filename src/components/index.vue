@@ -324,7 +324,7 @@
         <h1>分页</h1>
         <p>page-count 总页数 默认10</p>
         <p>current-page 当前页数 默认1</p>
-        <p>prev-text / next-text  替代图标显示的 上一页 / 下一页 文字</p>
+        <p>prev-text / next-text  替代图标显示的 上一页 / 下一页 文字</p><br>
         <p>
             <!-- page-count  pageCount -->
             <lu-pagination 
@@ -348,15 +348,23 @@
         <hr>
 
         <h1>Tabs 标签页</h1>
-
+        <p>default-value 默认值</p>
+        <p>@change value值改变时触发改函数</p>
+        <br>
         <p>
             <lu-tab :default-value="defaultValue" :tabs="tabs" @change="tabChange"/>
         </p>
 
         <hr>
 
-        <h1>alert 警告</h1>
-
+        <h1>Alert 警告</h1>
+        <p>title 标题</p>
+        <p>type 类型 success/info(默认)/warning</p>
+        <p>center 内容居中</p>
+        <p>show-icon 显示类型图标</p>
+        <p>description 描述语言</p>
+        <p>closable 显示关闭按钮 @close 关闭函数</p>
+        <br>
         <p>
             <lu-alert 
                 title="成功提示的文案"
@@ -396,22 +404,31 @@
 
         <hr>
 
+        <h1>Radio 单选框(lu-radio)</h1>
+        <p>name 单选框name属性</p>
+        <br>
         <p>
-            <h1>Radio 单选框(lu-radio)</h1>
             <lu-radio name="radio" v-model="radio" :resource="resource"  />
         </p>
 
         <hr>
 
+        <h1>InputNumber 计数器(lu-input-number)</h1>
+        <p>step 计数器步长</p>
+        <p>min max 最小值 最大值</p>
+        <br>
         <p>
-            <h1>InputNumber 计数器(lu-input-number)</h1>
             <lu-input-number v-model="numberInputValue" :step="1" :min="-2" :max="10" />
         </p> 
 
         <hr>
 
+        <h1>Progress 进度条(lu-progress)</h1>
+        <p>percent 百分比</p>
+        <p>size 大小 large/medium/small（默认）</p>
+        <p>shape类型 circle 圆形/line 直线（默认）</p>
+        <br>
         <p>
-            <h1>Progress 进度条(lu-progress)</h1>
             <lu-progress :percent="percentNumber" size="large" shape="circle" />
             <lu-progress :percent="percentNumber" size="medium" shape="circle" />
             <lu-progress :percent="percentNumber" size="small" shape="circle" /> 

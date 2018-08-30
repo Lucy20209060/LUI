@@ -117,7 +117,7 @@ this.$lu_message.error('危险错误提示')
 
 <img src="./static/img/input-1.png" />
 
-### tag标签
+### Tag标签
 
 >类型 (默认) / gray / primary / success / warning / danger 六种 也可以通过color="#009e4d"设置背景色 是否可关闭 :closable="true" 默认false
 
@@ -146,6 +146,53 @@ this.$lu_message.error('危险错误提示')
 ```
 
 <img src="./static/img/pagination-1.png" />
+
+### Alert 警告(lu-alert)
+
+>default-value 默认值, @change value值改变时触发改函数
+
+```html
+<lu-alert 
+    title="成功提示的文案"
+    type="success"
+    description="文字说明文字说明文字说明文字说明文字说明文字说明"
+    show-icon 
+    :closable="false"/>
+<lu-alert 
+    title="消息提示的文案"
+    type="info"
+    description="文字说明文字说明文字说明文字说明文字说明文字说明"
+    show-icon 
+    center/>
+<lu-alert 
+    type="warning"
+    description="文字说明文字说明文字说明文字说明文字说明文字说明"
+    show-icon />
+<lu-alert 
+    title="错误提示的文案"
+    type="error"
+    description="文字说明文字说明文字说明文字说明文字说明文字说明"
+    @close="close()"/>
+```
+<img src="./static/img/alert-1.png" />
+
+### Radio 单选框(lu-radio)
+
+>name 原生name属性
+
+<img src="./static/img/radio-1.png" />
+
+### InputNumber 计数器(lu-input-number)
+
+>step 计数器步长,min max 最小值 最大值
+
+<img src="./static/img/inputNumber-1.png" />
+
+### Progress 进度条(lu-progress)
+
+>percent 百分比, size 大小 large/medium/small（默认), shape类型 circle 圆形/line 直线（默认）
+
+<img src="./static/img/progress-1.png" />
 
 ****
 
@@ -176,4 +223,12 @@ this.$lu_message.error('危险错误提示')
 * 2018-08-24 00:58:20 feat:input-number组件增加极限值样式
 * 2018-08-25 19:38:47 feat:Progress进度条完成
 * 2018-08-26 00:22:33 feat:svg-rect创建矩形
-* 2018-08-26 00:28:06 feat:svg-circle创建圆* 2018-08-26 00:33:36 feat:svg-ellipse创建椭圆* 2018-08-26 00:55:22 feat:svg-line创建直线* 2018-08-26 11:51:01 feat:svg-polygon创建不少于三边的多边形* 2018-08-26 12:22:10 feat:svg-polyline创建曲线* 2018-08-26 17:17:24 feat:svg-stroke属性* 2018-08-27 00:06:41 feat:svg-linearGradient定义线性渐变* 2018-08-28 00:44:33 feat:使用svg绘制圆形进度条* 2018-08-29 01:14:45 feat:Progress进度条组件完成
+* 2018-08-26 00:28:06 feat:svg-circle创建圆
+* 2018-08-26 00:33:36 feat:svg-ellipse创建椭圆
+* 2018-08-26 00:55:22 feat:svg-line创建直线
+* 2018-08-26 11:51:01 feat:svg-polygon创建不少于三边的多边形
+* 2018-08-26 12:22:10 feat:svg-polyline创建曲线
+* 2018-08-26 17:17:24 feat:svg-stroke属性
+* 2018-08-27 00:06:41 feat:svg-linearGradient定义线性渐变
+* 2018-08-28 00:44:33 feat:使用svg绘制圆形进度条
+* 2018-08-29 01:14:45 feat:Progress进度条组件完成* 2018-08-30 23:38:02 docs:增加Alert,Radio,InputNumber,Progress文档
