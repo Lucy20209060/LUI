@@ -1,17 +1,12 @@
-/*
-	使用localStorage完成对缓存管理
-
-	通过Cache.get(key)获取key对应的缓存数据 没有则返回null 或自定义返回值defaultValue
-
-	通过Cache.set(key, value, time)设置缓存的key, value, 和有效时间（s）（-1表示永久有效）
-
-	通过Cache.clear(key) 清空key对应的缓存
-
-*/
-
+/**
+ * 使用localStorage完成对缓存管理
+ * 通过cache.get(key)获取key对应的缓存数据 没有则返回null 或自定义返回值defaultValue
+ * 通过cache.set(key, value, time)设置缓存的key, value, 和有效时间（s）（-1表示永久有效）
+ * 通过cache.clear(key) 清空key对应的缓存
+ */
 const cache = {
-
 	/*
+		数据结构示例
 		expire: {
 			"name":{   							// key
 				"value":lucy,					// value
@@ -26,12 +21,12 @@ const cache = {
 
 	// localStorage的名称
 	EXPIRE_KEY: 'CACHE_EXPIRE',
-	// localStorage的值（object形式）
+	// localStorage的值（object形式）最终要转为字符串存储
 	expire: {},
 
 	// 获取localStorage
 	get (key, defaultValue = null) {
-		this.initExpire()
+		this.initExpire();
 		// 已经被删除
 		if(!this.expire[key]){
 			return null; 
@@ -41,6 +36,7 @@ const cache = {
 			this.clear(key)
 			return null
 		}
+		// 存在 返回数据
 		return this.expire[key].value || defaultValue
 	},
 
