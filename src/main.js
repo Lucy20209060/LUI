@@ -81,6 +81,15 @@ Object.keys(directives).forEach(k =>
 );
 
 
+/**
+ * postcss测试
+ */
+var postcssTest = require('./utils/PostCSS-test')
+var postcss = require('postcss');
+postcss(postcssTest({
+  cssPath: ['./UI/lib/css/iconfont.css']
+}))
+
 
 
 Vue.config.productionTip = false
