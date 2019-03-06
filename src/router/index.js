@@ -1,28 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Index from '@/pages/Index'
+import Nopage from '@/pages/NoPage'
+import About from '@/pages/About'
 
-import index from '@/components/index'
-import Hello from '@/components/Hello'
-import Home from '@/components/Home'
-import about from '@/components/about'
-import cart from '@/components/cart'
-import test from '@/components/test'
-import svg from '@/components/svg'
 Vue.use(Router)
 
 const routes = [
-	{ path: '/',name: 'index',component: index },
-	{ path: '/hello',name: 'Hello',component: Hello },
-	{ path: '/home',name: 'home',component: Home },
-	{ path: '/cart',name: 'cart',component: cart },
-	{ path: '/about',name: 'about',component: about },
-	{ path: '/test',name: 'test',component: test },
-	{ path: '/svg',name: 'svg',component: svg }
+  { path:'/index', redirect:'/' },
+  { path: '/', name: 'index', component: Index },
+  { path: '/about', name: 'about', component: About },
+  { path: '*', name: 'nopage', component: Nopage }
 ]
 
 const router = new Router({
-	mode:'history',
-    routes
+  mode: 'history',
+  routes
 });
+
+router.beforeEach((to, from, next) => {
+  next();
+})
 
 export default router;
