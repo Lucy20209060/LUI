@@ -436,7 +436,7 @@
             <lu-progress :percent="percentNumber" size="large" /> <br>
             <lu-progress :percent="percentNumber" size="medium" /> <br>
             <lu-progress :percent="percentNumber" size="small" /> <br>
-            <button @click="percentAdd">add</button>
+            <lu-button @click="percentAdd">add</lu-button>
         </p> 
         <hr>
 

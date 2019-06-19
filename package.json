@@ -1,15 +1,16 @@
 {
   "name": "LUI",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "author": "luchao",
-  "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
     "build": "node build/build.js",
     "build-css": "gulp",
-    "build-ui": "npm-run-all -p build build-css"
+    "build-ui": "npm-run-all -p build build-css",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "deepmerge": "^3.2.0",
@@ -17,6 +18,9 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
+    "@vue/cli-plugin-unit-jest": "^3.8.0",
+    "@vue/cli-service": "^3.8.4",
+    "@vue/test-utils": "1.0.0-beta.29",
     "autoprefixer": "^7.1.2",
     "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.22.1",
@@ -64,13 +68,13 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
-  "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  }
 }
