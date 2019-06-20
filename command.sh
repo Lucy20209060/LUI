@@ -1,6 +1,8 @@
 if [ -n "$1" ];then
 # 记录log => README.md
-node gulpfile.js
+
+# 在 npm run build-css中构建
+# node gulpfile.js
 node ./log.js $1
 
 git add -A

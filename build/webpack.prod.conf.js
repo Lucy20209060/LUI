@@ -207,6 +207,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var merge = require('webpack-merge');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 process.env.NODE_ENV = 'production';
 
@@ -300,10 +301,6 @@ module.exports = merge(webpackBaseConfig, {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"production"'
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        })
+        new UglifyJsPlugin()
     ]
 });
