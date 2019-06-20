@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import { PopupManager } from '../../src/utils/popup';
 import { isVNode } from '../../src/utils/vdom';
+import Main from './main.vue'
  // 创建构造器
-let MessageConstructor = Vue.extend(require('./main.vue'));
+let MessageConstructor = Vue.extend(Main);
 
 let instance;
 let instances = [];
