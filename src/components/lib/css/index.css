@@ -221,8 +221,7 @@ button{
     padding: 0 6px;
     text-align: center;
     white-space: nowrap;
-    border: 1px solid #fff;
-    z-index: 9999;
+    z-index: 1000;
 }
 /*红点显示*/
 .lu_badge .lu_badge_isDot{
