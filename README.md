@@ -254,4 +254,4 @@ this.$lu_message.error('危险错误提示')
 * 2018-08-30 23:42:11 docs:增加Alert,Radio,InputNumber,Progress代码示例
 * 2019-06-20 14:35:02 test:添加测试代码
 * 2019-06-20 15:01:51 fix:解决代码压缩失败的问题
-* 2019-06-20 15:45:37 feat:修改bagge样式* 2019-06-20 16:03:13 fix:toast弹窗问题
+* 2019-06-20 15:45:37 feat:修改bagge样式* 2019-06-20 16:03:13 fix:toast弹窗问题* 2019-06-20 16:06:01 fix:Notification问题
