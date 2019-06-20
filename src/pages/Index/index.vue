@@ -727,7 +727,7 @@ export default {
         },
 
         toast(){
-            console.log(this)
+            // console.log(this)
             this.$lu_toast({
               message: '信息弹窗提示',
               position: 'top',

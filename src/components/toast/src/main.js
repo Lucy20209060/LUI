@@ -1,7 +1,8 @@
 import Vue from 'vue';
+import Main from './main.vue'
 
  // 创建构造器
-const ToastConstructor = Vue.extend(require('./main.vue'));
+const ToastConstructor = Vue.extend(Main);
 
 // 使用过的实例数组
 let toastPool = [];
