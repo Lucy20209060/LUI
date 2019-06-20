@@ -1,5 +1,6 @@
 if [ -n "$1" ];then
 # 记录log => README.md
+node gulpfile.js
 node ./log.js $1
 
 git add -A

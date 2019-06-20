@@ -317,23 +317,21 @@ button{
 .el-message-box__status.el-icon-warning{color:#f7ba2a}
 .el-message-box__status.el-icon-circle-cross{color:#ff4949}
 
-
-
-    .iconfont-animation{   
-        animation:mymove 1s infinite;
-    }
-    @keyframes mymove{
-        0%{
-           transform:scale(.5) 
-        }
-        50%{
-           transform:scale(1) 
-        }
-        57%{
-           transform:scale(.5) 
-        }
-        100%{
-           transform:scale(1) 
-        }
-        
-    }
+.iconfont-animation{   
+	animation:mymove 1s infinite;
+}
+@keyframes mymove{
+	0%{
+		transform:scale(.5) 
+	}
+	50%{
+		transform:scale(1) 
+	}
+	57%{
+		transform:scale(.5) 
+	}
+	100%{
+		transform:scale(1) 
+	}
+	
+}

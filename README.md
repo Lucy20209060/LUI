@@ -250,4 +250,4 @@ this.$lu_message.error('危险错误提示')
 * 2018-08-27 00:06:41 feat:svg-linearGradient定义线性渐变
 * 2018-08-28 00:44:33 feat:使用svg绘制圆形进度条
 * 2018-08-29 01:14:45 feat:Progress进度条组件完成
-* 2018-08-30 23:38:02 docs:增加Alert,Radio,InputNumber,Progress文档* 2018-08-30 23:42:11 docs:增加Alert,Radio,InputNumber,Progress代码示例
+* 2018-08-30 23:38:02 docs:增加Alert,Radio,InputNumber,Progress文档* 2018-08-30 23:42:11 docs:增加Alert,Radio,InputNumber,Progress代码示例* 2019-06-20 14:35:02 添加测试代码
