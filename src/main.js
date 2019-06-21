@@ -6,13 +6,13 @@ import router from './router'
 import '@/assets/utils/reset.scss'
 
 
-import LucyUI from './components'
+import LUI from './components'
 import './components/lib/css/index.css';
 import './components/lib/css/iconfont.css'
 
 // import '../static/lui.min.css'
 // import LucyUI from '../static/lui.min.js'
-Vue.use(LucyUI);
+Vue.use(LUI);
 
 Vue.config.productionTip = false
 

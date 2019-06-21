@@ -51,15 +51,15 @@ export default {
         // 滑过效果
         plain:Boolean,
         // 是否禁用
-        disabled:Boolean,
+        disabled:Boolean
     },
     mounted(){
         
     },
     methods:{
         btnClick(evt){
-            // 触发当前实例上的事件
-            this.$emit('click',evt);
+					// 触发当前实例上的事件
+					this.$emit('click',evt);
         }
     }
 }
