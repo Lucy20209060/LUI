@@ -1,5 +1,4 @@
-import { mount, shallowMount } from '@vue/test-utils'
-import sinon from 'sinon'
+import { mount } from '@vue/test-utils'
 import Toast from '@/components/toast/src/main.vue'
 
 describe('Toast', () => {
@@ -8,5 +7,14 @@ describe('Toast', () => {
     const wrapper = mount(Toast)
     expect(wrapper.exists()).toBe(true)
   })
-  
+
+  // 测试message属性
+  it('设置message属性', () => {
+    const wrapper = mount(Toast, {
+      propsData: {
+        message: 'test'
+      }
+    })
+    expect(wrapper.text()).toBe('test')
+  })
 })
