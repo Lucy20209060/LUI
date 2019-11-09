@@ -16,6 +16,9 @@ import Tab from './tab';
 import Alert from './alert';
 import InputNumber from './input-number';
 import Progress from './progress';
+import VirtualList from './virtualList';
+import Scrollbar from './scrollbar';
+import Ellipsis from './ellipsis';
 
 import anchu_messageBox from './anchu-message-box';
 import anchu_message from './anchu-message';
@@ -40,6 +43,9 @@ const components = [
     Alert,
     InputNumber,
     Progress,
+    VirtualList,
+    Scrollbar,
+    Ellipsis,
 
     anchu_messageBox,
     anchu_message
@@ -86,6 +92,9 @@ export default {
     Alert,
     InputNumber,
     Progress,
+    VirtualList,
+    Scrollbar,
+    Ellipsis,
 
     anchu_messageBox,
     anchu_message

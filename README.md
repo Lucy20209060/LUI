@@ -257,4 +257,4 @@ this.$lu_message.error('危险错误提示')
 * 2019-06-20 15:45:37 feat:修改bagge样式
 * 2019-06-20 16:03:13 fix:toast弹窗问题
 * 2019-06-20 16:06:01 fix:Notification问题
-* 2019-06-22 00:44:37 test:button测试用例* 2019-06-22 15:02:23 test:toast测试用例
+* 2019-06-22 00:44:37 test:button测试用例* 2019-06-22 15:02:23 test:toast测试用例* 2019-11-09 22:30:54 feat:Scrollbar滚动条组件，VirtualList虚拟列表组件
