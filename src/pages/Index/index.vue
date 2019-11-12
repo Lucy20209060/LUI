@@ -463,12 +463,24 @@
         </p> 
 
         <hr>
-        <h1>Ellipsis 滚动条(lu-ellipsis)</h1>
+        <h1>Ellipsis 多行省略(lu-ellipsis)</h1>
         <p>text 文本</p>
-        <p style="width: 10%; height: 500px">
-            <!-- <lu-ellipsis
-                text="奥雷连诺的衣服沾满了污泥和呕吐出来的脏东西。这时，皮拉·苔列娜只和自己的两个小儿子住在一起；她什么也没问他，就把他领到一个床铺，用湿布擦净他的脸，脱掉他的衣服，然后自己也脱得精光，放下蚊帐，免得两个儿子醒来看见。她等待留在原先那个村子的男人，等待离开这个村子的男人，等待那些被她的纸牌占卜弄得蒙头转向的男人，已经等得厌倦了；等呀盼呀，她的皮肤已经打皱了，乳房干瘪了，心里的欲火也熄灭了。皮拉·特列娜在黑暗中摸到了奥雷连诺，把一只手放在他的肚子上，母亲一般温情地吻了吻他的脖子，低声说："我可怜的孩子，"奥雷连诺战粟起来。他一点没有迟延，平稳地离开了岩石累累的悲袁的河岸，恍惚觉得雷麦黛丝变成了无边天际的沼泽，这片沼泽洋溢着原始动物的气息，散发出刚刚熨过的床单的味儿，他到了沼泽表面，却哭了。开头，这是不由自主的、断断续续的啜泣，然后，他就难以遏制地泪如泉涌。他心中感到极度的痛苦和难受。她用指尖抚摸着他的头发，等他把似乎使他难以生活下去的隐衷吐露出来。接着，皮拉·苔列娜问道："她是谁呀？"于是，奥雷连诺告诉了她。她笑了起来；这种笑声往日曾把鸽子吓得飞到空中，现在却没有惊醒她的两个孩子。"你先得把她养大，"--皮拉·苔列娜打趣地说。可是奥雷连诺在这笑语后面觉到了深刻的同情。他走出房间时，不仅不再怀疑自己的男性特征，而且放下了几个月来心中痛苦的重负，因为皮拉·苔列娜突然答应帮他的忙。"
-            /> -->
+        <p>lineLimit 省略行数 默认1</p>
+        <p>width 宽度 默认100%</p>
+        <p>lineHeight 字体line-height</p>
+        <p>fontSize 字体font-size</p>
+        <br>
+        <p>
+            <lu-ellipsis
+                text="奥雷连诺的衣服沾满了污泥和呕吐出来的脏东西。这时，皮拉·苔列娜只和自己的两个小儿子住在一起；她什么也没问他，就把他领到一个床铺，用湿布擦净他的脸，脱掉他的衣服，然后自己也脱得精光，放下蚊帐，免得两个儿子醒来看见。她等待留在原先那个村子的男人，等待离开这个村子的男人，等待那些被她的纸牌占卜弄得蒙头转向的男人，已经等得厌倦了；等呀盼呀，她的皮肤已经打皱了，乳房干瘪了，心里的欲火也熄灭了。皮拉·特列娜在黑暗中摸到了奥雷连诺，把一只手放在他的肚子上，母亲一般温情地吻了吻他的脖子，低声说：我可怜的孩子，奥雷连诺战粟起来。他一点没有迟延，平稳地离开了岩石累累的悲袁的河岸，恍惚觉得雷麦黛丝变成了无边天际的沼泽，这片沼泽洋溢着原始动物的气息，散发出刚刚熨过的床单的味儿，他到了沼泽表面，却哭了。开头，这是不由自主的、断断续续的啜泣，然后，他就难以遏制地泪如泉涌。他心中感到极度的痛苦和难受。她用指尖抚摸着他的头发，等他把似乎使他难以生活下去的隐衷吐露出来。接着，皮拉·苔列娜问道：于是，奥雷连诺告诉了她。她笑了起来；这种笑声往日曾把鸽子吓得飞到空中，现在却没有惊醒她的两个孩子。--皮拉·苔列娜打趣地说。可是奥雷连诺在这笑语后面觉到了深刻的同情。他走出房间时，不仅不再怀疑自己的男性特征，而且放下了几个月来心中痛苦的重负，因为皮拉·苔列娜突然答应帮他的忙。"
+            />
+        </p> 
+        <br>
+        <p>
+            <lu-ellipsis
+                :lineLimit="4"
+                text="He would walk along groping in the air, although he passed between objects with an inexplicable fluidity, as if be were endowed with some instinct of direction based on an immediate prescience. One day he forgot to put in his false teeth, which at night he left in a glass of water beside his bed, and he never put them in again. When Úrsula undertook the enlargement of the house, she had them build him a special room next to Aureliano's workshop, far from the noise and bustle of the house, with a window flooded with light and a bookcase where she herself put in order the books that were almost destroyed by dust and moths, the flaky stacks of paper covered with indecipherable signs, and the glass with his false teeth, where some aquatic plants with tiny yellow flowers had taken root."
+            />
         </p> 
 
 

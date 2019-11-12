@@ -20,18 +20,11 @@
                 fontSize: fontSize + 'px',
                 lineHeight: lineHeight + 'px'
             }"
-        >{{text}}</div>
+        >{{subString}}</div>
     </div>
 </template>
 <script>
-let timer = null;
-const throttle = (func, wait=100) => {
-  if (timer) return;
-  timer = setTimeout(() => {
-    func();
-    timer = null;
-  }, wait);
-};
+
 export default {
     name: 'LuEllipsis',
     data () {
@@ -46,10 +39,7 @@ export default {
             default: 1
         },
         lineHeight: Number,
-        fontSize: {
-            type: Number,
-            default: 16
-        },
+        fontSize: Number,
         text: {
             type: String,
             default: ''
@@ -65,24 +55,21 @@ export default {
         }
     },
     mounted(){
-        this.subString = this.ellipsisText();
-
-
-
-        window.onresize = () => {
-            const timer = Math.ceil(Math.random() * 100);
-            console.log(timer)
-            throttle(()=>{
-                this.subString = this.ellipsisText();
-
-            }, timer)
-        }
+        this.subString = this.ellipsisText()
+        window.addEventListener('resize',() => {
+           this.subString = this.ellipsisText()
+        },false);
+    },
+    destroyed() {
+        window.removeEventListener('resize',() => {
+           this.subString = this.ellipsisText()
+        },false);
     },
     methods:{
         ellipsisText() {
             var obj = {};
             var arr = [];
-            const children = this.$refs.luEllipsisContentCopy.children;
+            const children = this.$el.children[0].children;
 
             for(let item of children){
                 if(arr.includes(item.offsetTop)){
@@ -93,13 +80,12 @@ export default {
                     obj[arr.length - 1] = [item]
                 }
             }
-            // console.lo/--')
+
             let len = 0;
             for(let i in obj){
                 len = len + obj[i].length;
             }
-            // console.log(len)
-            return this.text.substring(0,len - 3)
+            return this.text.substring(0,len - 4) + (len >= children.length ? '' : '...');
         }
     }
 }
@@ -116,6 +102,6 @@ export default {
         overflow: hidden;
     }
     .lu-ellipsis-content:after {
-        content: ' ...'
+        /* content: ' ...' */
     }
 </style>
