@@ -1,5 +1,5 @@
 # LUI
-<p align="center">react UI组件库</p>
+<p align="center">Vue UI组件库</p>
 <p align="center">
   <a href="https://travis-ci.org/luchaoet/LUI"><img src="https://travis-ci.org/luchaoet/LUI.svg?branch=master">
 </a>
