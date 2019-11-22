@@ -72,7 +72,8 @@ export default {
             const children = this.$el.children[0].children;
 
             for(let item of children){
-                if(arr.includes(item.offsetTop)){
+                // 空格节点offsetTop有差异，直接添加至当前行
+                if(item.innerHTML === " " || arr.includes(item.offsetTop)){
                     obj[arr.length - 1] = [...obj[arr.length - 1], item]
                 }else{
                     if(arr.length >= this.lineLimit) break;
